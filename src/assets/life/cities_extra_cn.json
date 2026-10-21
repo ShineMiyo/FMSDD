@@ -1,0 +1,2095 @@
+{
+  "schema_version": 2,
+  "country": "CN",
+  "country_name_zh": "中国",
+  "country_name_en": "China",
+  "version": "2026.10",
+  "cities": [
+    {
+      "id": "hongkong",
+      "lat": 22.3193,
+      "lng": 114.1694,
+      "region": "华南",
+      "name_zh": "香港",
+      "name_en": "Hong Kong",
+      "districts": [
+        {
+          "id": "central",
+          "lat": 22.2819,
+          "lng": 114.1582,
+          "name_zh": "中西区",
+          "name_en": "Central and Western",
+          "residential": 205000,
+          "commercial": 360000,
+          "industrial": 42000
+        },
+        {
+          "id": "wanchai",
+          "lat": 22.2775,
+          "lng": 114.1733,
+          "name_zh": "湾仔",
+          "name_en": "Wan Chai",
+          "residential": 175000,
+          "commercial": 285000,
+          "industrial": 38000
+        },
+        {
+          "id": "kowloon",
+          "lat": 22.3282,
+          "lng": 114.1916,
+          "name_zh": "九龙城",
+          "name_en": "Kowloon City",
+          "residential": 135000,
+          "commercial": 195000,
+          "industrial": 30000
+        },
+        {
+          "id": "shatin",
+          "lat": 22.3771,
+          "lng": 114.1974,
+          "name_zh": "沙田",
+          "name_en": "Sha Tin",
+          "residential": 98000,
+          "commercial": 128000,
+          "industrial": 24000
+        }
+      ]
+    },
+    {
+      "id": "macau",
+      "lat": 22.1987,
+      "lng": 113.5439,
+      "region": "华南",
+      "name_zh": "澳门",
+      "name_en": "Macau",
+      "districts": [
+        {
+          "id": "se",
+          "lat": 22.1932,
+          "lng": 113.5393,
+          "name_zh": "大堂区",
+          "name_en": "Sé",
+          "residential": 125000,
+          "commercial": 220000,
+          "industrial": 26000
+        },
+        {
+          "id": "fatima",
+          "lat": 22.2074,
+          "lng": 113.5427,
+          "name_zh": "花地玛堂区",
+          "name_en": "Nossa Senhora de Fátima",
+          "residential": 98000,
+          "commercial": 145000,
+          "industrial": 22000
+        },
+        {
+          "id": "taipa",
+          "lat": 22.156,
+          "lng": 113.559,
+          "name_zh": "氹仔",
+          "name_en": "Taipa",
+          "residential": 108000,
+          "commercial": 155000,
+          "industrial": 18000
+        },
+        {
+          "id": "coloane",
+          "lat": 22.116,
+          "lng": 113.56,
+          "name_zh": "路环",
+          "name_en": "Coloane",
+          "residential": 72000,
+          "commercial": 78000,
+          "industrial": 15000
+        }
+      ]
+    },
+    {
+      "id": "shantou",
+      "lat": 23.3541,
+      "lng": 116.6819,
+      "region": "华南",
+      "name_zh": "汕头",
+      "name_en": "Shantou",
+      "districts": [
+        {
+          "id": "jinping",
+          "lat": 23.3654,
+          "lng": 116.703,
+          "name_zh": "金平",
+          "name_en": "Jinping",
+          "residential": 15500,
+          "commercial": 24500,
+          "industrial": 5200
+        },
+        {
+          "id": "longhu",
+          "lat": 23.3723,
+          "lng": 116.7169,
+          "name_zh": "龙湖",
+          "name_en": "Longhu",
+          "residential": 18500,
+          "commercial": 28500,
+          "industrial": 6200
+        },
+        {
+          "id": "haojiang",
+          "lat": 23.2858,
+          "lng": 116.6845,
+          "name_zh": "濠江",
+          "name_en": "Haojiang",
+          "residential": 9200,
+          "commercial": 11800,
+          "industrial": 4200
+        },
+        {
+          "id": "chenghai",
+          "lat": 23.4663,
+          "lng": 116.7563,
+          "name_zh": "澄海",
+          "name_en": "Chenghai",
+          "residential": 8800,
+          "commercial": 12500,
+          "industrial": 3800
+        }
+      ]
+    },
+    {
+      "id": "xiamen",
+      "lat": 24.4798,
+      "lng": 118.0894,
+      "region": "华东",
+      "name_zh": "厦门",
+      "name_en": "Xiamen",
+      "districts": [
+        {
+          "id": "siming",
+          "lat": 24.462,
+          "lng": 118.0824,
+          "name_zh": "思明",
+          "name_en": "Siming",
+          "residential": 48000,
+          "commercial": 76000,
+          "industrial": 10500
+        },
+        {
+          "id": "huli",
+          "lat": 24.5127,
+          "lng": 118.1468,
+          "name_zh": "湖里",
+          "name_en": "Huli",
+          "residential": 39500,
+          "commercial": 54000,
+          "industrial": 9200
+        },
+        {
+          "id": "jimei",
+          "lat": 24.5757,
+          "lng": 118.0978,
+          "name_zh": "集美",
+          "name_en": "Jimei",
+          "residential": 29000,
+          "commercial": 34500,
+          "industrial": 6800
+        },
+        {
+          "id": "haicang",
+          "lat": 24.4946,
+          "lng": 118.0313,
+          "name_zh": "海沧",
+          "name_en": "Haicang",
+          "residential": 25500,
+          "commercial": 29500,
+          "industrial": 7200
+        },
+        {
+          "id": "tongan",
+          "lat": 24.7235,
+          "lng": 118.1521,
+          "name_zh": "同安",
+          "name_en": "Tong'an",
+          "residential": 18500,
+          "commercial": 21000,
+          "industrial": 5600
+        }
+      ]
+    },
+    {
+      "id": "quanzhou",
+      "lat": 24.8741,
+      "lng": 118.6757,
+      "region": "华东",
+      "name_zh": "泉州",
+      "name_en": "Quanzhou",
+      "districts": [
+        {
+          "id": "licheng",
+          "lat": 24.9101,
+          "lng": 118.5889,
+          "name_zh": "鲤城",
+          "name_en": "Licheng",
+          "residential": 22000,
+          "commercial": 34000,
+          "industrial": 6200
+        },
+        {
+          "id": "fengze",
+          "lat": 24.9012,
+          "lng": 118.6134,
+          "name_zh": "丰泽",
+          "name_en": "Fengze",
+          "residential": 25500,
+          "commercial": 39000,
+          "industrial": 7100
+        },
+        {
+          "id": "luojiang",
+          "lat": 24.9438,
+          "lng": 118.6656,
+          "name_zh": "洛江",
+          "name_en": "Luojiang",
+          "residential": 14200,
+          "commercial": 16800,
+          "industrial": 4800
+        },
+        {
+          "id": "jinjiang",
+          "lat": 24.7816,
+          "lng": 118.5527,
+          "name_zh": "晋江",
+          "name_en": "Jinjiang",
+          "residential": 16500,
+          "commercial": 23500,
+          "industrial": 5200
+        }
+      ]
+    },
+    {
+      "id": "fuzhou",
+      "lat": 26.0745,
+      "lng": 119.2965,
+      "region": "华东",
+      "name_zh": "福州",
+      "name_en": "Fuzhou",
+      "districts": [
+        {
+          "id": "gulou",
+          "lat": 26.0823,
+          "lng": 119.3022,
+          "name_zh": "鼓楼",
+          "name_en": "Gulou",
+          "residential": 38500,
+          "commercial": 61000,
+          "industrial": 8500
+        },
+        {
+          "id": "taijiang",
+          "lat": 26.0609,
+          "lng": 119.3142,
+          "name_zh": "台江",
+          "name_en": "Taijiang",
+          "residential": 32500,
+          "commercial": 52000,
+          "industrial": 7600
+        },
+        {
+          "id": "cangshan",
+          "lat": 26.0308,
+          "lng": 119.3208,
+          "name_zh": "仓山",
+          "name_en": "Cangshan",
+          "residential": 27500,
+          "commercial": 33500,
+          "industrial": 6900
+        },
+        {
+          "id": "jinan",
+          "lat": 26.1099,
+          "lng": 119.3324,
+          "name_zh": "晋安",
+          "name_en": "Jin'an",
+          "residential": 24000,
+          "commercial": 29000,
+          "industrial": 6400
+        },
+        {
+          "id": "mawei",
+          "lat": 25.997,
+          "lng": 119.455,
+          "name_zh": "马尾",
+          "name_en": "Mawei",
+          "residential": 15500,
+          "commercial": 18000,
+          "industrial": 4800
+        }
+      ]
+    },
+
+    {
+      "id": "ningbo",
+      "lat": 29.8683,
+      "lng": 121.544,
+      "region": "华东",
+      "name_zh": "宁波",
+      "name_en": "Ningbo",
+      "districts": [
+        {
+          "id": "haishu",
+          "lat": 29.8598,
+          "lng": 121.5462,
+          "name_zh": "海曙",
+          "name_en": "Haishu",
+          "residential": 36500,
+          "commercial": 53000,
+          "industrial": 7600
+        },
+        {
+          "id": "yinzhou",
+          "lat": 29.8165,
+          "lng": 121.5505,
+          "name_zh": "鄞州",
+          "name_en": "Yinzhou",
+          "residential": 31500,
+          "commercial": 38500,
+          "industrial": 6800
+        },
+        {
+          "id": "jiangbei",
+          "lat": 29.886,
+          "lng": 121.5531,
+          "name_zh": "江北",
+          "name_en": "Jiangbei",
+          "residential": 28500,
+          "commercial": 35500,
+          "industrial": 6200
+        },
+        {
+          "id": "zhenhai",
+          "lat": 29.9492,
+          "lng": 121.7165,
+          "name_zh": "镇海",
+          "name_en": "Zhenhai",
+          "residential": 17500,
+          "commercial": 19500,
+          "industrial": 5200
+        },
+        {
+          "id": "beilun",
+          "lat": 29.9005,
+          "lng": 121.8449,
+          "name_zh": "北仑",
+          "name_en": "Beilun",
+          "residential": 16500,
+          "commercial": 18500,
+          "industrial": 5500
+        }
+      ]
+    },
+    {
+      "id": "suzhou",
+      "lat": 31.2989,
+      "lng": 120.5853,
+      "region": "华东",
+      "name_zh": "苏州",
+      "name_en": "Suzhou",
+      "districts": [
+        {
+          "id": "gusu",
+          "lat": 31.3114,
+          "lng": 120.6175,
+          "name_zh": "姑苏",
+          "name_en": "Gusu",
+          "residential": 44500,
+          "commercial": 69000,
+          "industrial": 9800
+        },
+        {
+          "id": "xiangcheng",
+          "lat": 31.3692,
+          "lng": 120.6426,
+          "name_zh": "相城",
+          "name_en": "Xiangcheng",
+          "residential": 28500,
+          "commercial": 34000,
+          "industrial": 6900
+        },
+        {
+          "id": "wuzhong",
+          "lat": 31.263,
+          "lng": 120.6317,
+          "name_zh": "吴中",
+          "name_en": "Wuzhong",
+          "residential": 31500,
+          "commercial": 37000,
+          "industrial": 7200
+        },
+        {
+          "id": "sip",
+          "lat": 31.3168,
+          "lng": 120.7221,
+          "name_zh": "苏州工业园区",
+          "name_en": "Suzhou Industrial Park",
+          "residential": 38500,
+          "commercial": 52000,
+          "industrial": 11200
+        },
+        {
+          "id": "huqiu",
+          "lat": 31.2988,
+          "lng": 120.5655,
+          "name_zh": "虎丘",
+          "name_en": "Huqiu",
+          "residential": 27500,
+          "commercial": 32000,
+          "industrial": 6600
+        },
+        {
+          "id": "wujiang",
+          "lat": 31.1606,
+          "lng": 120.6418,
+          "name_zh": "吴江",
+          "name_en": "Wujiang",
+          "residential": 22500,
+          "commercial": 26000,
+          "industrial": 6200
+        }
+      ]
+    },
+    {
+      "id": "qingdao",
+      "lat": 36.0671,
+      "lng": 120.3826,
+      "region": "华东",
+      "name_zh": "青岛",
+      "name_en": "Qingdao",
+      "districts": [
+        {
+          "id": "shinan",
+          "lat": 36.0671,
+          "lng": 120.391,
+          "name_zh": "市南",
+          "name_en": "Shinan",
+          "residential": 46500,
+          "commercial": 73000,
+          "industrial": 10500
+        },
+        {
+          "id": "shibei",
+          "lat": 36.0905,
+          "lng": 120.3741,
+          "name_zh": "市北",
+          "name_en": "Shibei",
+          "residential": 30500,
+          "commercial": 42000,
+          "industrial": 7900
+        },
+        {
+          "id": "laoshan",
+          "lat": 36.1028,
+          "lng": 120.4688,
+          "name_zh": "崂山",
+          "name_en": "Laoshan",
+          "residential": 38500,
+          "commercial": 51000,
+          "industrial": 8600
+        },
+        {
+          "id": "licang",
+          "lat": 36.1703,
+          "lng": 120.4325,
+          "name_zh": "李沧",
+          "name_en": "Licang",
+          "residential": 24500,
+          "commercial": 28500,
+          "industrial": 6500
+        },
+        {
+          "id": "chengyang",
+          "lat": 36.3076,
+          "lng": 120.3966,
+          "name_zh": "城阳",
+          "name_en": "Chengyang",
+          "residential": 19500,
+          "commercial": 23500,
+          "industrial": 6100
+        },
+        {
+          "id": "huangdao",
+          "lat": 35.9605,
+          "lng": 120.1974,
+          "name_zh": "黄岛",
+          "name_en": "Huangdao",
+          "residential": 18500,
+          "commercial": 22000,
+          "industrial": 6800
+        }
+      ]
+    },
+    {
+      "id": "jinan",
+      "lat": 36.6512,
+      "lng": 117.1201,
+      "region": "华东",
+      "name_zh": "济南",
+      "name_en": "Jinan",
+      "districts": [
+        {
+          "id": "lixia",
+          "lat": 36.6685,
+          "lng": 117.0358,
+          "name_zh": "历下",
+          "name_en": "Lixia",
+          "residential": 33500,
+          "commercial": 52000,
+          "industrial": 7600
+        },
+        {
+          "id": "shizhong",
+          "lat": 36.651,
+          "lng": 117.0002,
+          "name_zh": "市中",
+          "name_en": "Shizhong",
+          "residential": 28500,
+          "commercial": 35000,
+          "industrial": 6800
+        },
+        {
+          "id": "tianqiao",
+          "lat": 36.6905,
+          "lng": 116.9874,
+          "name_zh": "天桥",
+          "name_en": "Tianqiao",
+          "residential": 21500,
+          "commercial": 26000,
+          "industrial": 5900
+        },
+        {
+          "id": "huaiyin",
+          "lat": 36.6512,
+          "lng": 116.9279,
+          "name_zh": "槐荫",
+          "name_en": "Huaiyin",
+          "residential": 24500,
+          "commercial": 28500,
+          "industrial": 6100
+        },
+        {
+          "id": "licheng",
+          "lat": 36.6805,
+          "lng": 117.0652,
+          "name_zh": "历城",
+          "name_en": "Licheng",
+          "residential": 19500,
+          "commercial": 22500,
+          "industrial": 5600
+        }
+      ]
+    },
+    {
+      "id": "tianjin",
+      "lat": 39.0842,
+      "lng": 117.2009,
+      "region": "华北",
+      "name_zh": "天津",
+      "name_en": "Tianjin",
+      "districts": [
+        {
+          "id": "heping",
+          "lat": 39.1172,
+          "lng": 117.1995,
+          "name_zh": "和平",
+          "name_en": "Heping",
+          "residential": 52000,
+          "commercial": 88000,
+          "industrial": 11000
+        },
+        {
+          "id": "hexi",
+          "lat": 39.0913,
+          "lng": 117.2198,
+          "name_zh": "河西",
+          "name_en": "Hexi",
+          "residential": 36500,
+          "commercial": 50000,
+          "industrial": 8500
+        },
+        {
+          "id": "nankai",
+          "lat": 39.1024,
+          "lng": 117.1497,
+          "name_zh": "南开",
+          "name_en": "Nankai",
+          "residential": 32500,
+          "commercial": 41500,
+          "industrial": 7900
+        },
+        {
+          "id": "xiqing",
+          "lat": 39.1396,
+          "lng": 117.0076,
+          "name_zh": "西青",
+          "name_en": "Xiqing",
+          "residential": 21500,
+          "commercial": 25000,
+          "industrial": 5900
+        },
+        {
+          "id": "binhai",
+          "lat": 39.0065,
+          "lng": 117.654,
+          "name_zh": "滨海新区",
+          "name_en": "Binhai New Area",
+          "residential": 19500,
+          "commercial": 24500,
+          "industrial": 7100
+        }
+      ]
+    },
+    {
+      "id": "xian",
+      "lat": 34.3416,
+      "lng": 108.9398,
+      "region": "西北",
+      "name_zh": "西安",
+      "name_en": "Xi'an",
+      "districts": [
+        {
+          "id": "beilin",
+          "lat": 34.2603,
+          "lng": 108.947,
+          "name_zh": "碑林",
+          "name_en": "Beilin",
+          "residential": 28500,
+          "commercial": 47000,
+          "industrial": 7200
+        },
+        {
+          "id": "yanta",
+          "lat": 34.2223,
+          "lng": 108.9487,
+          "name_zh": "雁塔",
+          "name_en": "Yanta",
+          "residential": 31500,
+          "commercial": 43000,
+          "industrial": 7800
+        },
+        {
+          "id": "lianhu",
+          "lat": 34.2657,
+          "lng": 108.9335,
+          "name_zh": "莲湖",
+          "name_en": "Lianhu",
+          "residential": 24500,
+          "commercial": 31000,
+          "industrial": 6400
+        },
+        {
+          "id": "weiyang",
+          "lat": 34.3228,
+          "lng": 108.9463,
+          "name_zh": "未央",
+          "name_en": "Weiyang",
+          "residential": 22500,
+          "commercial": 26500,
+          "industrial": 6000
+        },
+        {
+          "id": "chanba",
+          "lat": 34.4116,
+          "lng": 109.0466,
+          "name_zh": "浐灞",
+          "name_en": "Chanba",
+          "residential": 18500,
+          "commercial": 21500,
+          "industrial": 5400
+        }
+      ]
+    },
+
+    {
+      "id": "chongqing",
+      "lat": 29.563,
+      "lng": 106.5516,
+      "region": "西南",
+      "name_zh": "重庆",
+      "name_en": "Chongqing",
+      "districts": [
+        {
+          "id": "yuzhong",
+          "lat": 29.5581,
+          "lng": 106.5688,
+          "name_zh": "渝中",
+          "name_en": "Yuzhong",
+          "residential": 36500,
+          "commercial": 64000,
+          "industrial": 8500
+        },
+        {
+          "id": "jiangbei",
+          "lat": 29.6066,
+          "lng": 106.5749,
+          "name_zh": "江北",
+          "name_en": "Jiangbei",
+          "residential": 28500,
+          "commercial": 41000,
+          "industrial": 7200
+        },
+        {
+          "id": "nanan",
+          "lat": 29.5232,
+          "lng": 106.563,
+          "name_zh": "南岸",
+          "name_en": "Nan'an",
+          "residential": 26500,
+          "commercial": 34000,
+          "industrial": 6900
+        },
+        {
+          "id": "shapingba",
+          "lat": 29.541,
+          "lng": 106.4571,
+          "name_zh": "沙坪坝",
+          "name_en": "Shapingba",
+          "residential": 23500,
+          "commercial": 28500,
+          "industrial": 6200
+        },
+        {
+          "id": "yubei",
+          "lat": 29.7183,
+          "lng": 106.6305,
+          "name_zh": "渝北",
+          "name_en": "Yubei",
+          "residential": 22500,
+          "commercial": 27500,
+          "industrial": 6600
+        }
+      ]
+    },
+    {
+      "id": "guiyang",
+      "lat": 26.647,
+      "lng": 106.6302,
+      "region": "西南",
+      "name_zh": "贵阳",
+      "name_en": "Guiyang",
+      "districts": [
+        {
+          "id": "yunyan",
+          "lat": 26.5845,
+          "lng": 106.7242,
+          "name_zh": "云岩",
+          "name_en": "Yunyan",
+          "residential": 22500,
+          "commercial": 35000,
+          "industrial": 5800
+        },
+        {
+          "id": "nanming",
+          "lat": 26.5684,
+          "lng": 106.7144,
+          "name_zh": "南明",
+          "name_en": "Nanming",
+          "residential": 24500,
+          "commercial": 36000,
+          "industrial": 6100
+        },
+        {
+          "id": "guanshanhu",
+          "lat": 26.6226,
+          "lng": 106.6225,
+          "name_zh": "观山湖",
+          "name_en": "Guanshanhu",
+          "residential": 28500,
+          "commercial": 38000,
+          "industrial": 6500
+        },
+        {
+          "id": "huaxi",
+          "lat": 26.4098,
+          "lng": 106.672,
+          "name_zh": "花溪",
+          "name_en": "Huaxi",
+          "residential": 16500,
+          "commercial": 18500,
+          "industrial": 5200
+        }
+      ]
+    },
+    {
+      "id": "kunming",
+      "lat": 25.0389,
+      "lng": 102.7183,
+      "region": "西南",
+      "name_zh": "昆明",
+      "name_en": "Kunming",
+      "districts": [
+        {
+          "id": "wuhua",
+          "lat": 25.0434,
+          "lng": 102.7077,
+          "name_zh": "五华",
+          "name_en": "Wuhua",
+          "residential": 28500,
+          "commercial": 41500,
+          "industrial": 6900
+        },
+        {
+          "id": "panlong",
+          "lat": 25.06,
+          "lng": 102.7306,
+          "name_zh": "盘龙",
+          "name_en": "Panlong",
+          "residential": 25500,
+          "commercial": 33500,
+          "industrial": 6400
+        },
+        {
+          "id": "guandu",
+          "lat": 24.9506,
+          "lng": 102.7437,
+          "name_zh": "官渡",
+          "name_en": "Guandu",
+          "residential": 21500,
+          "commercial": 27500,
+          "industrial": 6100
+        },
+        {
+          "id": "xishan",
+          "lat": 25.0345,
+          "lng": 102.6577,
+          "name_zh": "西山",
+          "name_en": "Xishan",
+          "residential": 23500,
+          "commercial": 28500,
+          "industrial": 6200
+        },
+        {
+          "id": "chenggong",
+          "lat": 24.8892,
+          "lng": 102.8218,
+          "name_zh": "呈贡",
+          "name_en": "Chenggong",
+          "residential": 17500,
+          "commercial": 20500,
+          "industrial": 5600
+        }
+      ]
+    },
+    {
+      "id": "nanning",
+      "lat": 22.817,
+      "lng": 108.3665,
+      "region": "华南",
+      "name_zh": "南宁",
+      "name_en": "Nanning",
+      "districts": [
+        {
+          "id": "qingxiu",
+          "lat": 22.8182,
+          "lng": 108.3515,
+          "name_zh": "青秀",
+          "name_en": "Qingxiu",
+          "residential": 24500,
+          "commercial": 39000,
+          "industrial": 6400
+        },
+        {
+          "id": "xingning",
+          "lat": 22.8234,
+          "lng": 108.3214,
+          "name_zh": "兴宁",
+          "name_en": "Xingning",
+          "residential": 18500,
+          "commercial": 24000,
+          "industrial": 5600
+        },
+        {
+          "id": "jiangnan",
+          "lat": 22.7941,
+          "lng": 108.3066,
+          "name_zh": "江南",
+          "name_en": "Jiangnan",
+          "residential": 16500,
+          "commercial": 21000,
+          "industrial": 5400
+        },
+        {
+          "id": "xixiangtang",
+          "lat": 22.8464,
+          "lng": 108.3137,
+          "name_zh": "西乡塘",
+          "name_en": "Xixiangtang",
+          "residential": 17500,
+          "commercial": 21500,
+          "industrial": 5800
+        },
+        {
+          "id": "yongning",
+          "lat": 22.7589,
+          "lng": 108.4873,
+          "name_zh": "邕宁",
+          "name_en": "Yongning",
+          "residential": 12500,
+          "commercial": 14500,
+          "industrial": 4800
+        }
+      ]
+    },
+    {
+      "id": "shenyang",
+      "lat": 41.8057,
+      "lng": 123.4315,
+      "region": "东北",
+      "name_zh": "沈阳",
+      "name_en": "Shenyang",
+      "districts": [
+        {
+          "id": "heping",
+          "lat": 41.7891,
+          "lng": 123.4206,
+          "name_zh": "和平",
+          "name_en": "Heping",
+          "residential": 28000,
+          "commercial": 45500,
+          "industrial": 7400
+        },
+        {
+          "id": "shenhe",
+          "lat": 41.7968,
+          "lng": 123.4515,
+          "name_zh": "沈河",
+          "name_en": "Shenhe",
+          "residential": 26500,
+          "commercial": 48000,
+          "industrial": 7000
+        },
+        {
+          "id": "tiexi",
+          "lat": 41.7876,
+          "lng": 123.3732,
+          "name_zh": "铁西",
+          "name_en": "Tiexi",
+          "residential": 21500,
+          "commercial": 27500,
+          "industrial": 6800
+        },
+        {
+          "id": "hunnan",
+          "lat": 41.7149,
+          "lng": 123.465,
+          "name_zh": "浑南",
+          "name_en": "Hunnan",
+          "residential": 23500,
+          "commercial": 29500,
+          "industrial": 6200
+        }
+      ]
+    },
+    {
+      "id": "changchun",
+      "lat": 43.8171,
+      "lng": 125.3235,
+      "region": "东北",
+      "name_zh": "长春",
+      "name_en": "Changchun",
+      "districts": [
+        {
+          "id": "nanguan",
+          "lat": 43.8637,
+          "lng": 125.3509,
+          "name_zh": "南关",
+          "name_en": "Nanguan",
+          "residential": 19500,
+          "commercial": 30500,
+          "industrial": 6100
+        },
+        {
+          "id": "chaoyang",
+          "lat": 43.8333,
+          "lng": 125.2886,
+          "name_zh": "朝阳",
+          "name_en": "Chaoyang",
+          "residential": 20500,
+          "commercial": 27500,
+          "industrial": 5800
+        },
+        {
+          "id": "lvyuan",
+          "lat": 43.8808,
+          "lng": 125.2561,
+          "name_zh": "绿园",
+          "name_en": "Lvyuan",
+          "residential": 16500,
+          "commercial": 20500,
+          "industrial": 5400
+        },
+        {
+          "id": "kuancheng",
+          "lat": 43.9421,
+          "lng": 125.3262,
+          "name_zh": "宽城",
+          "name_en": "Kuancheng",
+          "residential": 14500,
+          "commercial": 17500,
+          "industrial": 5200
+        }
+      ]
+    },
+
+    {
+      "id": "harbin",
+      "lat": 45.8038,
+      "lng": 126.5349,
+      "region": "东北",
+      "name_zh": "哈尔滨",
+      "name_en": "Harbin",
+      "districts": [
+        {
+          "id": "daoli",
+          "lat": 45.7766,
+          "lng": 126.6164,
+          "name_zh": "道里",
+          "name_en": "Daoli",
+          "residential": 21500,
+          "commercial": 34500,
+          "industrial": 5900
+        },
+        {
+          "id": "nangang",
+          "lat": 45.7601,
+          "lng": 126.6681,
+          "name_zh": "南岗",
+          "name_en": "Nangang",
+          "residential": 22500,
+          "commercial": 31500,
+          "industrial": 5700
+        },
+        {
+          "id": "xiangfang",
+          "lat": 45.7238,
+          "lng": 126.6629,
+          "name_zh": "香坊",
+          "name_en": "Xiangfang",
+          "residential": 16500,
+          "commercial": 20500,
+          "industrial": 5600
+        },
+        {
+          "id": "songbei",
+          "lat": 45.8031,
+          "lng": 126.5126,
+          "name_zh": "松北",
+          "name_en": "Songbei",
+          "residential": 17500,
+          "commercial": 22500,
+          "industrial": 5300
+        }
+      ]
+    },
+    {
+      "id": "dalian",
+      "lat": 38.914,
+      "lng": 121.6147,
+      "region": "东北",
+      "name_zh": "大连",
+      "name_en": "Dalian",
+      "districts": [
+        {
+          "id": "zhongshan",
+          "lat": 38.9185,
+          "lng": 121.6446,
+          "name_zh": "中山",
+          "name_en": "Zhongshan",
+          "residential": 29500,
+          "commercial": 46500,
+          "industrial": 7600
+        },
+        {
+          "id": "xigang",
+          "lat": 38.9149,
+          "lng": 121.613,
+          "name_zh": "西岗",
+          "name_en": "Xigang",
+          "residential": 24500,
+          "commercial": 33500,
+          "industrial": 6800
+        },
+        {
+          "id": "shahekou",
+          "lat": 38.9055,
+          "lng": 121.5948,
+          "name_zh": "沙河口",
+          "name_en": "Shahekou",
+          "residential": 25500,
+          "commercial": 31500,
+          "industrial": 6500
+        },
+        {
+          "id": "ganjingzi",
+          "lat": 38.9505,
+          "lng": 121.525,
+          "name_zh": "甘井子",
+          "name_en": "Ganjingzi",
+          "residential": 18500,
+          "commercial": 23500,
+          "industrial": 6200
+        }
+      ]
+    },
+    {
+      "id": "changsha",
+      "lat": 28.2282,
+      "lng": 112.9388,
+      "region": "华中",
+      "name_zh": "长沙",
+      "name_en": "Changsha",
+      "districts": [
+        {
+          "id": "furong",
+          "lat": 28.1931,
+          "lng": 113.032,
+          "name_zh": "芙蓉",
+          "name_en": "Furong",
+          "residential": 28500,
+          "commercial": 47500,
+          "industrial": 7200
+        },
+        {
+          "id": "tianxin",
+          "lat": 28.1143,
+          "lng": 112.983,
+          "name_zh": "天心",
+          "name_en": "Tianxin",
+          "residential": 25500,
+          "commercial": 35500,
+          "industrial": 6900
+        },
+        {
+          "id": "yuelu",
+          "lat": 28.2352,
+          "lng": 112.9316,
+          "name_zh": "岳麓",
+          "name_en": "Yuelu",
+          "residential": 24500,
+          "commercial": 31500,
+          "industrial": 6600
+        },
+        {
+          "id": "wangcheng",
+          "lat": 28.347,
+          "lng": 112.8315,
+          "name_zh": "望城",
+          "name_en": "Wangcheng",
+          "residential": 14500,
+          "commercial": 17500,
+          "industrial": 6100
+        }
+      ]
+    },
+    {
+      "id": "taiyuan",
+      "lat": 37.8706,
+      "lng": 112.5489,
+      "region": "华北",
+      "name_zh": "太原",
+      "name_en": "Taiyuan",
+      "districts": [
+        {
+          "id": "xinghualing",
+          "lat": 37.8588,
+          "lng": 112.5738,
+          "name_zh": "杏花岭",
+          "name_en": "Xinghualing",
+          "residential": 20500,
+          "commercial": 31500,
+          "industrial": 6200
+        },
+        {
+          "id": "yingze",
+          "lat": 37.8521,
+          "lng": 112.5578,
+          "name_zh": "迎泽",
+          "name_en": "Yingze",
+          "residential": 22500,
+          "commercial": 33500,
+          "industrial": 6000
+        },
+        {
+          "id": "xiaodian",
+          "lat": 37.7354,
+          "lng": 112.5654,
+          "name_zh": "小店",
+          "name_en": "Xiaodian",
+          "residential": 17500,
+          "commercial": 21500,
+          "industrial": 5800
+        },
+        {
+          "id": "jiancaoping",
+          "lat": 37.9404,
+          "lng": 112.4877,
+          "name_zh": "尖草坪",
+          "name_en": "Jiancaoping",
+          "residential": 12500,
+          "commercial": 14500,
+          "industrial": 5600
+        }
+      ]
+    },
+    {
+      "id": "shijiazhuang",
+      "lat": 38.0428,
+      "lng": 114.5149,
+      "region": "华北",
+      "name_zh": "石家庄",
+      "name_en": "Shijiazhuang",
+      "districts": [
+        {
+          "id": "changan",
+          "lat": 38.0367,
+          "lng": 114.5391,
+          "name_zh": "长安",
+          "name_en": "Chang'an",
+          "residential": 18500,
+          "commercial": 28500,
+          "industrial": 5900
+        },
+        {
+          "id": "qiaoxi",
+          "lat": 38.0317,
+          "lng": 114.4637,
+          "name_zh": "桥西",
+          "name_en": "Qiaoxi",
+          "residential": 19500,
+          "commercial": 27500,
+          "industrial": 5700
+        },
+        {
+          "id": "xinhua",
+          "lat": 38.0486,
+          "lng": 114.454,
+          "name_zh": "新华",
+          "name_en": "Xinhua",
+          "residential": 16500,
+          "commercial": 20500,
+          "industrial": 5400
+        },
+        {
+          "id": "luquan",
+          "lat": 38.0872,
+          "lng": 114.3131,
+          "name_zh": "鹿泉",
+          "name_en": "Luquan",
+          "residential": 12500,
+          "commercial": 14500,
+          "industrial": 5200
+        }
+      ]
+    },
+    {
+      "id": "hohhot",
+      "lat": 40.8426,
+      "lng": 111.7492,
+      "region": "华北",
+      "name_zh": "呼和浩特",
+      "name_en": "Hohhot",
+      "districts": [
+        {
+          "id": "xincheng",
+          "lat": 40.8576,
+          "lng": 111.695,
+          "name_zh": "新城",
+          "name_en": "Xincheng",
+          "residential": 17500,
+          "commercial": 27500,
+          "industrial": 5400
+        },
+        {
+          "id": "huimin",
+          "lat": 40.8143,
+          "lng": 111.6657,
+          "name_zh": "回民",
+          "name_en": "Huimin",
+          "residential": 15500,
+          "commercial": 23500,
+          "industrial": 5100
+        },
+        {
+          "id": "yuquan",
+          "lat": 40.7744,
+          "lng": 111.6735,
+          "name_zh": "玉泉",
+          "name_en": "Yuquan",
+          "residential": 14500,
+          "commercial": 19500,
+          "industrial": 5000
+        },
+        {
+          "id": "saihan",
+          "lat": 40.7925,
+          "lng": 111.7532,
+          "name_zh": "赛罕",
+          "name_en": "Saihan",
+          "residential": 16500,
+          "commercial": 22500,
+          "industrial": 5300
+        }
+      ]
+    },
+
+    {
+      "id": "yinchuan",
+      "lat": 38.4872,
+      "lng": 106.2309,
+      "region": "西北",
+      "name_zh": "银川",
+      "name_en": "Yinchuan",
+      "districts": [
+        {
+          "id": "xingqing",
+          "lat": 38.4878,
+          "lng": 106.2887,
+          "name_zh": "兴庆",
+          "name_en": "Xingqing",
+          "residential": 16500,
+          "commercial": 25500,
+          "industrial": 5200
+        },
+        {
+          "id": "jinfeng",
+          "lat": 38.4723,
+          "lng": 106.2424,
+          "name_zh": "金凤",
+          "name_en": "Jinfeng",
+          "residential": 17500,
+          "commercial": 24500,
+          "industrial": 5000
+        },
+        {
+          "id": "xixia",
+          "lat": 38.5026,
+          "lng": 106.1623,
+          "name_zh": "西夏",
+          "name_en": "Xixia",
+          "residential": 12500,
+          "commercial": 15500,
+          "industrial": 4900
+        },
+        {
+          "id": "yongning",
+          "lat": 38.2805,
+          "lng": 106.2501,
+          "name_zh": "永宁",
+          "name_en": "Yongning",
+          "residential": 9500,
+          "commercial": 10500,
+          "industrial": 4700
+        }
+      ]
+    },
+    {
+      "id": "zhengzhou",
+      "lat": 34.7466,
+      "lng": 113.6254,
+      "region": "华中",
+      "name_zh": "郑州",
+      "name_en": "Zhengzhou",
+      "districts": [
+        {
+          "id": "jinshui",
+          "lat": 34.8,
+          "lng": 113.6609,
+          "name_zh": "金水",
+          "name_en": "Jinshui",
+          "residential": 24500,
+          "commercial": 40500,
+          "industrial": 6600
+        },
+        {
+          "id": "zhongyuan",
+          "lat": 34.7481,
+          "lng": 113.613,
+          "name_zh": "中原",
+          "name_en": "Zhongyuan",
+          "residential": 20500,
+          "commercial": 28500,
+          "industrial": 6200
+        },
+        {
+          "id": "erqi",
+          "lat": 34.724,
+          "lng": 113.6405,
+          "name_zh": "二七",
+          "name_en": "Erqi",
+          "residential": 19500,
+          "commercial": 27500,
+          "industrial": 6000
+        },
+        {
+          "id": "zhongmu",
+          "lat": 34.7189,
+          "lng": 113.9762,
+          "name_zh": "中牟",
+          "name_en": "Zhongmu",
+          "residential": 12500,
+          "commercial": 14500,
+          "industrial": 5800
+        }
+      ]
+    },
+    {
+      "id": "lanzhou",
+      "lat": 36.0611,
+      "lng": 103.8343,
+      "region": "西北",
+      "name_zh": "兰州",
+      "name_en": "Lanzhou",
+      "districts": [
+        {
+          "id": "chengguan",
+          "lat": 36.0575,
+          "lng": 103.8406,
+          "name_zh": "城关",
+          "name_en": "Chengguan",
+          "residential": 19500,
+          "commercial": 31500,
+          "industrial": 5800
+        },
+        {
+          "id": "qilihe",
+          "lat": 36.0662,
+          "lng": 103.7857,
+          "name_zh": "七里河",
+          "name_en": "Qilihe",
+          "residential": 16500,
+          "commercial": 22500,
+          "industrial": 5600
+        },
+        {
+          "id": "anning",
+          "lat": 36.1039,
+          "lng": 103.7193,
+          "name_zh": "安宁",
+          "name_en": "Anning",
+          "residential": 14500,
+          "commercial": 18500,
+          "industrial": 5300
+        },
+        {
+          "id": "xigu",
+          "lat": 36.0881,
+          "lng": 103.6278,
+          "name_zh": "西固",
+          "name_en": "Xigu",
+          "residential": 11500,
+          "commercial": 13500,
+          "industrial": 5500
+        }
+      ]
+    },
+    {
+      "id": "xining",
+      "lat": 36.6171,
+      "lng": 101.7782,
+      "region": "西北",
+      "name_zh": "西宁",
+      "name_en": "Xining",
+      "districts": [
+        {
+          "id": "chengzhong",
+          "lat": 36.621,
+          "lng": 101.7786,
+          "name_zh": "城中",
+          "name_en": "Chengzhong",
+          "residential": 16500,
+          "commercial": 26500,
+          "industrial": 4900
+        },
+        {
+          "id": "chengxi",
+          "lat": 36.6299,
+          "lng": 101.7653,
+          "name_zh": "城西",
+          "name_en": "Chengxi",
+          "residential": 17500,
+          "commercial": 24500,
+          "industrial": 4700
+        },
+        {
+          "id": "chengdong",
+          "lat": 36.5998,
+          "lng": 101.803,
+          "name_zh": "城东",
+          "name_en": "Chengdong",
+          "residential": 13500,
+          "commercial": 17500,
+          "industrial": 4600
+        },
+        {
+          "id": "huangzhong",
+          "lat": 36.5003,
+          "lng": 101.5696,
+          "name_zh": "湟中",
+          "name_en": "Huangzhong",
+          "residential": 8500,
+          "commercial": 9500,
+          "industrial": 4400
+        }
+      ]
+    },
+    {
+      "id": "nanchang",
+      "lat": 28.682,
+      "lng": 115.8579,
+      "region": "华东",
+      "name_zh": "南昌",
+      "name_en": "Nanchang",
+      "districts": [
+        {
+          "id": "donghu",
+          "lat": 28.6851,
+          "lng": 115.8985,
+          "name_zh": "东湖",
+          "name_en": "Donghu",
+          "residential": 22500,
+          "commercial": 35500,
+          "industrial": 6200
+        },
+        {
+          "id": "xihu",
+          "lat": 28.6578,
+          "lng": 115.8753,
+          "name_zh": "西湖",
+          "name_en": "Xihu",
+          "residential": 23500,
+          "commercial": 34500,
+          "industrial": 6000
+        },
+        {
+          "id": "qingyunpu",
+          "lat": 28.6215,
+          "lng": 115.9106,
+          "name_zh": "青云谱",
+          "name_en": "Qingyunpu",
+          "residential": 16500,
+          "commercial": 20500,
+          "industrial": 5800
+        },
+        {
+          "id": "xinjian",
+          "lat": 28.6928,
+          "lng": 115.8151,
+          "name_zh": "新建",
+          "name_en": "Xinjian",
+          "residential": 12500,
+          "commercial": 14500,
+          "industrial": 5500
+        }
+      ]
+    },
+    {
+      "id": "yueyang",
+      "lat": 29.3571,
+      "lng": 113.1289,
+      "region": "华中",
+      "name_zh": "岳阳",
+      "name_en": "Yueyang",
+      "districts": [
+        {
+          "id": "yueyanglou",
+          "lat": 29.3716,
+          "lng": 113.1293,
+          "name_zh": "岳阳楼",
+          "name_en": "Yueyanglou",
+          "residential": 15500,
+          "commercial": 24500,
+          "industrial": 5100
+        },
+        {
+          "id": "yunxi",
+          "lat": 29.4723,
+          "lng": 113.2729,
+          "name_zh": "云溪",
+          "name_en": "Yunxi",
+          "residential": 11500,
+          "commercial": 14500,
+          "industrial": 5200
+        },
+        {
+          "id": "junshan",
+          "lat": 29.4388,
+          "lng": 113.0085,
+          "name_zh": "君山",
+          "name_en": "Junshan",
+          "residential": 10500,
+          "commercial": 12000,
+          "industrial": 4800
+        },
+        {
+          "id": "nanhu",
+          "lat": 29.3342,
+          "lng": 113.1028,
+          "name_zh": "南湖新区",
+          "name_en": "Nanhu New Area",
+          "residential": 14500,
+          "commercial": 19500,
+          "industrial": 4600
+        }
+      ]
+    },
+
+    {
+      "id": "hengyang",
+      "lat": 26.8934,
+      "lng": 112.5719,
+      "region": "华中",
+      "name_zh": "衡阳",
+      "name_en": "Hengyang",
+      "districts": [
+        {
+          "id": "yanfeng",
+          "lat": 26.892,
+          "lng": 112.6185,
+          "name_zh": "雁峰",
+          "name_en": "Yanfeng",
+          "residential": 14500,
+          "commercial": 22500,
+          "industrial": 5000
+        },
+        {
+          "id": "shigu",
+          "lat": 26.9037,
+          "lng": 112.6105,
+          "name_zh": "石鼓",
+          "name_en": "Shigu",
+          "residential": 13500,
+          "commercial": 19500,
+          "industrial": 4900
+        },
+        {
+          "id": "zhengxiang",
+          "lat": 26.8923,
+          "lng": 112.5721,
+          "name_zh": "蒸湘",
+          "name_en": "Zhengxiang",
+          "residential": 15500,
+          "commercial": 20500,
+          "industrial": 5100
+        },
+        {
+          "id": "zhuhui",
+          "lat": 26.8483,
+          "lng": 112.6515,
+          "name_zh": "珠晖",
+          "name_en": "Zhuhui",
+          "residential": 11500,
+          "commercial": 14500,
+          "industrial": 5000
+        }
+      ]
+    },
+    {
+      "id": "guilin",
+      "lat": 25.2742,
+      "lng": 110.2991,
+      "region": "华南",
+      "name_zh": "桂林",
+      "name_en": "Guilin",
+      "districts": [
+        {
+          "id": "xiufeng",
+          "lat": 25.2825,
+          "lng": 110.2947,
+          "name_zh": "秀峰",
+          "name_en": "Xiufeng",
+          "residential": 18500,
+          "commercial": 28500,
+          "industrial": 5200
+        },
+        {
+          "id": "diecai",
+          "lat": 25.3036,
+          "lng": 110.3015,
+          "name_zh": "叠彩",
+          "name_en": "Diecai",
+          "residential": 16500,
+          "commercial": 22500,
+          "industrial": 5000
+        },
+        {
+          "id": "qixing",
+          "lat": 25.2528,
+          "lng": 110.3177,
+          "name_zh": "七星",
+          "name_en": "Qixing",
+          "residential": 17500,
+          "commercial": 23500,
+          "industrial": 5300
+        },
+        {
+          "id": "lingui",
+          "lat": 25.2389,
+          "lng": 110.2022,
+          "name_zh": "临桂",
+          "name_en": "Lingui",
+          "residential": 11500,
+          "commercial": 13500,
+          "industrial": 4900
+        }
+      ]
+    },
+    {
+      "id": "haikou",
+      "lat": 20.044,
+      "lng": 110.1999,
+      "region": "华南",
+      "name_zh": "海口",
+      "name_en": "Haikou",
+      "districts": [
+        {
+          "id": "longhua",
+          "lat": 20.03,
+          "lng": 110.3283,
+          "name_zh": "龙华",
+          "name_en": "Longhua",
+          "residential": 22500,
+          "commercial": 34500,
+          "industrial": 5500
+        },
+        {
+          "id": "meilan",
+          "lat": 20.0271,
+          "lng": 110.3663,
+          "name_zh": "美兰",
+          "name_en": "Meilan",
+          "residential": 19500,
+          "commercial": 26500,
+          "industrial": 5200
+        },
+        {
+          "id": "xiuying",
+          "lat": 20.0075,
+          "lng": 110.2688,
+          "name_zh": "秀英",
+          "name_en": "Xiuying",
+          "residential": 20500,
+          "commercial": 25500,
+          "industrial": 5400
+        },
+        {
+          "id": "qiongshan",
+          "lat": 19.9846,
+          "lng": 110.3536,
+          "name_zh": "琼山",
+          "name_en": "Qiongshan",
+          "residential": 13500,
+          "commercial": 15500,
+          "industrial": 4800
+        }
+      ]
+    },
+    {
+      "id": "sanya",
+      "lat": 18.2528,
+      "lng": 109.5119,
+      "region": "华南",
+      "name_zh": "三亚",
+      "name_en": "Sanya",
+      "districts": [
+        {
+          "id": "jiyang",
+          "lat": 18.2597,
+          "lng": 109.5284,
+          "name_zh": "吉阳",
+          "name_en": "Jiyang",
+          "residential": 36500,
+          "commercial": 57500,
+          "industrial": 6900
+        },
+        {
+          "id": "tianya",
+          "lat": 18.2591,
+          "lng": 109.3938,
+          "name_zh": "天涯",
+          "name_en": "Tianya",
+          "residential": 32500,
+          "commercial": 47500,
+          "industrial": 6300
+        },
+        {
+          "id": "haitang",
+          "lat": 18.4071,
+          "lng": 109.7582,
+          "name_zh": "海棠",
+          "name_en": "Haitang",
+          "residential": 38500,
+          "commercial": 52500,
+          "industrial": 6100
+        },
+        {
+          "id": "yazhou",
+          "lat": 18.3589,
+          "lng": 109.1731,
+          "name_zh": "崖州",
+          "name_en": "Yazhou",
+          "residential": 17500,
+          "commercial": 20500,
+          "industrial": 5800
+        }
+      ]
+    },
+    {
+      "id": "taipei",
+      "lat": 25.033,
+      "lng": 121.5654,
+      "region": "台湾",
+      "name_zh": "台北",
+      "name_en": "Taipei",
+      "districts": [
+        {
+          "id": "zhongzheng",
+          "lat": 25.0324,
+          "lng": 121.5194,
+          "name_zh": "中正",
+          "name_en": "Zhongzheng",
+          "residential": 88500,
+          "commercial": 146000,
+          "industrial": 28500
+        },
+        {
+          "id": "daan",
+          "lat": 25.0264,
+          "lng": 121.5435,
+          "name_zh": "大安",
+          "name_en": "Da'an",
+          "residential": 96500,
+          "commercial": 152000,
+          "industrial": 27600
+        },
+        {
+          "id": "xinyi",
+          "lat": 25.033,
+          "lng": 121.5654,
+          "name_zh": "信义",
+          "name_en": "Xinyi",
+          "residential": 92500,
+          "commercial": 168000,
+          "industrial": 26000
+        },
+        {
+          "id": "neihu",
+          "lat": 25.069,
+          "lng": 121.588,
+          "name_zh": "内湖",
+          "name_en": "Neihu",
+          "residential": 62500,
+          "commercial": 82500,
+          "industrial": 24500
+        }
+      ]
+    },
+    {
+      "id": "kaohsiung",
+      "lat": 22.6273,
+      "lng": 120.3014,
+      "region": "台湾",
+      "name_zh": "高雄",
+      "name_en": "Kaohsiung",
+      "districts": [
+        {
+          "id": "lingya",
+          "lat": 22.6249,
+          "lng": 120.3123,
+          "name_zh": "苓雅",
+          "name_en": "Lingya",
+          "residential": 37500,
+          "commercial": 58500,
+          "industrial": 12800
+        },
+        {
+          "id": "xinxing",
+          "lat": 22.6254,
+          "lng": 120.3066,
+          "name_zh": "新兴",
+          "name_en": "Xinxing",
+          "residential": 39500,
+          "commercial": 61500,
+          "industrial": 12400
+        },
+        {
+          "id": "sanmin",
+          "lat": 22.6502,
+          "lng": 120.3183,
+          "name_zh": "三民",
+          "name_en": "Sanmin",
+          "residential": 30500,
+          "commercial": 38500,
+          "industrial": 11900
+        },
+        {
+          "id": "nanzi",
+          "lat": 22.7237,
+          "lng": 120.3044,
+          "name_zh": "楠梓",
+          "name_en": "Nanzi",
+          "residential": 22500,
+          "commercial": 27500,
+          "industrial": 11500
+        }
+      ]
+    },
+
+    {
+      "id": "lhasa",
+      "lat": 29.652,
+      "lng": 91.1721,
+      "region": "西南",
+      "name_zh": "拉萨",
+      "name_en": "Lhasa",
+      "districts": [
+        {
+          "id": "chengguan",
+          "lat": 29.651,
+          "lng": 91.1324,
+          "name_zh": "城关",
+          "name_en": "Chengguan",
+          "residential": 18500,
+          "commercial": 27500,
+          "industrial": 4700
+        },
+        {
+          "id": "doilungdeqen",
+          "lat": 29.6543,
+          "lng": 90.9868,
+          "name_zh": "堆龙德庆",
+          "name_en": "Doilungdeqen",
+          "residential": 10500,
+          "commercial": 13500,
+          "industrial": 4500
+        },
+        {
+          "id": "dagze",
+          "lat": 29.67,
+          "lng": 91.35,
+          "name_zh": "达孜",
+          "name_en": "Dagze",
+          "residential": 8500,
+          "commercial": 9500,
+          "industrial": 4300
+        },
+        {
+          "id": "lhunzhub",
+          "lat": 29.89,
+          "lng": 91.26,
+          "name_zh": "林周",
+          "name_en": "Lhunzhub",
+          "residential": 6500,
+          "commercial": 7500,
+          "industrial": 4100
+        }
+      ]
+    },
+    {
+      "id": "urumqi",
+      "lat": 43.8256,
+      "lng": 87.6168,
+      "region": "西北",
+      "name_zh": "乌鲁木齐",
+      "name_en": "Urumqi",
+      "districts": [
+        {
+          "id": "tianshan",
+          "lat": 43.7822,
+          "lng": 87.6188,
+          "name_zh": "天山",
+          "name_en": "Tianshan",
+          "residential": 18500,
+          "commercial": 29500,
+          "industrial": 5300
+        },
+        {
+          "id": "saybag",
+          "lat": 43.8008,
+          "lng": 87.5723,
+          "name_zh": "沙依巴克",
+          "name_en": "Saybag",
+          "residential": 17500,
+          "commercial": 24500,
+          "industrial": 5100
+        },
+        {
+          "id": "xinshi",
+          "lat": 43.844,
+          "lng": 87.5648,
+          "name_zh": "新市",
+          "name_en": "Xinshi",
+          "residential": 16500,
+          "commercial": 21500,
+          "industrial": 5200
+        },
+        {
+          "id": "shuimogou",
+          "lat": 43.8313,
+          "lng": 87.6586,
+          "name_zh": "水磨沟",
+          "name_en": "Shuimogou",
+          "residential": 14500,
+          "commercial": 18500,
+          "industrial": 5000
+        }
+      ]
+    },
+    {
+      "id": "beihai",
+      "lat": 21.4811,
+      "lng": 109.1202,
+      "region": "华南",
+      "name_zh": "北海",
+      "name_en": "Beihai",
+      "districts": [
+        {
+          "id": "haicheng",
+          "lat": 21.4735,
+          "lng": 109.1194,
+          "name_zh": "海城",
+          "name_en": "Haicheng",
+          "residential": 15500,
+          "commercial": 23500,
+          "industrial": 5000
+        },
+        {
+          "id": "yinhai",
+          "lat": 21.4384,
+          "lng": 109.1258,
+          "name_zh": "银海",
+          "name_en": "Yinhai",
+          "residential": 14500,
+          "commercial": 20500,
+          "industrial": 4800
+        },
+        {
+          "id": "tieshangang",
+          "lat": 21.5294,
+          "lng": 109.449,
+          "name_zh": "铁山港",
+          "name_en": "Tieshangang",
+          "residential": 8500,
+          "commercial": 10500,
+          "industrial": 5100
+        },
+        {
+          "id": "hepu",
+          "lat": 21.6609,
+          "lng": 109.2009,
+          "name_zh": "合浦",
+          "name_en": "Hepu",
+          "residential": 9500,
+          "commercial": 11500,
+          "industrial": 4500
+        }
+      ]
+    }
+  ]
+}

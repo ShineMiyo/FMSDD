@@ -1,0 +1,1152 @@
+{
+  "schema_version": 2,
+  "version": "2026.10",
+  "countries": [
+    {
+      "code": "GB",
+      "name_zh": "英国",
+      "name_en": "United Kingdom",
+      "region": "欧洲",
+      "cities": [
+        {
+          "id": "london",
+          "lat": 51.5074,
+          "lng": -0.1278,
+          "region": "英格兰",
+          "name_zh": "伦敦",
+          "name_en": "London",
+          "districts": [
+            {
+              "id": "city",
+              "lat": 51.5155,
+              "lng": -0.0922,
+              "name_zh": "伦敦城",
+              "name_en": "City of London",
+              "residential": 185000,
+              "commercial": 315000,
+              "industrial": 52000
+            },
+            {
+              "id": "westminster",
+              "lat": 51.4975,
+              "lng": -0.1357,
+              "name_zh": "威斯敏斯特",
+              "name_en": "Westminster",
+              "residential": 168000,
+              "commercial": 255000,
+              "industrial": 47000
+            },
+            {
+              "id": "camden",
+              "lat": 51.545,
+              "lng": -0.1626,
+              "name_zh": "卡姆登",
+              "name_en": "Camden",
+              "residential": 128000,
+              "commercial": 176000,
+              "industrial": 39000
+            },
+            {
+              "id": "kensington",
+              "lat": 51.499,
+              "lng": -0.1938,
+              "name_zh": "肯辛顿-切尔西",
+              "name_en": "Kensington and Chelsea",
+              "residential": 225000,
+              "commercial": 245000,
+              "industrial": 45000
+            },
+            {
+              "id": "towerhamlets",
+              "lat": 51.5152,
+              "lng": -0.0179,
+              "name_zh": "塔村",
+              "name_en": "Tower Hamlets",
+              "residential": 118000,
+              "commercial": 205000,
+              "industrial": 48500
+            }
+          ]
+        },
+        {
+          "id": "manchester",
+          "lat": 53.4808,
+          "lng": -2.2426,
+          "region": "英格兰",
+          "name_zh": "曼彻斯特",
+          "name_en": "Manchester",
+          "districts": [
+            {
+              "id": "manchester_city",
+              "lat": 53.4808,
+              "lng": -2.2426,
+              "name_zh": "曼彻斯特城",
+              "name_en": "Manchester City",
+              "residential": 55000,
+              "commercial": 85000,
+              "industrial": 18000
+            },
+            {
+              "id": "salford",
+              "lat": 53.4875,
+              "lng": -2.2901,
+              "name_zh": "索尔福德",
+              "name_en": "Salford",
+              "residential": 39000,
+              "commercial": 48000,
+              "industrial": 16000
+            },
+            {
+              "id": "trafford",
+              "lat": 53.4247,
+              "lng": -2.3493,
+              "name_zh": "特拉福德",
+              "name_en": "Trafford",
+              "residential": 42000,
+              "commercial": 56000,
+              "industrial": 15000
+            },
+            {
+              "id": "stockport",
+              "lat": 53.4106,
+              "lng": -2.1575,
+              "name_zh": "斯托克波特",
+              "name_en": "Stockport",
+              "residential": 35000,
+              "commercial": 46000,
+              "industrial": 14500
+            }
+          ]
+        },
+        {
+          "id": "liverpool",
+          "lat": 53.4084,
+          "lng": -2.9916,
+          "region": "英格兰",
+          "name_zh": "利物浦",
+          "name_en": "Liverpool",
+          "districts": [
+            {
+              "id": "liverpool_city",
+              "lat": 53.4084,
+              "lng": -2.9916,
+              "name_zh": "利物浦城",
+              "name_en": "Liverpool City",
+              "residential": 38000,
+              "commercial": 56000,
+              "industrial": 14000
+            },
+            {
+              "id": "sefton",
+              "lat": 53.489,
+              "lng": -3.009,
+              "name_zh": "塞夫顿",
+              "name_en": "Sefton",
+              "residential": 28000,
+              "commercial": 34000,
+              "industrial": 13500
+            },
+            {
+              "id": "wirral",
+              "lat": 53.373,
+              "lng": -3.073,
+              "name_zh": "威勒尔",
+              "name_en": "Wirral",
+              "residential": 30000,
+              "commercial": 36000,
+              "industrial": 12000
+            },
+            {
+              "id": "knowsley",
+              "lat": 53.452,
+              "lng": -2.855,
+              "name_zh": "诺斯利",
+              "name_en": "Knowsley",
+              "residential": 22000,
+              "commercial": 26000,
+              "industrial": 12500
+            }
+          ]
+        },
+        {
+          "id": "birmingham",
+          "lat": 52.4862,
+          "lng": -1.8904,
+          "region": "英格兰",
+          "name_zh": "伯明翰",
+          "name_en": "Birmingham",
+          "districts": [
+            {
+              "id": "birmingham_city",
+              "lat": 52.4862,
+              "lng": -1.8904,
+              "name_zh": "伯明翰城",
+              "name_en": "Birmingham City",
+              "residential": 42000,
+              "commercial": 64000,
+              "industrial": 16000
+            },
+            {
+              "id": "solihull",
+              "lat": 52.4118,
+              "lng": -1.7776,
+              "name_zh": "索利赫尔",
+              "name_en": "Solihull",
+              "residential": 45000,
+              "commercial": 62000,
+              "industrial": 15000
+            },
+            {
+              "id": "sandwell",
+              "lat": 52.514,
+              "lng": -1.99,
+              "name_zh": "桑德韦尔",
+              "name_en": "Sandwell",
+              "residential": 27000,
+              "commercial": 33000,
+              "industrial": 14000
+            },
+            {
+              "id": "walsall",
+              "lat": 52.5862,
+              "lng": -1.9829,
+              "name_zh": "沃尔索尔",
+              "name_en": "Walsall",
+              "residential": 23000,
+              "commercial": 28000,
+              "industrial": 13500
+            }
+          ]
+        },
+        {
+          "id": "wales",
+          "lat": 51.4816,
+          "lng": -3.1791,
+          "region": "威尔士",
+          "name_zh": "威尔士",
+          "name_en": "Wales",
+          "districts": [
+            {
+              "id": "cardiff",
+              "lat": 51.4816,
+              "lng": -3.1791,
+              "name_zh": "卡迪夫",
+              "name_en": "Cardiff",
+              "residential": 36000,
+              "commercial": 52000,
+              "industrial": 13500
+            },
+            {
+              "id": "newport",
+              "lat": 51.5842,
+              "lng": -2.9977,
+              "name_zh": "纽波特",
+              "name_en": "Newport",
+              "residential": 27000,
+              "commercial": 34000,
+              "industrial": 12500
+            },
+            {
+              "id": "swansea",
+              "lat": 51.6214,
+              "lng": -3.9436,
+              "name_zh": "斯旺西",
+              "name_en": "Swansea",
+              "residential": 25000,
+              "commercial": 30000,
+              "industrial": 11500
+            },
+            {
+              "id": "vale_of_glamorgan",
+              "lat": 51.439,
+              "lng": -3.448,
+              "name_zh": "格拉摩根谷",
+              "name_en": "Vale of Glamorgan",
+              "residential": 28000,
+              "commercial": 32000,
+              "industrial": 12000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FR",
+      "name_zh": "法国",
+      "name_en": "France",
+      "region": "欧洲",
+      "cities": [
+        {
+          "id": "paris",
+          "lat": 48.8566,
+          "lng": 2.3522,
+          "region": "法兰西岛",
+          "name_zh": "巴黎",
+          "name_en": "Paris",
+          "districts": [
+            {
+              "id": "louvre",
+              "lat": 48.8606,
+              "lng": 2.3376,
+              "name_zh": "卢浮宫区",
+              "name_en": "Louvre",
+              "residential": 205000,
+              "commercial": 330000,
+              "industrial": 48000
+            },
+            {
+              "id": "elysee",
+              "lat": 48.8698,
+              "lng": 2.3076,
+              "name_zh": "爱丽舍区",
+              "name_en": "Élysée",
+              "residential": 218000,
+              "commercial": 295000,
+              "industrial": 46000
+            },
+            {
+              "id": "passy",
+              "lat": 48.8637,
+              "lng": 2.2769,
+              "name_zh": "帕西",
+              "name_en": "Passy",
+              "residential": 178000,
+              "commercial": 215000,
+              "industrial": 42000
+            },
+            {
+              "id": "gobelins",
+              "lat": 48.8322,
+              "lng": 2.3561,
+              "name_zh": "戈布兰",
+              "name_en": "Gobelins",
+              "residential": 112000,
+              "commercial": 142000,
+              "industrial": 36000
+            },
+            {
+              "id": "ladefense",
+              "lat": 48.8918,
+              "lng": 2.238,
+              "name_zh": "拉德芳斯",
+              "name_en": "La Défense",
+              "residential": 92000,
+              "commercial": 188000,
+              "industrial": 39000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "DE",
+      "name_zh": "德国",
+      "name_en": "Germany",
+      "region": "欧洲",
+      "cities": [
+        {
+          "id": "berlin",
+          "lat": 52.52,
+          "lng": 13.405,
+          "region": "柏林州",
+          "name_zh": "柏林",
+          "name_en": "Berlin",
+          "districts": [
+            {
+              "id": "mitte",
+              "lat": 52.52,
+              "lng": 13.4049,
+              "name_zh": "米特区",
+              "name_en": "Mitte",
+              "residential": 85000,
+              "commercial": 145000,
+              "industrial": 30000
+            },
+            {
+              "id": "charlottenburg",
+              "lat": 52.5167,
+              "lng": 13.3042,
+              "name_zh": "夏洛滕堡-威尔默斯多夫",
+              "name_en": "Charlottenburg-Wilmersdorf",
+              "residential": 78000,
+              "commercial": 108000,
+              "industrial": 27000
+            },
+            {
+              "id": "friedrichshain",
+              "lat": 52.5121,
+              "lng": 13.454,
+              "name_zh": "腓特烈斯海因-克罗伊茨贝格",
+              "name_en": "Friedrichshain-Kreuzberg",
+              "residential": 72000,
+              "commercial": 118000,
+              "industrial": 26000
+            },
+            {
+              "id": "pankow",
+              "lat": 52.5695,
+              "lng": 13.401,
+              "name_zh": "潘科",
+              "name_en": "Pankow",
+              "residential": 52000,
+              "commercial": 61000,
+              "industrial": 22000
+            },
+            {
+              "id": "spandau",
+              "lat": 52.5351,
+              "lng": 13.2003,
+              "name_zh": "施潘道",
+              "name_en": "Spandau",
+              "residential": 48000,
+              "commercial": 56000,
+              "industrial": 23500
+            }
+          ]
+        },
+        {
+          "id": "munich",
+          "lat": 48.1351,
+          "lng": 11.582,
+          "region": "巴伐利亚",
+          "name_zh": "慕尼黑",
+          "name_en": "Munich",
+          "districts": [
+            {
+              "id": "altstadt_lehel",
+              "lat": 48.1374,
+              "lng": 11.5755,
+              "name_zh": "老城-莱赫尔",
+              "name_en": "Altstadt-Lehel",
+              "residential": 70000,
+              "commercial": 120000,
+              "industrial": 22000
+            },
+            {
+              "id": "schwabing",
+              "lat": 48.162,
+              "lng": 11.586,
+              "name_zh": "施瓦宾",
+              "name_en": "Schwabing",
+              "residential": 62000,
+              "commercial": 85000,
+              "industrial": 19000
+            },
+            {
+              "id": "sendling",
+              "lat": 48.113,
+              "lng": 11.55,
+              "name_zh": "森德林",
+              "name_en": "Sendling",
+              "residential": 55000,
+              "commercial": 68000,
+              "industrial": 17500
+            },
+            {
+              "id": "trudering_riem",
+              "lat": 48.126,
+              "lng": 11.666,
+              "name_zh": "特鲁德灵-里姆",
+              "name_en": "Trudering-Riem",
+              "residential": 42000,
+              "commercial": 52000,
+              "industrial": 24000
+            }
+          ]
+        },
+        {
+          "id": "stuttgart",
+          "lat": 48.7758,
+          "lng": 9.1829,
+          "region": "巴登-符腾堡",
+          "name_zh": "斯图加特",
+          "name_en": "Stuttgart",
+          "districts": [
+            {
+              "id": "mitte",
+              "lat": 48.7784,
+              "lng": 9.18,
+              "name_zh": "中区",
+              "name_en": "Mitte",
+              "residential": 58000,
+              "commercial": 86000,
+              "industrial": 21000
+            },
+            {
+              "id": "bad_cannstatt",
+              "lat": 48.803,
+              "lng": 9.218,
+              "name_zh": "巴特坎施塔特",
+              "name_en": "Bad Cannstatt",
+              "residential": 45000,
+              "commercial": 58000,
+              "industrial": 20000
+            },
+            {
+              "id": "vaihingen",
+              "lat": 48.73,
+              "lng": 9.11,
+              "name_zh": "法伊英根",
+              "name_en": "Vaihingen",
+              "residential": 43000,
+              "commercial": 52000,
+              "industrial": 19000
+            },
+            {
+              "id": "feuerbach",
+              "lat": 48.809,
+              "lng": 9.157,
+              "name_zh": "福伊尔巴赫",
+              "name_en": "Feuerbach",
+              "residential": 35000,
+              "commercial": 42000,
+              "industrial": 22000
+            }
+          ]
+        },
+        {
+          "id": "frankfurt",
+          "lat": 50.1109,
+          "lng": 8.6821,
+          "region": "黑森",
+          "name_zh": "法兰克福",
+          "name_en": "Frankfurt",
+          "districts": [
+            {
+              "id": "innenstadt",
+              "lat": 50.112,
+              "lng": 8.682,
+              "name_zh": "内城",
+              "name_en": "Innenstadt",
+              "residential": 65000,
+              "commercial": 115000,
+              "industrial": 22000
+            },
+            {
+              "id": "sachsenhausen",
+              "lat": 50.099,
+              "lng": 8.686,
+              "name_zh": "萨克森豪森",
+              "name_en": "Sachsenhausen",
+              "residential": 54000,
+              "commercial": 72000,
+              "industrial": 19000
+            },
+            {
+              "id": "bockenheim",
+              "lat": 50.123,
+              "lng": 8.64,
+              "name_zh": "博肯海姆",
+              "name_en": "Bockenheim",
+              "residential": 47000,
+              "commercial": 60000,
+              "industrial": 18000
+            },
+            {
+              "id": "hoechst",
+              "lat": 50.102,
+              "lng": 8.546,
+              "name_zh": "赫斯特",
+              "name_en": "Höchst",
+              "residential": 38000,
+              "commercial": 46000,
+              "industrial": 23000
+            }
+          ]
+        },
+        {
+          "id": "hanover",
+          "lat": 52.3759,
+          "lng": 9.732,
+          "region": "下萨克森",
+          "name_zh": "汉诺威",
+          "name_en": "Hanover",
+          "districts": [
+            {
+              "id": "mitte",
+              "lat": 52.3759,
+              "lng": 9.732,
+              "name_zh": "中区",
+              "name_en": "Mitte",
+              "residential": 42000,
+              "commercial": 62000,
+              "industrial": 17000
+            },
+            {
+              "id": "linden",
+              "lat": 52.369,
+              "lng": 9.711,
+              "name_zh": "林登",
+              "name_en": "Linden",
+              "residential": 32000,
+              "commercial": 40000,
+              "industrial": 16000
+            },
+            {
+              "id": "list",
+              "lat": 52.384,
+              "lng": 9.765,
+              "name_zh": "利斯特",
+              "name_en": "List",
+              "residential": 36000,
+              "commercial": 44000,
+              "industrial": 15500
+            },
+            {
+              "id": "ricklingen",
+              "lat": 52.357,
+              "lng": 9.705,
+              "name_zh": "里克林根",
+              "name_en": "Ricklingen",
+              "residential": 28000,
+              "commercial": 34000,
+              "industrial": 16500
+            }
+          ]
+        },
+        {
+          "id": "hamburg",
+          "lat": 53.5511,
+          "lng": 9.9937,
+          "region": "汉堡州",
+          "name_zh": "汉堡",
+          "name_en": "Hamburg",
+          "districts": [
+            {
+              "id": "mitte",
+              "lat": 53.5511,
+              "lng": 9.9937,
+              "name_zh": "中区",
+              "name_en": "Mitte",
+              "residential": 60000,
+              "commercial": 90000,
+              "industrial": 20000
+            },
+            {
+              "id": "altona",
+              "lat": 53.55,
+              "lng": 9.935,
+              "name_zh": "阿尔托纳",
+              "name_en": "Altona",
+              "residential": 52000,
+              "commercial": 68000,
+              "industrial": 18000
+            },
+            {
+              "id": "wandsbek",
+              "lat": 53.582,
+              "lng": 10.082,
+              "name_zh": "万茨贝克",
+              "name_en": "Wandsbek",
+              "residential": 45000,
+              "commercial": 56000,
+              "industrial": 17000
+            },
+            {
+              "id": "hafencity",
+              "lat": 53.541,
+              "lng": 9.997,
+              "name_zh": "港口城",
+              "name_en": "HafenCity",
+              "residential": 48000,
+              "commercial": 72000,
+              "industrial": 24000
+            }
+          ]
+        },
+        {
+          "id": "dusseldorf",
+          "lat": 51.2277,
+          "lng": 6.7735,
+          "region": "北莱茵-威斯特法伦",
+          "name_zh": "杜塞尔多夫",
+          "name_en": "Düsseldorf",
+          "districts": [
+            {
+              "id": "altstadt",
+              "lat": 51.2277,
+              "lng": 6.7735,
+              "name_zh": "老城",
+              "name_en": "Altstadt",
+              "residential": 52000,
+              "commercial": 78000,
+              "industrial": 18000
+            },
+            {
+              "id": "bilk",
+              "lat": 51.205,
+              "lng": 6.77,
+              "name_zh": "比尔克",
+              "name_en": "Bilk",
+              "residential": 44000,
+              "commercial": 58000,
+              "industrial": 16500
+            },
+            {
+              "id": "flingern",
+              "lat": 51.229,
+              "lng": 6.805,
+              "name_zh": "弗林根",
+              "name_en": "Flingern",
+              "residential": 38000,
+              "commercial": 48000,
+              "industrial": 15500
+            },
+            {
+              "id": "hafen",
+              "lat": 51.221,
+              "lng": 6.75,
+              "name_zh": "港区",
+              "name_en": "Hafen",
+              "residential": 34000,
+              "commercial": 44000,
+              "industrial": 19000
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "code": "ES",
+      "name_zh": "西班牙",
+      "name_en": "Spain",
+      "region": "欧洲",
+      "cities": [
+        {
+          "id": "madrid",
+          "lat": 40.4168,
+          "lng": -3.7038,
+          "region": "马德里自治区",
+          "name_zh": "马德里",
+          "name_en": "Madrid",
+          "districts": [
+            {
+              "id": "centro",
+              "lat": 40.4168,
+              "lng": -3.7038,
+              "name_zh": "中区",
+              "name_en": "Centro",
+              "residential": 60000,
+              "commercial": 100000,
+              "industrial": 20000
+            },
+            {
+              "id": "salamanca",
+              "lat": 40.43,
+              "lng": -3.676,
+              "name_zh": "萨拉曼卡",
+              "name_en": "Salamanca",
+              "residential": 68000,
+              "commercial": 96000,
+              "industrial": 19000
+            },
+            {
+              "id": "retiro",
+              "lat": 40.414,
+              "lng": -3.681,
+              "name_zh": "丽池",
+              "name_en": "Retiro",
+              "residential": 55000,
+              "commercial": 70000,
+              "industrial": 18000
+            },
+            {
+              "id": "villaverde",
+              "lat": 40.346,
+              "lng": -3.695,
+              "name_zh": "比利亚韦德",
+              "name_en": "Villaverde",
+              "residential": 29000,
+              "commercial": 34000,
+              "industrial": 21000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "BE",
+      "name_zh": "比利时",
+      "name_en": "Belgium",
+      "region": "欧洲",
+      "cities": [
+        {
+          "id": "brussels",
+          "lat": 50.8503,
+          "lng": 4.3517,
+          "region": "布鲁塞尔首都大区",
+          "name_zh": "布鲁塞尔",
+          "name_en": "Brussels",
+          "districts": [
+            {
+              "id": "bruxelles",
+              "lat": 50.8503,
+              "lng": 4.3517,
+              "name_zh": "布鲁塞尔城",
+              "name_en": "City of Brussels",
+              "residential": 55000,
+              "commercial": 85000,
+              "industrial": 18000
+            },
+            {
+              "id": "ixelles",
+              "lat": 50.833,
+              "lng": 4.366,
+              "name_zh": "伊克塞尔",
+              "name_en": "Ixelles",
+              "residential": 48000,
+              "commercial": 62000,
+              "industrial": 16500
+            },
+            {
+              "id": "schaerbeek",
+              "lat": 50.867,
+              "lng": 4.378,
+              "name_zh": "斯哈尔贝克",
+              "name_en": "Schaerbeek",
+              "residential": 38000,
+              "commercial": 46000,
+              "industrial": 15500
+            },
+            {
+              "id": "molenbeek",
+              "lat": 50.855,
+              "lng": 4.322,
+              "name_zh": "莫伦贝克",
+              "name_en": "Molenbeek",
+              "residential": 30000,
+              "commercial": 36000,
+              "industrial": 17000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "NL",
+      "name_zh": "荷兰",
+      "name_en": "Netherlands",
+      "region": "欧洲",
+      "cities": [
+        {
+          "id": "amsterdam",
+          "lat": 52.3676,
+          "lng": 4.9041,
+          "region": "北荷兰",
+          "name_zh": "阿姆斯特丹",
+          "name_en": "Amsterdam",
+          "districts": [
+            {
+              "id": "centrum",
+              "lat": 52.3676,
+              "lng": 4.9041,
+              "name_zh": "中区",
+              "name_en": "Centrum",
+              "residential": 68000,
+              "commercial": 110000,
+              "industrial": 22000
+            },
+            {
+              "id": "zuid",
+              "lat": 52.339,
+              "lng": 4.872,
+              "name_zh": "南区",
+              "name_en": "Zuid",
+              "residential": 58000,
+              "commercial": 78000,
+              "industrial": 19000
+            },
+            {
+              "id": "noord",
+              "lat": 52.397,
+              "lng": 4.918,
+              "name_zh": "北区",
+              "name_en": "Noord",
+              "residential": 42000,
+              "commercial": 52000,
+              "industrial": 20000
+            },
+            {
+              "id": "westpoort",
+              "lat": 52.4,
+              "lng": 4.82,
+              "name_zh": "西港",
+              "name_en": "Westpoort",
+              "residential": 30000,
+              "commercial": 38000,
+              "industrial": 23000
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "code": "JP",
+      "name_zh": "日本",
+      "name_en": "Japan",
+      "region": "亚洲",
+      "cities": [
+        {
+          "id": "tokyo",
+          "lat": 35.6762,
+          "lng": 139.6503,
+          "region": "关东",
+          "name_zh": "东京",
+          "name_en": "Tokyo",
+          "districts": [
+            {
+              "id": "chiyoda",
+              "lat": 35.6938,
+              "lng": 139.753,
+              "name_zh": "千代田",
+              "name_en": "Chiyoda",
+              "residential": 110000,
+              "commercial": 190000,
+              "industrial": 32000
+            },
+            {
+              "id": "shinjuku",
+              "lat": 35.6938,
+              "lng": 139.7034,
+              "name_zh": "新宿",
+              "name_en": "Shinjuku",
+              "residential": 98000,
+              "commercial": 160000,
+              "industrial": 30000
+            },
+            {
+              "id": "shibuya",
+              "lat": 35.6618,
+              "lng": 139.7041,
+              "name_zh": "涩谷",
+              "name_en": "Shibuya",
+              "residential": 95000,
+              "commercial": 150000,
+              "industrial": 29000
+            },
+            {
+              "id": "ota",
+              "lat": 35.5612,
+              "lng": 139.716,
+              "name_zh": "大田",
+              "name_en": "Ota",
+              "residential": 65000,
+              "commercial": 82000,
+              "industrial": 31000
+            }
+          ]
+        },
+        {
+          "id": "nagoya",
+          "lat": 35.1815,
+          "lng": 136.9066,
+          "region": "爱知",
+          "name_zh": "名古屋",
+          "name_en": "Nagoya",
+          "districts": [
+            {
+              "id": "naka",
+              "lat": 35.1815,
+              "lng": 136.9066,
+              "name_zh": "中区",
+              "name_en": "Naka",
+              "residential": 55000,
+              "commercial": 85000,
+              "industrial": 20000
+            },
+            {
+              "id": "chikusa",
+              "lat": 35.166,
+              "lng": 136.936,
+              "name_zh": "千种",
+              "name_en": "Chikusa",
+              "residential": 42000,
+              "commercial": 52000,
+              "industrial": 18500
+            },
+            {
+              "id": "atsuta",
+              "lat": 35.127,
+              "lng": 136.913,
+              "name_zh": "热田",
+              "name_en": "Atsuta",
+              "residential": 38000,
+              "commercial": 45000,
+              "industrial": 18000
+            },
+            {
+              "id": "minato",
+              "lat": 35.108,
+              "lng": 136.86,
+              "name_zh": "港区",
+              "name_en": "Minato",
+              "residential": 30000,
+              "commercial": 36000,
+              "industrial": 19500
+            }
+          ]
+        },
+        {
+          "id": "osaka",
+          "lat": 34.6937,
+          "lng": 135.5023,
+          "region": "大阪府",
+          "name_zh": "大阪",
+          "name_en": "Osaka",
+          "districts": [
+            {
+              "id": "kita",
+              "lat": 34.705,
+              "lng": 135.499,
+              "name_zh": "北区",
+              "name_en": "Kita",
+              "residential": 65000,
+              "commercial": 98000,
+              "industrial": 22000
+            },
+            {
+              "id": "chuo",
+              "lat": 34.681,
+              "lng": 135.51,
+              "name_zh": "中央",
+              "name_en": "Chuo",
+              "residential": 60000,
+              "commercial": 90000,
+              "industrial": 21000
+            },
+            {
+              "id": "naniwa",
+              "lat": 34.659,
+              "lng": 135.499,
+              "name_zh": "浪速",
+              "name_en": "Naniwa",
+              "residential": 42000,
+              "commercial": 52000,
+              "industrial": 19500
+            },
+            {
+              "id": "suminoe",
+              "lat": 34.609,
+              "lng": 135.46,
+              "name_zh": "住之江",
+              "name_en": "Suminoe",
+              "residential": 30000,
+              "commercial": 36000,
+              "industrial": 20500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "KR",
+      "name_zh": "韩国",
+      "name_en": "South Korea",
+      "region": "亚洲",
+      "cities": [
+        {
+          "id": "seoul",
+          "lat": 37.5665,
+          "lng": 126.978,
+          "region": "首尔特别市",
+          "name_zh": "首尔",
+          "name_en": "Seoul",
+          "districts": [
+            {
+              "id": "jongno",
+              "lat": 37.573,
+              "lng": 126.9794,
+              "name_zh": "钟路",
+              "name_en": "Jongno",
+              "residential": 75000,
+              "commercial": 130000,
+              "industrial": 26000
+            },
+            {
+              "id": "gangnam",
+              "lat": 37.4979,
+              "lng": 127.0276,
+              "name_zh": "江南",
+              "name_en": "Gangnam",
+              "residential": 82000,
+              "commercial": 138000,
+              "industrial": 25000
+            },
+            {
+              "id": "mapo",
+              "lat": 37.5663,
+              "lng": 126.9019,
+              "name_zh": "麻浦",
+              "name_en": "Mapo",
+              "residential": 58000,
+              "commercial": 72000,
+              "industrial": 22500
+            },
+            {
+              "id": "guro",
+              "lat": 37.4954,
+              "lng": 126.8874,
+              "name_zh": "九老",
+              "name_en": "Guro",
+              "residential": 40000,
+              "commercial": 48000,
+              "industrial": 24000
+            }
+          ]
+        },
+        {
+          "id": "busan",
+          "lat": 35.1796,
+          "lng": 129.0756,
+          "region": "釜山广域市",
+          "name_zh": "釜山",
+          "name_en": "Busan",
+          "districts": [
+            {
+              "id": "jung",
+              "lat": 35.1062,
+              "lng": 129.0323,
+              "name_zh": "中区",
+              "name_en": "Jung",
+              "residential": 42000,
+              "commercial": 65000,
+              "industrial": 18000
+            },
+            {
+              "id": "haeundae",
+              "lat": 35.1631,
+              "lng": 129.1636,
+              "name_zh": "海云台",
+              "name_en": "Haeundae",
+              "residential": 45000,
+              "commercial": 60000,
+              "industrial": 17000
+            },
+            {
+              "id": "saha",
+              "lat": 35.1046,
+              "lng": 128.974,
+              "name_zh": "沙下",
+              "name_en": "Saha",
+              "residential": 28000,
+              "commercial": 34000,
+              "industrial": 16000
+            },
+            {
+              "id": "gangseo",
+              "lat": 35.2122,
+              "lng": 128.9806,
+              "name_zh": "江西",
+              "name_en": "Gangseo",
+              "residential": 23000,
+              "commercial": 28000,
+              "industrial": 18500
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

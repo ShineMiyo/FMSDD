@@ -1,0 +1,12 @@
+# Third-party materials
+
+Project source, dependencies and data are distinct materials. A project license does not replace the licenses or rights of their original authors.
+
+- **Lucide 1.16.0**: `src/web/assets/vendor/lucide-1.16.0.min.js`; ISC, with the Feather-derived icons under MIT. The complete upstream notice is in [Lucide-LICENSE.txt](docs/licenses/Lucide-LICENSE.txt).
+- **Microsoft WebView2 SDK 1.0.4078.44**: restored from the official NuGet package by `scripts/restore_webview2.py`. SDK binaries are not tracked in this source repository. See [WebView2-LICENSE.txt](docs/licenses/WebView2-LICENSE.txt).
+- **Player-name dictionaries**: `src/assets/player_names/` contains mappings from the maintainer-provided FM24/FM26 personnel-localisation XML files. No additional rights in third-party source data are granted by this notice.
+- **OpenStreetMap-derived terrain mask**: `src/assets/life/city_terrain.json` is a simplified offline extract of mapped water, coastline and green-area polygons used only to keep fictional life-system plots out of those areas. Source data is © OpenStreetMap contributors and is available under the Open Database License 1.0 (ODbL 1.0); see <https://www.openstreetmap.org/copyright>. The maintenance extractor is `scripts/build_life_terrain_data.py`; the bundled terrain mask is read locally and the runtime never contacts an OSM data service for it.
+- **Online basemaps**: when the life map is visible, the selected basemap provider may be contacted for map tiles. Automatic mode uses AMap for China and Bing Maps overseas; OpenStreetMap is also a manual option and the temporary fallback. AMap tiles are © AMap and Bing Maps content is © Microsoft and its suppliers; OpenStreetMap tiles are © OpenStreetMap contributors. Displayed attribution must be retained, and provider terms, network availability and coverage apply. Online basemap tiles are not bundled with the application.
+- **Images and other runtime assets**: stored in `src/web/assets/`; retain any applicable third-party rights. This notice does not relicense third-party artwork or game assets.
+
+Football Manager and related marks belong to their respective owners. FMSDD (formerly FMODD) is an unofficial community project and does not claim affiliation with Sports Interactive, SEGA, or FMRTE. Proprietary game/editor binaries, recovered assemblies, personal saves, accounts, and raw research captures are not included.

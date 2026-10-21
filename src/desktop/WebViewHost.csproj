@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <AssemblyName>FMODD.WebViewHost</AssemblyName>
+    <RootNamespace>FMODDDesktop</RootNamespace>
+    <ApplicationManifest>FMODD.manifest</ApplicationManifest>
+    <ApplicationIcon>..\assets\desktop\fmodd.ico</ApplicationIcon>
+    <Version>2.9.6.3</Version>
+    <InformationalVersion>V2.9.6cBeta</InformationalVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <AssemblyVersion>2.9.6.3</AssemblyVersion>
+    <FileVersion>2.9.6.3</FileVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="WebViewHost.cs" />
+    <Reference Include="Microsoft.Web.WebView2.Core" HintPath="..\build\desktop_host\Microsoft.Web.WebView2.Core.dll" Private="true" />
+    <Reference Include="Microsoft.Web.WebView2.WinForms" HintPath="..\build\desktop_host\Microsoft.Web.WebView2.WinForms.dll" Private="true" />
+    <None Include="..\build\desktop_host\WebView2Loader.dll" Link="WebView2Loader.dll" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,1995 @@
+{
+  "schema_version": 1,
+  "version": "2026.10",
+  "cities": {
+    "hongkong": {
+    "tier": 1,
+    "city_type": "finance",
+    "traits": [
+      "finance",
+      "port"
+    ],
+    "districts": {
+      "central": "core",
+      "wanchai": "business",
+      "kowloon": "residential",
+      "shatin": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Victoria Harbour",
+        "lat": 22.2932,
+        "lng": 114.1695,
+        "radius_m": 700
+      },
+      {
+        "kind": "park",
+        "name": "Victoria Park",
+        "lat": 22.2827,
+        "lng": 114.1882,
+        "radius_m": 330
+      }
+    ]
+  },
+    "macau": {
+    "tier": 2,
+    "city_type": "tourism",
+    "traits": [
+      "tourism",
+      "culture"
+    ],
+    "districts": {
+      "se": "core",
+      "fatima": "business",
+      "taipa": "residential",
+      "coloane": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Macau Harbour",
+        "lat": 22.1948,
+        "lng": 113.5543,
+        "radius_m": 420
+      },
+      {
+        "kind": "park",
+        "name": "Camoes Garden",
+        "lat": 22.1993,
+        "lng": 113.5391,
+        "radius_m": 210
+      }
+    ]
+  },
+    "shantou": {
+    "tier": 2,
+    "city_type": "port",
+    "traits": [
+      "port",
+      "culture"
+    ],
+    "districts": {
+      "jinping": "core",
+      "longhu": "business",
+      "haojiang": "industrial",
+      "chenghai": "suburb"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Shantou Bay",
+        "lat": 23.349,
+        "lng": 116.708,
+        "radius_m": 650
+      },
+      {
+        "kind": "park",
+        "name": "Queshi Scenic Area",
+        "lat": 23.337,
+        "lng": 116.668,
+        "radius_m": 800
+      }
+    ]
+  },
+    "xiamen": {
+    "tier": 1,
+    "city_type": "port",
+    "traits": [
+      "port",
+      "tourism"
+    ],
+    "districts": {
+      "siming": "core",
+      "huli": "business",
+      "jimei": "residential",
+      "haicang": "industrial",
+      "tongan": "suburb"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Yundang Lake",
+        "lat": 24.479,
+        "lng": 118.1025,
+        "radius_m": 520
+      },
+      {
+        "kind": "water",
+        "name": "Gulangyu Channel",
+        "lat": 24.448,
+        "lng": 118.064,
+        "radius_m": 650
+      },
+      {
+        "kind": "park",
+        "name": "Wanshi Botanical Garden",
+        "lat": 24.463,
+        "lng": 118.126,
+        "radius_m": 500
+      }
+    ]
+  },
+    "quanzhou": {
+    "tier": 2,
+    "city_type": "port",
+    "traits": [
+      "culture",
+      "port"
+    ],
+    "districts": {
+      "licheng": "core",
+      "fengze": "business",
+      "luojiang": "residential",
+      "jinjiang": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "park",
+        "name": "West Lake Park",
+        "lat": 24.9164,
+        "lng": 118.575,
+        "radius_m": 330
+      },
+      {
+        "kind": "park",
+        "name": "Qingyuan Mountain",
+        "lat": 24.952,
+        "lng": 118.605,
+        "radius_m": 900
+      }
+    ]
+  },
+    "fuzhou": {
+    "tier": 2,
+    "city_type": "port",
+    "traits": [
+      "culture",
+      "port"
+    ],
+    "districts": {
+      "gulou": "core",
+      "taijiang": "business",
+      "cangshan": "residential",
+      "jinan": "suburb",
+      "mawei": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "West Lake",
+        "lat": 26.092,
+        "lng": 119.287,
+        "radius_m": 420
+      },
+      {
+        "kind": "water",
+        "name": "Min River",
+        "lat": 26.052,
+        "lng": 119.315,
+        "radius_m": 420
+      }
+    ]
+  },
+    "ningbo": {
+    "tier": 2,
+    "city_type": "port",
+    "traits": [
+      "port",
+      "industrial"
+    ],
+    "districts": {
+      "haishu": "core",
+      "yinzhou": "business",
+      "jiangbei": "residential",
+      "zhenhai": "industrial",
+      "beilun": "suburb"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Moon Lake",
+        "lat": 29.873,
+        "lng": 121.55,
+        "radius_m": 310
+      },
+      {
+        "kind": "water",
+        "name": "Dongqian Lake",
+        "lat": 29.785,
+        "lng": 121.657,
+        "radius_m": 1100
+      },
+      {
+        "kind": "water",
+        "name": "Yong River",
+        "lat": 29.873,
+        "lng": 121.565,
+        "radius_m": 360
+      }
+    ]
+  },
+    "suzhou": {
+    "tier": 2,
+    "city_type": "tech",
+    "traits": [
+      "culture",
+      "tech"
+    ],
+    "districts": {
+      "gusu": "core",
+      "xiangcheng": "business",
+      "wuzhong": "residential",
+      "sip": "industrial",
+      "huqiu": "residential",
+      "wujiang": "suburb"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Jinji Lake",
+        "lat": 31.317,
+        "lng": 120.704,
+        "radius_m": 1100
+      },
+      {
+        "kind": "water",
+        "name": "Shihu Lake",
+        "lat": 31.254,
+        "lng": 120.586,
+        "radius_m": 850
+      },
+      {
+        "kind": "park",
+        "name": "Humble Administrator Garden",
+        "lat": 31.323,
+        "lng": 120.629,
+        "radius_m": 260
+      }
+    ]
+  },
+
+    "qingdao": {
+    "tier": 2,
+    "city_type": "port",
+    "traits": [
+      "port",
+      "tourism"
+    ],
+    "districts": {
+      "shinan": "core",
+      "shibei": "business",
+      "laoshan": "residential",
+      "licang": "industrial",
+      "chengyang": "suburb",
+      "huangdao": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Fushan Bay",
+        "lat": 36.061,
+        "lng": 120.389,
+        "radius_m": 600
+      },
+      {
+        "kind": "park",
+        "name": "Badaguan Scenic Area",
+        "lat": 36.05,
+        "lng": 120.346,
+        "radius_m": 650
+      },
+      {
+        "kind": "park",
+        "name": "May Fourth Square",
+        "lat": 36.063,
+        "lng": 120.384,
+        "radius_m": 260
+      }
+    ]
+  },
+    "jinan": {
+    "tier": 2,
+    "city_type": "culture",
+    "traits": [
+      "culture",
+      "industrial"
+    ],
+    "districts": {
+      "lixia": "core",
+      "shizhong": "business",
+      "tianqiao": "residential",
+      "huaiyin": "industrial",
+      "licheng": "suburb"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Daming Lake",
+        "lat": 36.677,
+        "lng": 117.026,
+        "radius_m": 650
+      },
+      {
+        "kind": "park",
+        "name": "Baotu Spring",
+        "lat": 36.661,
+        "lng": 117.009,
+        "radius_m": 260
+      }
+    ]
+  },
+    "tianjin": {
+    "tier": 1,
+    "city_type": "port",
+    "traits": [
+      "port",
+      "finance"
+    ],
+    "districts": {
+      "heping": "core",
+      "hexi": "residential",
+      "nankai": "business",
+      "xiqing": "industrial",
+      "binhai": "suburb"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Hai River",
+        "lat": 39.13,
+        "lng": 117.205,
+        "radius_m": 420
+      },
+      {
+        "kind": "park",
+        "name": "Water Park",
+        "lat": 39.091,
+        "lng": 117.181,
+        "radius_m": 600
+      }
+    ]
+  },
+    "xian": {
+    "tier": 2,
+    "city_type": "culture",
+    "traits": [
+      "culture",
+      "tech"
+    ],
+    "districts": {
+      "beilin": "core",
+      "yanta": "business",
+      "lianhu": "residential",
+      "weiyang": "residential",
+      "chanba": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "park",
+        "name": "Xingqing Palace Park",
+        "lat": 34.264,
+        "lng": 108.969,
+        "radius_m": 520
+      },
+      {
+        "kind": "water",
+        "name": "Qujiang Pool",
+        "lat": 34.208,
+        "lng": 108.969,
+        "radius_m": 430
+      },
+      {
+        "kind": "park",
+        "name": "Daming Palace Park",
+        "lat": 34.302,
+        "lng": 108.963,
+        "radius_m": 900
+      }
+    ]
+  },
+    "chongqing": {
+    "tier": 1,
+    "city_type": "industrial",
+    "traits": [
+      "industrial",
+      "port"
+    ],
+    "districts": {
+      "yuzhong": "core",
+      "jiangbei": "business",
+      "nanan": "residential",
+      "shapingba": "residential",
+      "yubei": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Jialing River",
+        "lat": 29.568,
+        "lng": 106.577,
+        "radius_m": 450
+      },
+      {
+        "kind": "water",
+        "name": "Yangtze River",
+        "lat": 29.548,
+        "lng": 106.59,
+        "radius_m": 500
+      },
+      {
+        "kind": "park",
+        "name": "Eling Park",
+        "lat": 29.548,
+        "lng": 106.552,
+        "radius_m": 320
+      }
+    ]
+  },
+    "guiyang": {
+    "tier": 2,
+    "city_type": "tech",
+    "traits": [
+      "tech",
+      "tourism"
+    ],
+    "districts": {
+      "yunyan": "core",
+      "nanming": "business",
+      "guanshanhu": "residential",
+      "huaxi": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "park",
+        "name": "Qianling Park",
+        "lat": 26.596,
+        "lng": 106.701,
+        "radius_m": 650
+      },
+      {
+        "kind": "water",
+        "name": "Guanshan Lake",
+        "lat": 26.625,
+        "lng": 106.63,
+        "radius_m": 650
+      }
+    ]
+  },
+    "kunming": {
+    "tier": 2,
+    "city_type": "tourism",
+    "traits": [
+      "tourism",
+      "culture"
+    ],
+    "districts": {
+      "wuhua": "core",
+      "panlong": "business",
+      "guandu": "industrial",
+      "xishan": "residential",
+      "chenggong": "suburb"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Green Lake",
+        "lat": 25.049,
+        "lng": 102.704,
+        "radius_m": 320
+      },
+      {
+        "kind": "water",
+        "name": "Dianchi Lake",
+        "lat": 24.86,
+        "lng": 102.72,
+        "radius_m": 2400
+      }
+    ]
+  },
+    "nanning": {
+    "tier": 2,
+    "city_type": "tourism",
+    "traits": [
+      "tourism",
+      "port"
+    ],
+    "districts": {
+      "qingxiu": "core",
+      "xingning": "business",
+      "jiangnan": "residential",
+      "xixiangtang": "residential",
+      "yongning": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "park",
+        "name": "Nanhu Park",
+        "lat": 22.805,
+        "lng": 108.349,
+        "radius_m": 550
+      },
+      {
+        "kind": "water",
+        "name": "Yong River",
+        "lat": 22.792,
+        "lng": 108.35,
+        "radius_m": 500
+      }
+    ]
+  },
+
+    "london": {
+    "tier": 1,
+    "city_type": "finance",
+    "traits": [
+      "finance",
+      "culture"
+    ],
+    "districts": {
+      "city": "core",
+      "westminster": "business",
+      "camden": "residential",
+      "kensington": "scenic",
+      "towerhamlets": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "River Thames",
+        "lat": 51.507,
+        "lng": -0.105,
+        "radius_m": 430
+      },
+      {
+        "kind": "park",
+        "name": "Hyde Park",
+        "lat": 51.5073,
+        "lng": -0.1657,
+        "radius_m": 950
+      },
+      {
+        "kind": "park",
+        "name": "Regent's Park",
+        "lat": 51.5313,
+        "lng": -0.1569,
+        "radius_m": 780
+      }
+    ]
+  },
+    "paris": {
+    "tier": 1,
+    "city_type": "culture",
+    "traits": [
+      "culture",
+      "finance"
+    ],
+    "districts": {
+      "louvre": "core",
+      "elysee": "business",
+      "passy": "scenic",
+      "gobelins": "industrial",
+      "ladefense": "business"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "River Seine",
+        "lat": 48.858,
+        "lng": 2.341,
+        "radius_m": 320
+      },
+      {
+        "kind": "park",
+        "name": "Tuileries Garden",
+        "lat": 48.8635,
+        "lng": 2.327,
+        "radius_m": 420
+      },
+      {
+        "kind": "park",
+        "name": "Bois de Boulogne",
+        "lat": 48.863,
+        "lng": 2.25,
+        "radius_m": 1200
+      }
+    ]
+  },
+    "berlin": {
+    "tier": 1,
+    "city_type": "capital",
+    "traits": [
+      "culture",
+      "tech"
+    ],
+    "districts": {
+      "mitte": "core",
+      "charlottenburg": "business",
+      "friedrichshain": "residential",
+      "pankow": "residential",
+      "spandau": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "River Spree",
+        "lat": 52.52,
+        "lng": 13.404,
+        "radius_m": 340
+      },
+      {
+        "kind": "park",
+        "name": "Tiergarten",
+        "lat": 52.5145,
+        "lng": 13.3501,
+        "radius_m": 1200
+      }
+    ]
+  },
+    "shenyang": {
+    "tier": 1,
+    "city_type": "industrial",
+    "traits": [
+      "industrial",
+      "transport"
+    ],
+    "districts": {
+      "heping": "core",
+      "shenhe": "business",
+      "tiexi": "industrial",
+      "hunnan": "residential"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Hun River",
+        "lat": 41.74,
+        "lng": 123.5,
+        "radius_m": 1200
+      },
+      {
+        "kind": "green",
+        "name": "Nanhu Park",
+        "lat": 41.785,
+        "lng": 123.43,
+        "radius_m": 500
+      }
+    ]
+  },
+    "changchun": {
+    "tier": 2,
+    "city_type": "industrial",
+    "traits": [
+      "industrial",
+      "transport"
+    ],
+    "districts": {
+      "nanguan": "core",
+      "chaoyang": "business",
+      "lvyuan": "residential",
+      "kuancheng": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "South Lake",
+        "lat": 43.86,
+        "lng": 125.31,
+        "radius_m": 700
+      },
+      {
+        "kind": "green",
+        "name": "Jingyuetan",
+        "lat": 43.79,
+        "lng": 125.45,
+        "radius_m": 1600
+      },
+      {
+        "kind": "water",
+        "name": "Yitong River",
+        "lat": 43.86,
+        "lng": 125.3,
+        "radius_m": 300
+      }
+    ]
+  },
+    "harbin": {
+    "tier": 2,
+    "city_type": "culture",
+    "traits": [
+      "culture",
+      "port"
+    ],
+    "districts": {
+      "daoli": "core",
+      "nangang": "business",
+      "xiangfang": "industrial",
+      "songbei": "residential"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Songhua River",
+        "lat": 45.79,
+        "lng": 126.6,
+        "radius_m": 1800
+      },
+      {
+        "kind": "green",
+        "name": "Sun Island",
+        "lat": 45.79,
+        "lng": 126.58,
+        "radius_m": 1200
+      }
+    ]
+  },
+    "dalian": {
+    "tier": 1,
+    "city_type": "port",
+    "traits": [
+      "port",
+      "tourism"
+    ],
+    "districts": {
+      "zhongshan": "core",
+      "xigang": "business",
+      "shahekou": "residential",
+      "ganjingzi": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Xinghai Bay",
+        "lat": 38.88,
+        "lng": 121.58,
+        "radius_m": 1000
+      },
+      {
+        "kind": "water",
+        "name": "Dalian Bay",
+        "lat": 38.96,
+        "lng": 121.67,
+        "radius_m": 1200
+      },
+      {
+        "kind": "green",
+        "name": "Laohutan",
+        "lat": 38.87,
+        "lng": 121.68,
+        "radius_m": 800
+      }
+    ]
+  },
+    "changsha": {
+    "tier": 1,
+    "city_type": "culture",
+    "traits": [
+      "culture",
+      "tech"
+    ],
+    "districts": {
+      "furong": "core",
+      "tianxin": "business",
+      "yuelu": "residential",
+      "wangcheng": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Xiang River",
+        "lat": 28.19,
+        "lng": 112.96,
+        "radius_m": 900
+      },
+      {
+        "kind": "green",
+        "name": "Yuelu Mountain",
+        "lat": 28.18,
+        "lng": 112.93,
+        "radius_m": 1800
+      },
+      {
+        "kind": "water",
+        "name": "Meixi Lake",
+        "lat": 28.19,
+        "lng": 112.89,
+        "radius_m": 700
+      }
+    ]
+  },
+
+    "taiyuan": {
+    "tier": 2,
+    "city_type": "industrial",
+    "traits": [
+      "industrial",
+      "culture"
+    ],
+    "districts": {
+      "xinghualing": "core",
+      "yingze": "business",
+      "xiaodian": "residential",
+      "jiancaoping": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Fen River",
+        "lat": 37.86,
+        "lng": 112.55,
+        "radius_m": 700
+      },
+      {
+        "kind": "green",
+        "name": "Jinci",
+        "lat": 37.71,
+        "lng": 112.44,
+        "radius_m": 900
+      }
+    ]
+  },
+    "shijiazhuang": {
+    "tier": 2,
+    "city_type": "industrial",
+    "traits": [
+      "industrial",
+      "transport"
+    ],
+    "districts": {
+      "changan": "business",
+      "qiaoxi": "core",
+      "xinhua": "residential",
+      "luquan": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Hutuo River",
+        "lat": 38.12,
+        "lng": 114.55,
+        "radius_m": 1400
+      },
+      {
+        "kind": "green",
+        "name": "Chang'an Park",
+        "lat": 38.05,
+        "lng": 114.52,
+        "radius_m": 500
+      }
+    ]
+  },
+    "hohhot": {
+    "tier": 2,
+    "city_type": "culture",
+    "traits": [
+      "culture",
+      "transport"
+    ],
+    "districts": {
+      "xincheng": "core",
+      "huimin": "business",
+      "yuquan": "residential",
+      "saihan": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Dahei River",
+        "lat": 40.75,
+        "lng": 111.65,
+        "radius_m": 800
+      },
+      {
+        "kind": "green",
+        "name": "Wusutu Park",
+        "lat": 40.84,
+        "lng": 111.67,
+        "radius_m": 700
+      }
+    ]
+  },
+    "yinchuan": {
+    "tier": 2,
+    "city_type": "culture",
+    "traits": [
+      "culture",
+      "agriculture"
+    ],
+    "districts": {
+      "xingqing": "core",
+      "jinfeng": "business",
+      "xixia": "industrial",
+      "yongning": "residential"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Yellow River",
+        "lat": 38.47,
+        "lng": 106.4,
+        "radius_m": 1500
+      },
+      {
+        "kind": "water",
+        "name": "Yuehai Lake",
+        "lat": 38.5,
+        "lng": 106.19,
+        "radius_m": 1000
+      }
+    ]
+  },
+    "zhengzhou": {
+    "tier": 1,
+    "city_type": "industrial",
+    "traits": [
+      "industrial",
+      "transport"
+    ],
+    "districts": {
+      "jinshui": "core",
+      "zhongyuan": "business",
+      "erqi": "residential",
+      "zhongmu": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Yellow River",
+        "lat": 34.9,
+        "lng": 113.65,
+        "radius_m": 1800
+      },
+      {
+        "kind": "water",
+        "name": "Ruyi Lake",
+        "lat": 34.75,
+        "lng": 113.76,
+        "radius_m": 700
+      },
+      {
+        "kind": "water",
+        "name": "Longhu",
+        "lat": 34.81,
+        "lng": 113.72,
+        "radius_m": 900
+      }
+    ]
+  },
+    "lanzhou": {
+    "tier": 2,
+    "city_type": "industrial",
+    "traits": [
+      "industrial",
+      "transport"
+    ],
+    "districts": {
+      "chengguan": "core",
+      "qilihe": "business",
+      "anning": "residential",
+      "xigu": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Yellow River",
+        "lat": 36.07,
+        "lng": 103.82,
+        "radius_m": 800
+      },
+      {
+        "kind": "green",
+        "name": "Wuquan Mountain",
+        "lat": 36.05,
+        "lng": 103.77,
+        "radius_m": 900
+      }
+    ]
+  },
+    "xining": {
+    "tier": 2,
+    "city_type": "culture",
+    "traits": [
+      "culture",
+      "transport"
+    ],
+    "districts": {
+      "chengzhong": "core",
+      "chengxi": "business",
+      "chengdong": "residential",
+      "huangzhong": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Huangshui River",
+        "lat": 36.62,
+        "lng": 101.78,
+        "radius_m": 500
+      },
+      {
+        "kind": "green",
+        "name": "Beishan",
+        "lat": 36.64,
+        "lng": 101.77,
+        "radius_m": 900
+      }
+    ]
+  },
+    "nanchang": {
+    "tier": 2,
+    "city_type": "culture",
+    "traits": [
+      "culture",
+      "tech"
+    ],
+    "districts": {
+      "donghu": "core",
+      "xihu": "business",
+      "qingyunpu": "residential",
+      "xinjian": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Gan River",
+        "lat": 28.68,
+        "lng": 115.88,
+        "radius_m": 900
+      },
+      {
+        "kind": "water",
+        "name": "Poyang Lake",
+        "lat": 28.9,
+        "lng": 116.2,
+        "radius_m": 2500
+      },
+      {
+        "kind": "water",
+        "name": "Qingshan Lake",
+        "lat": 28.71,
+        "lng": 115.94,
+        "radius_m": 800
+      }
+    ]
+  },
+
+    "yueyang": {
+    "tier": 3,
+    "city_type": "port",
+    "traits": [
+      "port",
+      "culture"
+    ],
+    "districts": {
+      "yueyanglou": "core",
+      "yunxi": "industrial",
+      "junshan": "residential",
+      "nanhu": "business"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Dongting Lake",
+        "lat": 29.38,
+        "lng": 113.1,
+        "radius_m": 3000
+      },
+      {
+        "kind": "water",
+        "name": "Nanhu Lake",
+        "lat": 29.34,
+        "lng": 113.1,
+        "radius_m": 1200
+      }
+    ]
+  },
+    "hengyang": {
+    "tier": 3,
+    "city_type": "industrial",
+    "traits": [
+      "industrial",
+      "transport"
+    ],
+    "districts": {
+      "yanfeng": "core",
+      "shigu": "business",
+      "zhengxiang": "residential",
+      "zhuhui": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Xiang River",
+        "lat": 26.9,
+        "lng": 112.6,
+        "radius_m": 700
+      },
+      {
+        "kind": "green",
+        "name": "Nanyue Hengshan",
+        "lat": 27.2,
+        "lng": 112.7,
+        "radius_m": 3000
+      }
+    ]
+  },
+    "guilin": {
+    "tier": 2,
+    "city_type": "tourism",
+    "traits": [
+      "tourism",
+      "culture"
+    ],
+    "districts": {
+      "xiufeng": "core",
+      "diecai": "business",
+      "qixing": "residential",
+      "lingui": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Li River",
+        "lat": 25.28,
+        "lng": 110.3,
+        "radius_m": 500
+      },
+      {
+        "kind": "water",
+        "name": "Two Rivers Four Lakes",
+        "lat": 25.28,
+        "lng": 110.29,
+        "radius_m": 600
+      },
+      {
+        "kind": "green",
+        "name": "Reed Flute Cave",
+        "lat": 25.3,
+        "lng": 110.26,
+        "radius_m": 700
+      }
+    ]
+  },
+    "haikou": {
+    "tier": 2,
+    "city_type": "tourism",
+    "traits": [
+      "tourism",
+      "port"
+    ],
+    "districts": {
+      "longhua": "core",
+      "meilan": "business",
+      "xiuying": "residential",
+      "qiongshan": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Haidian River",
+        "lat": 20.04,
+        "lng": 110.33,
+        "radius_m": 400
+      },
+      {
+        "kind": "green",
+        "name": "Evergreen Park",
+        "lat": 20.02,
+        "lng": 110.31,
+        "radius_m": 600
+      },
+      {
+        "kind": "water",
+        "name": "Haikou Bay",
+        "lat": 20.03,
+        "lng": 110.24,
+        "radius_m": 1500
+      }
+    ]
+  },
+    "sanya": {
+    "tier": 2,
+    "city_type": "tourism",
+    "traits": [
+      "tourism"
+    ],
+    "districts": {
+      "jiyang": "core",
+      "tianya": "business",
+      "haitang": "residential",
+      "yazhou": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Sanya Bay",
+        "lat": 18.27,
+        "lng": 109.44,
+        "radius_m": 1800
+      },
+      {
+        "kind": "water",
+        "name": "Yalong Bay",
+        "lat": 18.22,
+        "lng": 109.64,
+        "radius_m": 1800
+      },
+      {
+        "kind": "green",
+        "name": "Luhuitou",
+        "lat": 18.22,
+        "lng": 109.5,
+        "radius_m": 700
+      }
+    ]
+  },
+    "taipei": {
+    "tier": 1,
+    "city_type": "finance",
+    "traits": [
+      "finance",
+      "tech"
+    ],
+    "districts": {
+      "zhongzheng": "core",
+      "daan": "business",
+      "xinyi": "business",
+      "neihu": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Tamsui River",
+        "lat": 25.07,
+        "lng": 121.5,
+        "radius_m": 700
+      },
+      {
+        "kind": "green",
+        "name": "Daan Park",
+        "lat": 25.03,
+        "lng": 121.54,
+        "radius_m": 500
+      }
+    ]
+  },
+    "kaohsiung": {
+    "tier": 1,
+    "city_type": "port",
+    "traits": [
+      "port",
+      "industrial"
+    ],
+    "districts": {
+      "lingya": "core",
+      "xinxing": "business",
+      "sanmin": "residential",
+      "nanzi": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Love River",
+        "lat": 22.62,
+        "lng": 120.29,
+        "radius_m": 400
+      },
+      {
+        "kind": "water",
+        "name": "Kaohsiung Harbour",
+        "lat": 22.6,
+        "lng": 120.28,
+        "radius_m": 1600
+      },
+      {
+        "kind": "green",
+        "name": "Shoushan",
+        "lat": 22.64,
+        "lng": 120.27,
+        "radius_m": 900
+      }
+    ]
+  },
+    "lhasa": {
+    "tier": 3,
+    "city_type": "culture",
+    "traits": [
+      "culture",
+      "tourism"
+    ],
+    "districts": {
+      "chengguan": "core",
+      "doilungdeqen": "business",
+      "dagze": "industrial",
+      "lhunzhub": "suburb"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Lhasa River",
+        "lat": 29.65,
+        "lng": 91.1,
+        "radius_m": 800
+      },
+      {
+        "kind": "green",
+        "name": "Norbulingka",
+        "lat": 29.65,
+        "lng": 91.1,
+        "radius_m": 500
+      }
+    ]
+  },
+
+    "urumqi": {
+    "tier": 2,
+    "city_type": "culture",
+    "traits": [
+      "culture",
+      "transport"
+    ],
+    "districts": {
+      "tianshan": "core",
+      "saybag": "business",
+      "xinshi": "residential",
+      "shuimogou": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "green",
+        "name": "Hongshan Park",
+        "lat": 43.81,
+        "lng": 87.6,
+        "radius_m": 500
+      },
+      {
+        "kind": "water",
+        "name": "Urumqi River",
+        "lat": 43.8,
+        "lng": 87.55,
+        "radius_m": 600
+      }
+    ]
+  },
+    "beihai": {
+    "tier": 3,
+    "city_type": "tourism",
+    "traits": [
+      "tourism",
+      "port"
+    ],
+    "districts": {
+      "haicheng": "core",
+      "yinhai": "business",
+      "tieshangang": "industrial",
+      "hepu": "suburb"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Beibu Gulf",
+        "lat": 21.44,
+        "lng": 109.12,
+        "radius_m": 1800
+      },
+      {
+        "kind": "water",
+        "name": "Silver Beach",
+        "lat": 21.42,
+        "lng": 109.16,
+        "radius_m": 1000
+      },
+      {
+        "kind": "green",
+        "name": "Guantouling",
+        "lat": 21.45,
+        "lng": 109.1,
+        "radius_m": 800
+      }
+    ]
+  },
+    "manchester": {
+    "tier": 2,
+    "city_type": "finance",
+    "traits": [
+      "finance",
+      "tech"
+    ],
+    "districts": {
+      "manchester_city": "core",
+      "salford": "business",
+      "trafford": "residential",
+      "stockport": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "River Irwell",
+        "lat": 53.48,
+        "lng": -2.25,
+        "radius_m": 300
+      },
+      {
+        "kind": "green",
+        "name": "Piccadilly Gardens",
+        "lat": 53.48,
+        "lng": -2.24,
+        "radius_m": 250
+      },
+      {
+        "kind": "green",
+        "name": "Heaton Park",
+        "lat": 53.54,
+        "lng": -2.25,
+        "radius_m": 900
+      }
+    ]
+  },
+    "liverpool": {
+    "tier": 2,
+    "city_type": "port",
+    "traits": [
+      "port",
+      "culture"
+    ],
+    "districts": {
+      "liverpool_city": "core",
+      "sefton": "business",
+      "wirral": "residential",
+      "knowsley": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "River Mersey",
+        "lat": 53.4,
+        "lng": -3.0,
+        "radius_m": 900
+      },
+      {
+        "kind": "green",
+        "name": "Sefton Park",
+        "lat": 53.39,
+        "lng": -2.94,
+        "radius_m": 600
+      }
+    ]
+  },
+    "birmingham": {
+    "tier": 2,
+    "city_type": "industrial",
+    "traits": [
+      "industrial",
+      "transport"
+    ],
+    "districts": {
+      "birmingham_city": "core",
+      "solihull": "business",
+      "sandwell": "residential",
+      "walsall": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "River Rea",
+        "lat": 52.48,
+        "lng": -1.89,
+        "radius_m": 250
+      },
+      {
+        "kind": "green",
+        "name": "Cannon Hill Park",
+        "lat": 52.45,
+        "lng": -1.9,
+        "radius_m": 500
+      }
+    ]
+  },
+    "wales": {
+    "tier": 3,
+    "city_type": "tourism",
+    "traits": [
+      "tourism",
+      "port"
+    ],
+    "districts": {
+      "cardiff": "core",
+      "newport": "business",
+      "swansea": "residential",
+      "vale_of_glamorgan": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "River Taff",
+        "lat": 51.48,
+        "lng": -3.18,
+        "radius_m": 300
+      },
+      {
+        "kind": "water",
+        "name": "Cardiff Bay",
+        "lat": 51.46,
+        "lng": -3.17,
+        "radius_m": 900
+      },
+      {
+        "kind": "green",
+        "name": "Bute Park",
+        "lat": 51.49,
+        "lng": -3.19,
+        "radius_m": 500
+      }
+    ]
+  },
+    "munich": {
+    "tier": 1,
+    "city_type": "finance",
+    "traits": [
+      "finance",
+      "tech"
+    ],
+    "districts": {
+      "altstadt_lehel": "core",
+      "schwabing": "business",
+      "sendling": "residential",
+      "trudering_riem": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Isar River",
+        "lat": 48.13,
+        "lng": 11.59,
+        "radius_m": 450
+      },
+      {
+        "kind": "green",
+        "name": "English Garden",
+        "lat": 48.15,
+        "lng": 11.6,
+        "radius_m": 1200
+      }
+    ]
+  },
+    "stuttgart": {
+    "tier": 1,
+    "city_type": "industrial",
+    "traits": [
+      "industrial",
+      "tech"
+    ],
+    "districts": {
+      "mitte": "core",
+      "bad_cannstatt": "business",
+      "vaihingen": "residential",
+      "feuerbach": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Neckar River",
+        "lat": 48.79,
+        "lng": 9.21,
+        "radius_m": 450
+      },
+      {
+        "kind": "green",
+        "name": "Rosenstein Park",
+        "lat": 48.8,
+        "lng": 9.2,
+        "radius_m": 500
+      }
+    ]
+  },
+
+    "frankfurt": {
+    "tier": 1,
+    "city_type": "finance",
+    "traits": [
+      "finance"
+    ],
+    "districts": {
+      "innenstadt": "core",
+      "sachsenhausen": "business",
+      "bockenheim": "residential",
+      "hoechst": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Main River",
+        "lat": 50.1,
+        "lng": 8.68,
+        "radius_m": 450
+      },
+      {
+        "kind": "green",
+        "name": "Palm Garden",
+        "lat": 50.12,
+        "lng": 8.66,
+        "radius_m": 500
+      }
+    ]
+  },
+    "hanover": {
+    "tier": 2,
+    "city_type": "industrial",
+    "traits": [
+      "industrial",
+      "transport"
+    ],
+    "districts": {
+      "mitte": "core",
+      "linden": "business",
+      "list": "residential",
+      "ricklingen": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Leine River",
+        "lat": 52.37,
+        "lng": 9.73,
+        "radius_m": 300
+      },
+      {
+        "kind": "water",
+        "name": "Maschsee",
+        "lat": 52.35,
+        "lng": 9.74,
+        "radius_m": 700
+      }
+    ]
+  },
+    "hamburg": {
+    "tier": 1,
+    "city_type": "port",
+    "traits": [
+      "port",
+      "finance"
+    ],
+    "districts": {
+      "mitte": "core",
+      "altona": "business",
+      "wandsbek": "residential",
+      "hafencity": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Elbe River",
+        "lat": 53.54,
+        "lng": 9.97,
+        "radius_m": 1500
+      },
+      {
+        "kind": "water",
+        "name": "Alster",
+        "lat": 53.56,
+        "lng": 10.0,
+        "radius_m": 700
+      },
+      {
+        "kind": "green",
+        "name": "Planten un Blomen",
+        "lat": 53.56,
+        "lng": 9.98,
+        "radius_m": 500
+      }
+    ]
+  },
+    "dusseldorf": {
+    "tier": 2,
+    "city_type": "finance",
+    "traits": [
+      "finance",
+      "industrial"
+    ],
+    "districts": {
+      "altstadt": "core",
+      "bilk": "business",
+      "flingern": "residential",
+      "hafen": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Rhine",
+        "lat": 51.23,
+        "lng": 6.77,
+        "radius_m": 700
+      },
+      {
+        "kind": "green",
+        "name": "Hofgarten",
+        "lat": 51.23,
+        "lng": 6.78,
+        "radius_m": 400
+      }
+    ]
+  },
+    "madrid": {
+    "tier": 1,
+    "city_type": "capital",
+    "traits": [
+      "culture",
+      "finance"
+    ],
+    "districts": {
+      "centro": "core",
+      "salamanca": "business",
+      "retiro": "residential",
+      "villaverde": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Manzanares",
+        "lat": 40.4,
+        "lng": -3.72,
+        "radius_m": 500
+      },
+      {
+        "kind": "green",
+        "name": "Retiro Park",
+        "lat": 40.42,
+        "lng": -3.68,
+        "radius_m": 700
+      }
+    ]
+  },
+    "brussels": {
+    "tier": 1,
+    "city_type": "capital",
+    "traits": [
+      "finance",
+      "culture"
+    ],
+    "districts": {
+      "bruxelles": "core",
+      "ixelles": "business",
+      "schaerbeek": "residential",
+      "molenbeek": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Senne",
+        "lat": 50.85,
+        "lng": 4.35,
+        "radius_m": 250
+      },
+      {
+        "kind": "green",
+        "name": "Cinquantenaire",
+        "lat": 50.84,
+        "lng": 4.39,
+        "radius_m": 500
+      }
+    ]
+  },
+    "amsterdam": {
+    "tier": 1,
+    "city_type": "finance",
+    "traits": [
+      "finance",
+      "port"
+    ],
+    "districts": {
+      "centrum": "core",
+      "zuid": "business",
+      "noord": "residential",
+      "westpoort": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "IJ",
+        "lat": 52.38,
+        "lng": 4.9,
+        "radius_m": 700
+      },
+      {
+        "kind": "green",
+        "name": "Vondelpark",
+        "lat": 52.36,
+        "lng": 4.87,
+        "radius_m": 450
+      },
+      {
+        "kind": "water",
+        "name": "Canals",
+        "lat": 52.37,
+        "lng": 4.89,
+        "radius_m": 200
+      }
+    ]
+  },
+    "tokyo": {
+    "tier": 1,
+    "city_type": "capital",
+    "traits": [
+      "finance",
+      "tech"
+    ],
+    "districts": {
+      "chiyoda": "core",
+      "shinjuku": "business",
+      "shibuya": "residential",
+      "ota": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Sumida River",
+        "lat": 35.71,
+        "lng": 139.8,
+        "radius_m": 450
+      },
+      {
+        "kind": "water",
+        "name": "Tokyo Bay",
+        "lat": 35.62,
+        "lng": 139.8,
+        "radius_m": 1800
+      },
+      {
+        "kind": "green",
+        "name": "Imperial Palace",
+        "lat": 35.68,
+        "lng": 139.75,
+        "radius_m": 800
+      }
+    ]
+  },
+
+    "nagoya": {
+    "tier": 1,
+    "city_type": "industrial",
+    "traits": [
+      "industrial",
+      "tech"
+    ],
+    "districts": {
+      "naka": "core",
+      "chikusa": "business",
+      "atsuta": "residential",
+      "minato": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Port of Nagoya",
+        "lat": 35.09,
+        "lng": 136.88,
+        "radius_m": 1800
+      },
+      {
+        "kind": "water",
+        "name": "Shonai River",
+        "lat": 35.18,
+        "lng": 136.9,
+        "radius_m": 500
+      }
+    ]
+  },
+    "osaka": {
+    "tier": 1,
+    "city_type": "finance",
+    "traits": [
+      "finance",
+      "port"
+    ],
+    "districts": {
+      "kita": "core",
+      "chuo": "business",
+      "naniwa": "residential",
+      "suminoe": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Yodo River",
+        "lat": 34.7,
+        "lng": 135.48,
+        "radius_m": 600
+      },
+      {
+        "kind": "water",
+        "name": "Osaka Bay",
+        "lat": 34.65,
+        "lng": 135.42,
+        "radius_m": 1800
+      }
+    ]
+  },
+    "seoul": {
+    "tier": 1,
+    "city_type": "capital",
+    "traits": [
+      "finance",
+      "tech"
+    ],
+    "districts": {
+      "jongno": "core",
+      "gangnam": "business",
+      "mapo": "residential",
+      "guro": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Han River",
+        "lat": 37.52,
+        "lng": 126.99,
+        "radius_m": 1000
+      },
+      {
+        "kind": "green",
+        "name": "Namsan Park",
+        "lat": 37.55,
+        "lng": 126.99,
+        "radius_m": 500
+      }
+    ]
+  },
+    "busan": {
+    "tier": 2,
+    "city_type": "port",
+    "traits": [
+      "port",
+      "industrial"
+    ],
+    "districts": {
+      "jung": "core",
+      "haeundae": "business",
+      "saha": "residential",
+      "gangseo": "industrial"
+    },
+    "exclusions": [
+      {
+        "kind": "water",
+        "name": "Suyeong River",
+        "lat": 35.16,
+        "lng": 129.12,
+        "radius_m": 350
+      },
+      {
+        "kind": "water",
+        "name": "Busan Bay",
+        "lat": 35.1,
+        "lng": 129.05,
+        "radius_m": 1000
+      },
+      {
+        "kind": "water",
+        "name": "Haeundae Beach",
+        "lat": 35.16,
+        "lng": 129.16,
+        "radius_m": 500
+      }
+    ]
+  }
+  }
+}

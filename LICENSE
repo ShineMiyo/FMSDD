@@ -1,0 +1,35 @@
+FMODD Source-Available License 1.0
+
+Copyright (c) 2026 FMODD contributors. All rights reserved except as expressly
+granted below.
+
+1. Grant. Permission is granted to view, copy, fork, modify and redistribute
+   this source code and the accompanying documentation for personal,
+   non-commercial purposes, provided that this licence and the copyright notice
+   are retained in all copies or substantial portions, and that modified
+   versions are clearly identified as modified.
+
+2. Commercial use. Commercial use of FMODD original code and other material
+   over which the maintainer holds rights is prohibited without prior written
+   authorisation. This includes selling, paid distribution, paid hosting, or
+   incorporation into a paid product or service.
+
+3. Third-party materials. This licence does not grant rights in third-party
+   code, data, images, fonts, game/editor binaries or other materials. Those
+   materials remain governed by their own terms; see THIRD_PARTY_NOTICES.md and
+   docs/notices/SOURCE_NOTICE.md.
+
+4. No trademark or endorsement. This licence does not grant permission to use
+   the FMODD/FMSDD names, logos or branding in a way that suggests endorsement
+   of a fork or derivative.
+
+5. No warranty. The software is provided "as is", without warranty of any kind,
+   express or implied, including merchantability, fitness for a particular
+   purpose and non-infringement. In no event shall the authors be liable for any
+   claim, damages or other liability arising from the software or its use.
+
+6. Termination. Rights under this licence terminate automatically if you breach
+   its terms. Sections 2, 3, 4 and 5 survive termination.
+
+For commercial licensing, contact the maintainer through the repository issue
+tracker or the contact address in README.md.

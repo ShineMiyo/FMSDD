@@ -1,0 +1,238 @@
+# FMODD 架构与代码路由
+
+本文是 FMODD 的首读架构索引：回答系统怎样分层、某类改动由哪个模块负责，以及修改后应核对哪些边界。详细运行时规则见 [`RUNTIME_CONTRACTS.md`](RUNTIME_CONTRACTS.md)；赔率、盘口、投注与结算见 [`ODDS_ARCHITECTURE.md`](ODDS_ARCHITECTURE.md)；偏移、AOB、Hook 和上游证据见 [`RESEARCH_SOURCES.md`](RESEARCH_SOURCES.md)。
+
+程序代码和运行资源统一位于仓库的 `src/`；测试与辅助脚本分别位于顶层的 `tests/` 和 `scripts/`。
+
+代码和测试是行为真值。本文用于路由，不把一次性实验、版本历史或完整产品说明重复写进来。
+
+按“银行、训练场、名人堂”等用户功能名称找代码时，可先查 [FEATURE_INDEX.md](FEATURE_INDEX.md) 的对应条目；已有明确文件/函数时直接定位。功能索引不取代本文的模块所有权。
+
+## 1. 系统分层
+
+```mermaid
+flowchart TB
+    UI["Web UI / WebView2"] --> HTTP["HTTP 与 API 路由"]
+    HTTP --> APP["LocalOddsState 与应用服务"]
+    APP --> DOMAIN["赔率、账户、经济、俱乐部、训练等领域模块"]
+    APP --> READ["FM 只读会话、数据库目录与结构读取"]
+    DOMAIN --> WRITE["验证式写入与 Hook 控制器"]
+    READ --> LAYOUT["GameLayout：FM24/FM26 与发行版布局"]
+    WRITE --> LAYOUT
+    APP --> STORE["账户、生涯、设置与派生缓存"]
+    READ --> FM["Football Manager 进程"]
+    WRITE --> FM
+```
+
+核心边界：
+
+1. `game_layout`、读取层和原生核心负责证明“从哪个版本、哪个对象、哪个字段读取或写入”。
+2. 领域模块负责业务语义，不拥有跨版本地址真值。
+3. `LocalOddsState` 和应用服务负责编排、锁、作用域与 API 状态，不应继续吸收可独立测试的领域逻辑。
+4. 前端负责展示与交互；余额、赔率、结算、风控和写入校验始终以服务端为准。
+
+## 2. 启动与请求入口
+
+| 入口 | 职责 |
+| --- | --- |
+| `src/fm_odds_web.py` | 本地 HTTP 服务、`LocalOddsState` 门面、共享运行时启动和薄 API 入口 |
+| `src/tools/api_routing.py` | 精确路由注册与分派 |
+| `src/tools/state_publication.py` | 单槽、短时公共快照合并与构建串行化；只接收上下文键和构建函数，不拥有账户或 FM 真值 |
+| `src/tools/state_patches.py` | HTTP 修改请求的来源上下文校验与纯响应字段投影；不读写账户、不执行业务操作 |
+| `src/tools/sponsorship_payment.py` | ODD 赞助付款与原生结余之间的意图记录、写后验证、提交和恢复顺序；原生能力与存储由窄 I/O 接口提供 |
+| `src/tools/domain_errors.py` | 稳定领域错误码、阶段和可重试信息 |
+| `src/tools/local_state_services.py` | 刷新协调与附属归档编排；`ClubLegacyRefreshCoordinator` 串行合并球队资料发布后的名人堂附属任务；兼容导出账户服务 |
+| `src/tools/account_application.py` | 账户、商店与钱包用例；通过显式 `AccountOperation` 使用绑定账户的操作保护和响应能力，不直接持有运行时宿主 |
+| `src/tools/refresh_status.py` | 轻量刷新状态的上下文绑定快照；拥有独立副本，未知或不匹配上下文不复用缓存字段 |
+| `src/fmodd_desktop.py` | 冻结桌面入口与本地服务生命周期 |
+| `src/desktop/WebViewHost.cs` | WebView2 窗口、宿主生命周期和桌面行为 |
+
+开发版由 `src/fm_odds_web.py` 直接提供 `src/web/` 与 `/api/*`。正式版由 `src/fmodd_desktop.py` 启动同一共享运行时，再交给 WebView2 宿主显示。两条入口必须复用相同的连接、监控、结算和关闭语义。
+
+JSON 业务路由以 `build_api_routes()` 注册表为唯一分派来源；`Handler` 不再保留注册表之后的同路径业务分支。二进制球员头像、静态资源回退、请求解析与通用错误边界仍由 `Handler` 处理；开发专用接口的 `FROZEN` 门禁在注册时保留。
+
+## 3. 模块所有权
+
+### 3.1 FM 身份、会话与读取
+
+| 模块 | 所有权 |
+| --- | --- |
+| `src/tools/game_layout.py` | FM24/FM26、Steam/Epic/XGP 的模块身份、RVA、vtable、字段和能力布局 |
+| `src/tools/game_session.py` | 常驻只读进程句柄、模块身份和会话代际 |
+| `src/tools/database_index.py` | Club、Competition、Nation、Person、Stadium、Team 等原生对象目录 |
+| `src/tools/initial_data_audit.py` | 核心对象、赛程、赛果和事件解析 |
+| `src/tools/refresh_memory_core.py` | 赛程/赛果池发现、结构校验、同 slab 补全和有界回退扫描 |
+| `src/tools/club_reader.py` | 经理、俱乐部、球员、职员读取，以及属性、伤病和不可用状态等通用原生事务入口 |
+| `src/tools/player_details_fm24.py`、`src/tools/player_details_fm26.py` | 各代球员、合同和扩展资料布局 |
+| `src/tools/player_name_localization.py`、`src/tools/player_aliases.py` | 按稳定 UID 解析安装目录 `.lnc`，加载封装版内置 XML 合并字典，并以后备方式读取用户文档目录的 FM 编辑器人员汉化 XML；完整映射未命中时按无歧义姓名片段、精确全名模板和离线保守音译依次兜底，日籍球员仅使用可靠汉字映射并按姓前名后显示；显示设置关闭“球员汉化”时恢复 FM 原名，不重排姓名或添加分隔符；在用户自定义别名之前统一处理球员显示名 |
+
+新增 FM 字段先进入 `GameLayout` 与对应读取模块。业务模块只消费已校验结果，不直接复制偏移或跨版本地址。
+
+### 3.2 赔率、投注与赛事
+
+详细数据流、所有权和测试路由统一见 [`ODDS_ARCHITECTURE.md`](ODDS_ARCHITECTURE.md)。首要模块为：
+
+| 领域 | 所有者 |
+| --- | --- |
+| 赛程、画像、xG、单场盘口 | `src/tools/preview_cup_odds.py` |
+| 阵容与近期赛果的纯球队画像 | `src/tools/odds_profiles.py`；只接收已读取事实，原 `team_profile` 门面保留按需读取与缓存调用兼容 |
+| 纯概率与亚洲盘数学 | `src/tools/odds_math_core.py`、`src/tools/rust_native_core.py`、`fmodd_native_core` |
+| 赛果证据身份与明细一致性 | `src/tools/result_evidence.py`；不读取 FM、不持久化历史，也不生成赔率 |
+| 生涯赛果历史账本 | `src/tools/result_history.py`；拥有读取、冲突合并、保留、备份恢复与原子保存；`preview_cup_odds` 保留原签名兼容入口 |
+| 实时盘口 | `src/tools/live_market.py` |
+| 钱包、注单、退款、派彩 | `src/tools/betting_account.py`、`src/tools/money.py`、`src/tools/pass_methods.py` |
+| 积分榜、ELO、冠军盘 | `src/tools/league_standings.py`、`src/tools/championship_odds.py` |
+| 异常投注与处罚 | `src/tools/match_integrity.py` |
+| 赛季预测归档 | `src/tools/season_ledger.py` |
+
+积分榜公共投影由 `src/tools/league_standings.py` 负责，限定为绑定完整语义依赖键的有界 LRU 派生缓存；冠军盘口的市场价格与快照缓存仍由 `src/tools/championship_odds.py` 按市场版本管理。两者都不能缓存积分/冠军事实、钱包或结算副作用，也不能改变唯一冠军判定、下注重定价和结算链路。
+
+### 3.3 账户、经济与持久化
+
+| 模块 | 所有权 |
+| --- | --- |
+| `src/tools/club_economy.py` | 银行、工资、贷款、商店、库存、活动/医疗账户状态，以及银行与钱包统一账本的只读公共投影 |
+| `src/tools/save_context.py` | 生涯、经理账户、存档证据和历史账户选择 |
+| `src/tools/app_paths.py` | 开发版与冻结版数据路径 |
+| `src/tools/app_settings.py` | 用户设置与读取范围 |
+| `src/tools/global_statistics.py` | 全局使用时长，以及基于已登记账户的跨存档投注统计只读投影 |
+| `src/tools/storage_io.py`、`src/tools/storage_*.py` | 原子存储、锁、迁移、保留与空间管理 |
+| `src/tools/update_rewards.py` | 应用版本奖励批次与领取幂等性 |
+| `src/tools/club_stock_market.py` | 俱乐部股市：按国家/地区划分的交易所注册表、确定性报价引擎（收购估值 × 行情系数）与持仓/成交/公告/指数，均为存档/账户作用域的 ODD 模拟文档；默认不开市，文档 `scope` 内的国家/联赛按需初始化（选项按存档自己的赛事表 `save_competition_index` 归入“存档内”），`apply_scope` 负责增删交易所并结算被移除范围的持仓；资金变动仍由 `src/tools/club_economy.py` 记账 |
+| `src/tools/life_system.py` | 生活系统：9 国 68 城的城市画像与离线 OSM 地形掩码驱动本地城市包、按国家代码隔离的世界/国家/城市层元数据包、按区县合并的资产统计、城市层与地块包双向补建、虚构地块买卖与 30/90/180/365 天租约、住宅自住/出租、商业/工业出租/经营、业态筹备与施工期、资产升级、分段收益、房产附赠与独立车库容量、固定 100 车位寄存车库、车辆估值/出售/批量迁移/批量出售、展厅购买与神秘车库抽取；收藏家出金支持 `S2 + 传奇 / Forza Edition` 或任意等级 `+ Donut Edition`，抽卡接口以 `life_patch` 返回新增车辆、车库/寄存、图鉴与卡池统计增量；生活 schema 9、城市包 2.4，旧资产按完整地块半径迁移到合法地块；房产、车库、车辆、抽取历史与图鉴均随存档保存，图鉴写入 `state.collection`，旧账户级 `life_collection.json` 不再读取；资金只通过既有银行/钱包账本，不写 FM 原生内存 |
+| `src/tools/life_interactions.py` | 存档级人物互动：成年球员缓存与增量刷新、分离姓氏/名字的点数制玩家档案、年龄/身高/体重身份点与四项只增属性（颜值/能力/魅力/情商；声望改为 FM 经理只读投影；社交计算按 100 点封顶）、五维关系、公开伴侣排他与保密情人、可预测恢复的行动力、确定关系专属有符号亲密度（-100–100）与六个亲密行为、怀孕与 30 天待决事件、保密关系暴露风险、负亲密度危机与修复/分手事件、资产等级时间轴与一次性属性点/特别车辆奖励、NPC 身高/体重/性格/价值观/偏好及成年女性三围、按关系等级裁剪的 NPC 资料披露、聊天/赠礼/约会、住宅入住、带好感与阶段预览的永久资产赠礼和关系时间线；情商校准整体社交与危机修复，魅力放大好感，颜值放大吸引，能力放大尊重，聊天、赠礼、约会、亲密行为与关系推进共用同一服务端公式；姓名子串/单字、国籍、性别、成年年龄与俱乐部组合查询由世界球员索引执行，俱乐部过滤仅经 `world_clubs.read_native_world_club_player_ids()` 读取关联名单 UID；模板对话只返回语言无关的描述，前端按人物性格、价值观、话题和关系阶段选择本地化变体，资产转移通过 `life_system` 文档完成，不直接写 FM 原生关系 |
+
+| `src/tools/life_travel.py` | 外出偶遇目录：复用 `life_system.city_catalog()` 的 9 国 68 城，补齐每城 5–6 个地点、国家代码到原生 nation 名称的映射、资产等级加成与偶遇概率；只读目录，不接触 FM 内存，不持久化任何状态。实际 travel 状态、隐藏联系人、虚构人物与索要联系方式仍由 `life_interactions.py` 服务端结算 |
+城市包解析结果按文件大小与修改时间做进程内缓存；购买通过 `city_id` 定向到目标包，只有旧调用才回退全局地块索引。房产和独立车库的 `parking_spaces` 由领域层统一投影，旧城市包按地块类型计算兼容值。地块合法性同时覆盖中心与地块半径；`scripts/build_life_terrain_data.py` 负责离线生成 OSM 水体、海岸线、沙滩、湿地、水库与绿地数据，运行时只读取 `city_terrain.json`，不查询 OSM 数据服务。
+
+余额、库存、交易、贷款和账户文档是易变真值，不得因状态轮询性能优化而用无版本约束的长期缓存替代。可缓存的只能是完整语义键下的纯派生投影，并必须定义容量与失效条件。
+
+### 3.4 俱乐部、人员与经营
+
+| 领域 | 所有者 |
+| --- | --- |
+| 世界俱乐部、收购和出售 | `src/tools/world_clubs.py` |
+| 集团人员批量读取 | `LocalOddsState.owned_world_club_group_people` → `src/tools/world_clubs.py::read_native_world_club_group_people` → `src/tools/club_reader.py::_scan_staff_for_teams`；一次只读会话、按队读取球员、共用职员候选遍历 |
+| ODD 设施升级、出售与品牌推广报价规则 | `src/tools/club_operation_quotes.py`；纯计算，不扣费、不读写 FM，原服务入口保留兼容导出 |
+| ODD 模拟赞助招商与合同 | `src/tools/club_sponsorship.py`；`src/fm_odds_web.py` 编排联赛余额报价、邮件和可选原生结余入账 |
+| 俱乐部人物库与名人堂 | `src/tools/club_legacy.py`；FM26 build-gated 当前赛季统计由 `src/tools/player_details_fm26.py` 读取并随去地址球员快照持久化；本地 FM graphics 头像 UID 映射由 `src/tools/player_portraits.py` 提供 |
+| 转会预算 | `src/tools/transfer_budget.py` |
+| 球员/职员移动、租借与主教练事务 | `src/tools/player_movement.py` |
+| 未来转会只读状态 | `src/tools/future_transfers.py` |
+| 经理记录 | `src/tools/manager_record.py` |
+| 玩家执教俱乐部历史转会投影 | `src/tools/transfer_history.py`；FM26 精确 Steam build 与 FM24 精确 Epic build 的原生归档读取复用 `src/tools/future_transfers.py` 的 TransferManager 定位和各自版本门禁，永久人物事实与人工补录金额仍分别由 `src/tools/club_legacy.py` 的生涯/经理账户容器持有 |
+| 俱乐部关系 | `src/tools/club_affiliations.py` |
+| 董事会愿景 | `src/tools/club_vision.py`、`src/tools/board_listens_hook.py` |
+
+世界俱乐部的规范化目录、地区分面、同名消歧、声望排名和分页索引由 `src/tools/world_clubs.py` 负责；`LocalOddsState` 只编排存档/账户作用域与单实例派生缓存。目录中的地址始终只是会话提示，收购报价、成员核验和所有原生写入仍须走目标读取与事务校验，不能把目录投影当作 FM 地址或账户真值。`src/tools/database_index.py` 提供 FMRTE 风格的会话级 Team/Club/Nation 对象重定位：优先按稳定 UID 取得当前地址，随后校验 Team/Club vtable 与 Team→Club 关联；预备队/B 队的 Club UID 可与 Team UID 不同，不能用该相等关系误拒绝合法对象。索引暂时不可用时才使用已验证的调用方地址，不持久化裸地址。
+
+世界目录的行级 `gender` 由 `world_clubs.py` 基于俱乐部与赛事名称标记生成：成年女足俱乐部保留，青年、预备与全明星队继续排除；`paginate_world_clubs()` 支持 `men|women|all` 并重建对应分面。股市在 `_stock_market_raw_directory()` 再显式过滤为男足，因此世界目录新增女足行不会改变交易所、股本、市值与持仓的身份。国家名称仍由内置 FM 国家 ID 映射提供，Nation 原生名称字段尚未有经实机验证的偏移。
+
+### 3.5 训练、青训、活动与医疗系统
+
+| 领域 | 所有者 |
+| --- | --- |
+| 训练设施、任务、楼层与公共投影 | `src/tools/training_ground.py` |
+| 训练结算期间的队伍索引和对象回绑 | `src/tools/training_runtime.py` |
+| 关系综训房间规则与专项进度 | `src/tools/relationship_training.py` |
+| 版本化训练档案、关系摘要索引与关系时间线 | `src/tools/training_archive.py` |
+| 双向人物关系读取、保类别写入与精确回滚 | `src/tools/person_relationships.py`、`src/tools/relationship_network.py` |
+| 青训计划与名单事务 | `src/tools/youth_intake.py` |
+| 原生青训生成 Hook | `src/tools/youth_generation_hook.py` |
+| 活动中心楼层、冷却、语言课程、医疗策略、治疗任务与扣费 | `src/tools/club_economy.py` |
+| 球员/职员 Person 语言 vector 读取、验证式写入与回滚 | `src/tools/player_languages.py`；职员写入能力由 `src/tools/game_layout.py` 按实机证据门控 |
+| 2F 球员离队模拟报价、估值与账户报价轮次 | `src/tools/player_departure.py`；所有权校验、当前原生样本与成交编排由 `src/tools/player_departure_application.py` 负责，实际合同/名单及卖方财政写入复用 `src/tools/player_movement.py` |
+| 活动效果、伤病读取及治疗天数原生事务 | `src/tools/club_reader.py` |
+| 退役计划与不退役 Hook | `src/tools/retirement.py` |
+| 情报中心候选赛程、私有赛果证据及情报退款核对 | `src/tools/preview_cup_odds.py`、`src/tools/club_economy.py`、`src/fm_odds_web.py` |
+| 比赛/球员道具 | `src/tools/*hook*.py`、`src/tools/*nuclear*.py` |
+
+业务文档、原生对象地址和前端选中状态属于不同层。训练、活动或医疗优化不能通过复用旧地址、吞掉等待状态、缓存伤病真值或绕过写后回读来换取速度。
+
+### 3.6 前端与资源
+
+| 路径 | 所有权 |
+| --- | --- |
+| `src/web/index.html` | 页面和对话框结构 |
+| `src/web/i18n.js`、`src/web/i18n.ko.js` | 前端界面语言运行时、英文基准/中文过渡目录与韩语目录；界面语言不承载 FM 业务真值，缺失翻译统一回退英文 |
+| `src/web/app.css` | 布局、主题、状态和动画 |
+| `src/web/app.js` | 状态同步、页面渲染和用户交互 |
+| `src/web/announcement_board.js` | 公告板条目、Markdown 子集渲染、状态标签、排序/筛选与卡片标记；纯函数、不访问网络或存储，未读与阅读视图仍由 `app.js` 持有 |
+| `src/web/bet_analysis_page.js` | 收益分析只读视图；显式接收数据、范围、线模式和格式化能力，不访问全局应用状态或发起请求，历史控制器与事件仍由 `app.js` 持有 |
+| `src/web/life_page.js`、`src/web/life.css`、`src/web/i18n.life.js` | 生活系统五个页面的地图、我的资产、车库工作台、展厅与抽卡交互，以及独立的样式和 11 语言文案模块；地图支持国家/城市筛选、自动（中国高德/海外 Bing）/高德/Bing/OpenStreetMap 底图、OSM 临时回退、z3–15 四层视图、购买/租用与 z13–15 交易门禁；“我的资产”可按类型、自有/租赁与施工状态筛选，显示租约、施工倒计时和经营报价，并在升级或开店前要求确认费用与工期，余额、资产和最终价格由服务端提供 |
+| `src/web/interactions_page.js`、`src/web/interactions.css`、`src/web/i18n.interactions.js`、`src/web/i18n.interactions.polish.js` | 生活人物工作台：总览属性直读、分离姓名与身份点预算、左侧结果与右侧筛选卡的组合搜索、人物缓存、五维关系、公开/保密关系操作、渐进披露的两栏 NPC 档案、条件式亲密行为标签与亲密度面板、聊天/赠礼/约会、住宅入住、永久资产赠送与时间线；头像和关系栏采用更宽的档案布局，聊天、赠礼、约会、资产赠礼、关系推进与亲密行为统一使用单栏自包含结算卡，模板对白按当前语言与确定关系呈现，关系结果、披露范围、亲密度与资产所有权仍以服务端响应为准 |
+| `src/web/assets/` | 运行时图片与静态资源 |
+| `car_images/`、`scripts/build_life_car_assets.py` | 开发期 FH5 车辆图库（厂商/等级/车型三层目录与 manifest）及其透明 WebP 构建器；源图库不进入运行时包，构建产物写入 `src/web/assets/life/cars/`，版权与缺图补位说明见图库 README |
+| `src/tools/user_fonts.py` | 用户自定义简体中文字体与英文数字字体目录（数据根 `fonts/chinese`、`fonts/latin`）、只读扫描结果与字体文件服务 |
+| `src/tools/embedded_web_assets.py` | 构建生成的内嵌资源，禁止手工编辑 |
+
+前端索引、签名或单航班请求只能减少重复工作。签名必须覆盖全部可见语义，存档作用域或对应状态版本变化时失效；服务端错误、忙碌、恢复和重定价状态不能被跳过。
+
+### 3.7 模块化性能与体验边界
+
+后端、渲染、交互是按热点选择的检查维度，不要求每个任务分三轮。只有用户明确要求系统性迭代时才按约定逐轮推进；局部优化只处理有证据的瓶颈，并保持下列边界。
+
+| 维度 | 责任层 | 允许优化 | 必须保持 |
+| --- | --- | --- | --- |
+| 后端/投影 | 领域模块、应用服务 | 批量读取、单次投影、有界纯派生缓存、锁外计算 | 易变真值、副作用顺序、事务和版本校验 |
+| 前端/渲染 | `src/web/app.js` | 对象身份索引、完整状态签名、单帧合并和局部 DOM 更新 | 服务端真值、存档作用域、错误与恢复状态 |
+| 交互/视觉 | `src/web/index.html`、`src/web/app.css`、`src/web/app.js` | 忙碌反馈、键盘、ARIA、焦点和视觉层级 | 操作入口、业务文案、可访问性和最小字号 |
+
+模块迭代从本文确定所有权，再到 [`RUNTIME_CONTRACTS.md`](RUNTIME_CONTRACTS.md) 核对长期契约；赔率模块还要核对 [`ODDS_ARCHITECTURE.md`](ODDS_ARCHITECTURE.md)。合成基准只证明相对计算或 DOM 准备开销，不等价于真实 FM、HTTP 或桌面 WebView 延迟。
+
+## 4. 状态与数据边界
+
+| 层级 | 身份/位置 | 规则 |
+| --- | --- | --- |
+| 进程会话 | PID、模块身份、会话 generation | 地址只在当前会话内作为提示；每次写入仍重验对象 |
+| FM 生涯 | 永久 `career-*` | 保存跨经理共享的赛果证据和生涯事实 |
+| 经理账户 | 永久 `account-*` / `saves/<scope>.fmodd` | 钱包、注单、经济、设施、通知等账户真值 |
+| 派生缓存 | `cache/<scope>/` | 必须可重建，并绑定存档、模型、设置和会话身份 |
+| 前端快照 | `data_scope_id` 加领域版本/对象身份 | 仅用于展示和减少 DOM 工作，不是业务真值 |
+
+`data/` 是本机运行与研究数据，普通开发任务不扫描、不搬移、不清理。完整账户容器、缓存迁移、清理语义和后台线程作用域契约见 [`RUNTIME_CONTRACTS.md`](RUNTIME_CONTRACTS.md#账户存档与缓存)。
+
+## 5. 典型调用链
+
+### 5.1 连接与公共状态
+
+`/api/connect` → `LocalOddsState` → 只读会话/存档/经理/球队身份 → 账户作用域绑定 → 后台盘口刷新。连接上下文和盘口刷新是两个阶段；盘口失败不得清空已经验证的玩家上下文。
+
+`/api/state` → 状态锁内到期事务与领域协调 → 构建公共快照 → 锁外生成可独立计算的派生输出 → 前端单航班同步。不能把包含副作用的完整响应只按 `data_version` 长期缓存。
+
+### 5.2 验证式写入
+
+API 请求 → 当前账户/球队/球员作用域校验 → `GameLayout` 选择 → 对象 vtable、UID、反向引用和期望旧值校验 → 写入 → 回读 → 持久化提交。任一步失败按事务恢复内存、账户文档和 Hook 状态。
+
+### 5.3 赔率与结算
+
+FM 事实 → 球队画像/xG/概率矩阵 → 服务端盘口快照 → 下单时重新定价 → 账户事务 → 已验证赛果 → 幂等结算 → 风控审查。完整细节见 [`ODDS_ARCHITECTURE.md`](ODDS_ARCHITECTURE.md)。
+
+## 6. 新代码放置规则
+
+- HTTP 解析和响应适配进入路由/门面；可独立测试的用例编排进入 `local_state_services` 或对应领域服务。
+- 纯赔率数学进入 `odds_math_core`/原生核心；不要继续扩大 `preview_cup_odds.py` 的非赔率职责。
+- FM 结构、地址和对象验证进入 `game_layout` 与读取/写入层；不要把偏移写进 UI 或经济模块。
+- 钱包、注单、退款和派彩进入 `betting_account`；商店、库存、银行和贷款进入 `club_economy`。
+- 账户身份与磁盘格式进入保存/存储层；前端不得自行推导持久化真值。
+- 普通修复不顺手迁移大段旧代码。大文件拆分必须单独定义兼容契约和回归范围。
+
+## 7. 文档路由
+
+| 需要确认 | 文档 |
+| --- | --- |
+| 自动化授权、安全与完成标准 | [`../AGENTS.md`](../AGENTS.md) |
+| 模块所有权和代码入口 | 本文 |
+| 详细运行时与业务契约 | [`RUNTIME_CONTRACTS.md`](RUNTIME_CONTRACTS.md) |
+| 赔率、盘口、投注与结算 | [`ODDS_ARCHITECTURE.md`](ODDS_ARCHITECTURE.md) |
+| CE/FMRTE、偏移、AOB、Hook、版本证据 | [`RESEARCH_SOURCES.md`](RESEARCH_SOURCES.md) |
+| 开发、验证和发布命令 | [开发手册](development/DEVELOPMENT.md) |
+| 当前产品能力 | [`../README.md`](../README.md) |
+
+维护原则：所有权变化更新本文；跨模块长期行为变化更新 `RUNTIME_CONTRACTS.md`；赔率链路变化更新 `ODDS_ARCHITECTURE.md`；新逆向证据更新 `RESEARCH_SOURCES.md`；用户入口和能力变化更新根 README。
+
+## 8. 验证范围
+
+先运行与改动最接近的测试。只有共享状态、账户持久化、版本分派、结算或发布边界变化时才扩大回归。修改 `src/web/` 后重建内嵌资源；普通功能修改后按开发文档重启 7857；仅文档修改不重建资源、不重启服务。
+
+静态、模拟和合成测试只能证明对应代码路径。FM 地址、Hook、对象身份、真实存档和桌面 WebView 行为仍需分别记录匹配 build 的实机证据。

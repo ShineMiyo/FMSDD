@@ -1,0 +1,1029 @@
+/* FMSDD life-system workspace. Loaded after app.css and dark-theme.css. */
+.life-page, .life-collection-dialog {
+  --life-soft: #eef5f1;
+  --life-soft-2: #f7faf8;
+  --life-card: #ffffff;
+  --life-border: #d7e3dc;
+  --life-border-strong: #bdd0c5;
+  --life-ink: #1d3c31;
+  --life-muted: #657b70;
+  --life-accent: #176b4d;
+  --life-accent-soft: #e2f1e9;
+  --life-gold: #d8a62f;
+  --life-shadow: 0 12px 30px #173b2c12;
+  min-width: 0;
+}
+:root[data-theme="dark"] .life-page,
+:root[data-theme="dark"] .life-collection-dialog {
+  --life-soft: #16231e;
+  --life-soft-2: #111b17;
+  --life-card: #18251f;
+  --life-border: #31483e;
+  --life-border-strong: #49685a;
+  --life-ink: #e5eee9;
+  --life-muted: #a1b2aa;
+  --life-accent: #65c69a;
+  --life-accent-soft: #1b392d;
+  --life-gold: #e7bd59;
+  --life-shadow: 0 12px 30px #00000038;
+}
+.life-page-header { align-items: center !important; }
+.life-page-actions { display: flex; align-items: center; gap: 12px; }
+.life-workspace { display: grid; gap: 16px; min-width: 0; }
+.life-page button, .life-page input, .life-page select { font-size: 13px; }
+.life-page small { font-size: 13px; line-height: 1.35; }
+.life-collection-dialog button, .life-collection-dialog input, .life-collection-dialog select { font-size: 13px; }
+.life-collection-dialog small { font-size: 13px; line-height: 1.35; }
+.life-page h1, .life-page h2, .life-page h3, .life-page p { overflow-wrap: anywhere; }
+.life-page h2 { margin: 0; font-size: 20px; }
+.life-page h3 { margin: 0; font-size: 16px; }
+.life-primary, .life-secondary, .life-danger-button, .life-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-weight: 800;
+  line-height: 1.2;
+  transition: background .16s ease, border-color .16s ease, color .16s ease, transform .16s ease;
+}
+.life-primary { background: var(--life-accent); color: #fff; }
+.life-primary:hover:not(:disabled) { filter: brightness(.92); }
+.life-secondary { border-color: var(--life-border-strong); background: var(--life-card); color: var(--life-ink); }
+.life-secondary:hover:not(:disabled) { border-color: var(--life-accent); color: var(--life-accent); background: var(--life-accent-soft); }
+.life-danger-button { border-color: #e3b7b2; background: #fff4f2; color: #a92f26; }
+.life-danger-button:hover:not(:disabled) { background: #ffe7e4; }
+.life-icon-button { width: 38px; min-width: 38px; padding: 0; border-color: var(--life-border-strong); background: var(--life-card); color: var(--life-ink); }
+.life-primary:disabled, .life-secondary:disabled, .life-danger-button:disabled, .life-icon-button:disabled { cursor: not-allowed; opacity: .5; }
+.life-primary svg, .life-secondary svg, .life-danger-button svg, .life-icon-button svg { width: 16px; height: 16px; }
+.life-page button:focus-visible, .life-page input:focus-visible, .life-page select:focus-visible, .life-page a:focus-visible { outline: 2px solid #2a8060; outline-offset: 2px; }
+.life-field { display: grid; gap: 5px; min-width: 0; color: var(--life-muted); font-size: 13px; font-weight: 700; }
+.life-field > span { white-space: nowrap; }
+.life-field select, .life-field input, .life-search-field {
+  min-height: 40px;
+  border: 1px solid var(--life-border-strong);
+  border-radius: 6px;
+  background: var(--life-card);
+  color: var(--life-ink);
+}
+.life-field select { width: 100%; padding: 0 34px 0 10px; }
+.life-field input { width: 100%; padding: 0 10px; }
+.life-search-field { display: flex; align-items: center; gap: 8px; padding: 0 11px; }
+.life-search-field svg { width: 17px; height: 17px; color: var(--life-muted); }
+.life-search-field input { width: 100%; min-width: 0; height: 38px; padding: 0; border: 0; outline: 0; background: transparent; color: var(--life-ink); }
+.life-wide-button { width: 100%; }
+.life-state-card, .life-empty-state, .life-section-card, .life-inline-warning, .life-footnote {
+  border: 1px solid var(--life-border);
+  border-radius: 10px;
+  background: var(--life-card);
+}
+.life-state-card { display: grid; justify-items: center; gap: 10px; min-height: 180px; padding: 30px; text-align: center; color: var(--life-ink); }
+.life-state-card p { max-width: 680px; margin: 0; color: var(--life-muted); }
+.life-error-card > svg { width: 30px; height: 30px; color: #b93b31; }
+.life-empty-state { display: grid; place-items: center; gap: 8px; min-height: 130px; padding: 22px; color: var(--life-muted); text-align: center; }
+.life-empty-state svg { width: 25px; height: 25px; color: var(--life-accent); }
+.life-empty-state p { margin: 0; }
+.life-inline-warning, .life-footnote { display: flex; align-items: flex-start; gap: 8px; padding: 10px 13px; color: #8c5d12; font-size: 13px; }
+.life-footnote { align-items: center; margin: 0; background: #fff9e8; }
+.life-inline-warning svg, .life-footnote svg { width: 17px; height: 17px; flex: 0 0 auto; }
+.life-kind-tabs { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px; border-radius: 8px; background: var(--life-soft); }
+.life-kind-tabs button { min-height: 34px; padding: 0 11px; border: 0; border-radius: 5px; background: transparent; color: var(--life-muted); font-weight: 800; }
+.life-kind-tabs button.active { background: var(--life-accent); color: #fff; }
+.life-kind-residential { --kind-color: #3781a5; --kind-soft: #e8f3f8; }
+.life-kind-commercial { --kind-color: #b0781b; --kind-soft: #faf1dc; }
+.life-kind-industrial { --kind-color: #7658a8; --kind-soft: #f0ebfa; }
+.life-kind-garage { --kind-color: #2f8067; --kind-soft: #e6f4ee; }
+.life-kind-pill, .life-kind-dot { background: var(--kind-soft, var(--life-soft)); color: var(--kind-color, var(--life-accent)); }
+.life-kind-pill { display: inline-flex; align-items: center; min-height: 24px; padding: 0 8px; border-radius: 999px; font-size: 13px; font-weight: 800; white-space: nowrap; }
+.life-kind-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--kind-color, var(--life-accent)); }
+.life-map-toolbar, .life-dealer-toolbar, .life-gacha-toolbar { display: flex; align-items: end; gap: 10px; flex-wrap: wrap; padding: 12px; border: 1px solid var(--life-border); border-radius: 10px; background: var(--life-card); box-shadow: var(--life-shadow); }
+.life-map-country-field { min-width: 150px; }
+.life-map-city-field { min-width: 210px; }
+.life-map-provider-field { min-width: 150px; }
+.life-map-pack-copy { display: grid; gap: 2px; min-width: 190px; flex: 1; color: var(--life-muted); font-size: 13px; }
+.life-map-pack-copy strong { color: var(--life-ink); font-size: 15px; }
+.life-map-toolbar > .life-primary, .life-map-toolbar > .life-icon-button { margin-left: auto; }
+.life-map-grid { display: grid; grid-template-columns: minmax(0, 1fr) 370px; gap: 14px; align-items: start; min-width: 0; }
+.life-map-stage { min-width: 0; overflow: hidden; border: 1px solid var(--life-border); border-radius: 11px; background: var(--life-card); box-shadow: var(--life-shadow); }
+.life-map-viewport { position: relative; height: clamp(460px, 61vh, 700px); overflow: hidden; background: #dce8e2; cursor: grab; touch-action: none; user-select: none; }
+.life-map-viewport.dragging { cursor: grabbing; }
+.life-map-tiles, .life-map-markers { position: absolute; inset: 0; }
+.life-map-tiles { z-index: 0; }
+.life-map-tiles img { position: absolute; max-width: none; pointer-events: none; user-select: none; }
+.life-map-markers { z-index: 2; pointer-events: none; }
+.life-map-marker { position: absolute; left: 0; top: 0; width: 25px; height: 25px; display: grid; place-items: center; padding: 0; border: 2px solid #fff; border-radius: 50% 50% 50% 4px; background: var(--kind-color, var(--life-accent)); color: #fff; box-shadow: 0 3px 10px #102d2266; pointer-events: auto; transform-origin: 50% 100%; }
+.life-map-marker span { width: 7px; height: 7px; border-radius: 50%; background: #fff; }
+.life-map-marker.selected { z-index: 3; box-shadow: 0 0 0 4px #e7bd5975, 0 5px 13px #102d2280; }
+.life-map-marker.owned { border-color: var(--life-gold); box-shadow: 0 0 0 2px #fff, 0 0 0 4px #d9a52e99, 0 4px 12px #102d2266; }
+.life-map-marker.owned::after { content: ""; position: absolute; right: -4px; top: -4px; width: 10px; height: 10px; border: 2px solid #fff; border-radius: 50%; background: var(--life-gold); box-shadow: 0 1px 4px #102d2255; }
+.life-map-marker.owned.selected { box-shadow: 0 0 0 4px #e7bd5975, 0 0 0 6px #d9a52e88, 0 5px 13px #102d2280; }
+.life-map-marker:hover { filter: brightness(1.1); }
+.life-map-cluster { position:absolute; left:0; top:0; z-index:2; display:grid; grid-template-columns:auto auto; align-items:center; gap:1px 7px; min-width:88px; padding:6px 9px; border:2px solid #fff; border-radius:9px; background:var(--life-accent); color:#fff; box-shadow:0 5px 18px #102d2255; pointer-events:auto; text-align:left; }
+.life-map-cluster strong { font-size:16px; line-height:1; }
+.life-map-cluster span { color:#d9f2e7; font-size:13px; font-weight:800; }
+.life-map-cluster small { grid-column:1 / -1; max-width:130px; overflow:hidden; color:#fff; font-size:13px; font-weight:800; text-overflow:ellipsis; white-space:nowrap; }
+.life-map-cluster.empty { border-color:#ffffffd9; background:#668276; color:#fff; opacity:.86; }
+.life-map-cluster.selected { box-shadow:0 0 0 4px #e7bd5975, 0 6px 18px #102d2270; }
+.life-map-layer-chip { position:absolute; z-index:4; left:13px; top:13px; display:flex; align-items:center; gap:7px; padding:7px 10px; border:1px solid #ffffffaa; border-radius:7px; background:#ffffffdf; color:#214734; box-shadow:0 4px 15px #16372a22; pointer-events:none; }
+.life-map-layer-chip span { font-size:13px; font-weight:900; }
+.life-map-layer-chip small { color:#527062; font-size:13px; font-weight:700; }
+.life-map-controls { position: absolute; z-index: 4; top: 13px; right: 13px; display: grid; overflow: hidden; border: 1px solid #ffffffaa; border-radius: 7px; background: #ffffffdd; box-shadow: 0 4px 15px #16372a33; }
+.life-map-controls button { width: 36px; height: 34px; display: grid; place-items: center; border: 0; background: transparent; color: #1f4d3b; }
+.life-map-controls button:hover { background: #e7f3ec; }
+.life-map-controls span { padding: 4px 0; border-top: 1px solid #cddbd4; border-bottom: 1px solid #cddbd4; color: #315d4c; font-size: 13px; font-weight: 900; text-align: center; }
+.life-map-drag-hint { position: absolute; z-index: 4; left: 13px; bottom: 13px; display: flex; align-items: center; gap: 6px; padding: 7px 10px; border-radius: 6px; background: #ffffffdd; color: #315d4c; font-size: 13px; font-weight: 700; backdrop-filter: blur(4px); }
+.life-map-drag-hint svg { width: 15px; height: 15px; }
+.life-map-attribution { position: absolute; z-index: 4; right: 4px; bottom: 3px; padding: 2px 4px; background: #ffffffc9; color: #476356; font-size: 13px; text-decoration: none; }
+.life-map-tile-error { position: absolute; z-index: 4; left: 13px; top: 58px; max-width: calc(100% - 70px); display: flex; gap: 7px; padding: 8px 10px; border-radius: 6px; background: #fff4dd; color: #8c5d12; font-size: 13px; }
+.life-map-tile-error svg { width: 16px; height: 16px; }
+.life-map-empty-overlay { position: absolute; z-index: 3; inset: 0; display: grid; place-content: center; justify-items: center; gap: 9px; padding: 30px; background: #f3f8f5dd; color: #4b665a; text-align: center; }
+.life-map-empty-overlay svg { width: 35px; height: 35px; color: #2e7a5c; }
+.life-map-empty-overlay strong { color: #214734; font-size: 17px; }
+.life-map-empty-overlay span { max-width: 390px; font-size: 13px; line-height: 1.6; }
+.life-map-underbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 13px; color: var(--life-muted); font-size: 13px; }
+.life-map-underbar span { display: flex; align-items: center; gap: 6px; }
+.life-map-underbar svg { width: 16px; height: 16px; }
+.life-map-underbar strong { color: var(--life-ink); }
+.life-map-panel { display: grid; gap: 12px; max-height: 700px; overflow: auto; padding: 12px; border: 1px solid var(--life-border); border-radius: 11px; background: var(--life-card); box-shadow: var(--life-shadow); scrollbar-gutter: stable; }
+.life-map-list-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; color: var(--life-muted); font-size: 13px; }
+.life-map-list-head strong { color: var(--life-ink); }
+.life-map-plot-list { display: grid; gap: 6px; }
+.life-map-plot-row { display: grid; grid-template-columns: 10px minmax(0, 1fr) auto; align-items: center; gap: 8px; width: 100%; padding: 9px; border: 1px solid transparent; border-radius: 7px; background: var(--life-soft-2); color: var(--life-ink); text-align: left; }
+.life-map-plot-row:hover { border-color: var(--life-border-strong); background: var(--life-soft); }
+.life-map-plot-row.selected { border-color: var(--life-accent); background: var(--life-accent-soft); }
+.life-map-plot-row > span:nth-child(2) { display: grid; gap: 2px; min-width: 0; }
+.life-map-plot-row strong, .life-map-plot-row small, .life-map-plot-row b, .life-map-plot-row em { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.life-map-plot-row small { color: var(--life-muted); }
+.life-map-plot-row b { color: var(--life-accent); font-size: 13px; }
+.life-map-plot-row em { grid-column: 2 / -1; color: #9a6d12; font-size: 13px; font-style: normal; font-weight: 800; }
+.life-map-aggregate-total { display:flex; align-items:baseline; justify-content:space-between; gap:10px; padding:10px 11px; border-radius:7px; background:var(--life-accent-soft); color:var(--life-muted); font-size:13px; }
+.life-map-aggregate-total strong { color:var(--life-accent); font-size:18px; }
+.life-map-aggregate-list { display:grid; gap:6px; }
+.life-map-aggregate-row { display:grid; grid-template-columns:34px minmax(0,1fr) auto auto; align-items:center; gap:8px; width:100%; padding:9px; border:1px solid transparent; border-radius:7px; background:var(--life-soft-2); color:var(--life-ink); text-align:left; }
+.life-map-aggregate-row:hover, .life-map-aggregate-row.selected { border-color:var(--life-accent); background:var(--life-accent-soft); }
+.life-map-aggregate-icon { width:34px; height:34px; display:grid; place-items:center; border-radius:7px; background:var(--life-card); color:var(--life-accent); }
+.life-map-aggregate-icon svg { width:17px; height:17px; }
+.life-map-aggregate-row > span:nth-child(2) { display:grid; gap:2px; min-width:0; }
+.life-map-aggregate-row strong, .life-map-aggregate-row small { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.life-map-aggregate-row small { color:var(--life-muted); }
+.life-map-aggregate-row b { color:var(--life-ink); font-size:13px; white-space:nowrap; }
+.life-map-aggregate-row em { color:var(--life-accent); font-size:13px; font-style:normal; font-weight:800; white-space:nowrap; }
+.life-map-locked { min-height:150px; align-content:center; justify-items:center; color:var(--life-muted); text-align:center; }
+.life-map-locked svg { width:28px; height:28px; color:var(--life-accent); }
+.life-map-locked strong { color:var(--life-ink); }
+.life-map-detail { display: grid; gap: 11px; padding: 13px; border: 1px solid var(--life-border); border-radius: 9px; background: var(--life-soft-2); }
+.life-map-detail > header { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.life-map-detail-location { display: flex; align-items: center; gap: 6px; margin: -4px 0 0; color: var(--life-muted); font-size: 13px; }
+.life-map-detail-location svg { width: 15px; height: 15px; }
+.life-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin: 0; }
+.life-detail-grid > div { display: grid; gap: 2px; min-width: 0; padding: 7px 8px; border-radius: 5px; background: var(--life-card); }
+.life-detail-grid .wide { grid-column: 1 / -1; }
+.life-detail-grid dt { color: var(--life-muted); font-size: 13px; }
+.life-detail-grid dd { margin: 0; color: var(--life-ink); font-size: 13px; font-weight: 800; }
+.life-map-total { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding-top: 4px; color: var(--life-muted); font-size: 13px; }
+.life-map-total strong { color: var(--life-accent); font-size: 20px; }
+.life-property-metrics, .life-metric-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.life-metric { display: grid; gap: 4px; min-height: 94px; padding: 14px; border: 1px solid var(--life-border); border-radius: 10px; background: var(--life-card); box-shadow: var(--life-shadow); }
+.life-metric small { color: var(--life-muted); font-weight: 700; }
+.life-metric strong { color: var(--life-ink); font-size: 22px; }
+.life-metric span { color: var(--life-muted); font-size: 13px; }
+.life-metric-gold { border-top: 3px solid var(--life-gold); }
+.life-metric-action { grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 8px 12px; }
+.life-metric-action .life-primary { grid-row: 1 / 3; }
+.life-metric-action > span { align-self: start; }
+.life-property-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 430px), 1fr)); align-items: start; gap: 14px; }
+@media (min-width: 1520px) { .life-property-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.life-property-card { display: grid; align-content: start; gap: 14px; padding: 16px; border: 1px solid var(--life-border); border-radius: 11px; background: var(--life-card); box-shadow: var(--life-shadow); }
+.life-property-card > header { display: grid; grid-template-columns: 42px minmax(0, 1fr) auto; align-items: start; gap: 10px; }
+.life-property-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 9px; background: var(--kind-soft); color: var(--kind-color); }
+.life-property-icon svg { width: 21px; height: 21px; }
+.life-property-card h3 { margin-top: 2px; }
+.life-property-card p { display: flex; align-items: center; gap: 4px; margin: 4px 0 0; color: var(--life-muted); font-size: 13px; }
+.life-property-card p svg { width: 14px; height: 14px; }
+.life-property-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+.life-property-stats > div { display: grid; gap: 2px; min-width: 0; padding: 8px 9px; border-radius: 6px; background: var(--life-soft-2); }
+.life-property-stats small { color: var(--life-muted); }
+.life-property-stats strong { color: var(--life-ink); font-size: 14px; }
+.life-pending-income { display: grid; grid-template-columns: auto auto minmax(0, 1fr) auto; align-items: center; gap: 7px; padding: 9px 10px; border-radius: 6px; background: #fff7e2; color: #795811; font-size: 13px; }
+.life-pending-income svg { width: 17px; height: 17px; }
+.life-pending-income strong { font-size: 14px; }
+.life-pending-income small { color: #9a7a34; text-align: right; }
+.life-property-footer { display: grid; gap: 9px; padding-top: 11px; border-top: 1px solid var(--life-border); }
+.life-property-actions, .life-property-deed { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.life-property-actions .life-secondary { flex: 1 1 210px; justify-content: center; }
+.life-property-deed { justify-content: space-between; }
+.life-property-deed .life-danger-button { margin-left: auto; }
+.life-mode-switch { display: inline-flex; padding: 3px; border-radius: 6px; background: var(--life-soft); }
+.life-mode-switch button { min-height: 31px; padding: 0 10px; border: 0; border-radius: 4px; background: transparent; color: var(--life-muted); font-weight: 800; }
+.life-mode-switch button.active { background: var(--life-card); color: var(--life-accent); box-shadow: 0 1px 4px #183a2c1f; }
+.life-property-config { display: grid; gap: 10px; padding: 12px; border: 1px solid var(--life-border); border-radius: 9px; background: var(--life-soft-2); }
+.life-config-head { display: grid; gap: 5px; padding-bottom: 9px; border-bottom: 1px solid var(--life-border); }
+.life-config-title { display: inline-flex; align-items: center; gap: 7px; color: var(--life-ink); font-weight: 900; }
+.life-config-title svg { width: 17px; height: 17px; color: var(--life-accent); }
+.life-config-head p { display: block; margin: 0; color: var(--life-muted); font-size: 13px; line-height: 1.45; }
+.life-config-fields { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(140px, .85fr); align-items: start; gap: 10px; }
+.life-config-submit { display: grid; grid-template-columns: minmax(0, 1fr) minmax(190px, .72fr); align-items: stretch; gap: 10px; }
+.life-property-config .life-field { font-size: 13px; }
+.life-property-config .life-field small { color: var(--life-muted); font-size: 13px; line-height: 1.35; }
+.life-property-config > .life-secondary { grid-column: 1 / -1; justify-self: start; min-height: 32px; }
+.life-income-breakdown { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+.life-income-breakdown > span { display: grid; gap: 2px; min-width: 0; padding: 8px 9px; border-radius: 6px; background: var(--life-soft-2); }
+.life-income-breakdown > span.daily { grid-column: 1 / -1; display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.life-income-breakdown small { color: var(--life-muted); font-size: 13px; }
+.life-income-breakdown b { color: var(--life-ink); font-size: 14px; overflow-wrap: anywhere; }
+.life-income-breakdown .net { border: 1px solid var(--life-border); background: var(--life-card); }
+.life-income-breakdown .net b { color: var(--life-accent); }
+.life-income-breakdown .daily { grid-column: 1 / -1; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 10px; }
+.life-income-breakdown .daily b { justify-self: end; font-size: 13px; color: var(--life-muted); }
+.life-property-mode-note { display: flex; align-items: center; gap: 7px; padding: 8px 10px; border-radius: 6px; background: var(--life-soft-2); color: var(--life-muted); font-size: 13px; }
+.life-property-mode-note svg { width: 16px; height: 16px; flex: 0 0 auto; }
+.life-property-mode-note.warning { background: #fff7e2; color: #795811; }
+.life-acquired { margin-right: auto; color: var(--life-muted); font-size: 13px; }
+.life-garage-summary { display: grid; gap: 13px; padding: 16px; border: 1px solid var(--life-border); border-radius: 11px; background: linear-gradient(120deg, var(--life-soft), var(--life-card)); box-shadow: var(--life-shadow); }
+.life-collection-heading { display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; align-items: center; gap: 12px; }
+.life-collection-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 12px; background: var(--life-accent); color: #fff; }
+.life-collection-icon svg { width: 24px; height: 24px; }
+.life-collection-heading > div { display: grid; gap: 3px; }
+.life-collection-heading small { color: var(--life-accent); font-weight: 900; letter-spacing: .08em; }
+.life-collection-heading strong { color: var(--life-ink); font-size: 16px; }
+.life-collection-heading p { margin: 0; color: var(--life-muted); font-size: 13px; }
+.life-collection-heading > b { color: var(--life-accent); font-size: 18px; }
+.life-collection-strip { display: grid; grid-auto-flow: column; grid-auto-columns: 148px; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+.life-collection-strip article { position: relative; display: grid; gap: 4px; min-width: 0; padding: 7px; border: 1px solid var(--life-border); border-radius: 7px; background: var(--life-card); }
+.life-collection-strip img { width: 100%; aspect-ratio: 16 / 10; padding:8px; box-sizing:border-box; object-fit:contain; border-radius:6px; background:linear-gradient(145deg,var(--life-soft-2),var(--life-soft)); }
+.life-collection-strip span { overflow: hidden; color: var(--life-ink); font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+.life-collection-strip strong { position: absolute; right: 10px; top: 10px; padding: 2px 5px; border-radius: 4px; background: #102c22bb; color: #fff; font-size: 13px; }
+.life-garage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(390px, 1fr)); gap: 13px; }
+.life-garage-workspace { display: grid; grid-template-columns: minmax(290px, 350px) minmax(0, 1fr); align-items: start; gap: 14px; }
+.life-garage-directory { position: sticky; top: 12px; display: grid; gap: 12px; max-height: calc(100vh - 110px); overflow: auto; padding: 12px; border: 1px solid var(--life-border); border-radius: 11px; background: var(--life-card); box-shadow: var(--life-shadow); }
+.life-garage-directory-head { display: grid; gap: 3px; padding: 4px 5px 10px; border-bottom: 1px solid var(--life-border); }
+.life-garage-directory-head small { color: var(--life-accent); font-weight: 900; letter-spacing: .07em; }
+.life-garage-directory-head strong { color: var(--life-ink); font-size: 21px; }
+.life-garage-directory-head span { color: var(--life-muted); font-size: 13px; line-height: 1.45; }
+.life-garage-group { display: grid; gap: 6px; }
+.life-garage-group > header { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 4px 5px 0; color: var(--life-muted); font-size: 13px; font-weight: 900; letter-spacing: .04em; }
+.life-garage-group > header b { min-width: 24px; padding: 2px 6px; border-radius: 999px; background: var(--life-soft); color: var(--life-ink); text-align: center; }
+.life-garage-nav { display: grid; grid-template-columns: 38px minmax(0, 1fr) auto; align-items: center; gap: 8px; width: 100%; padding: 9px; border: 1px solid transparent; border-radius: 8px; background: var(--life-soft-2); color: var(--life-ink); text-align: left; }
+.life-garage-nav:hover { border-color: var(--life-border-strong); }
+.life-garage-nav.active { border-color: var(--life-accent); background: var(--life-accent-soft); box-shadow: inset 3px 0 0 var(--life-accent); }
+.life-garage-nav-icon { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 9px; background: var(--life-card); color: var(--life-accent); }
+.life-garage-nav-icon svg { width: 19px; height: 19px; }
+.life-garage-nav-copy { display: grid; gap: 1px; min-width: 0; }
+.life-garage-nav-copy small { color: var(--life-muted); font-size: 13px; }
+.life-garage-nav-copy strong, .life-garage-nav-copy em { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.life-garage-nav-copy strong { font-size: 14px; }
+.life-garage-nav-copy em { color: var(--life-muted); font-size: 13px; font-style: normal; }
+.life-garage-nav > b { align-self: start; color: var(--life-accent); font-size: 13px; }
+.life-garage-nav-track { grid-column: 2 / -1; height: 4px; overflow: hidden; border-radius: 99px; background: var(--life-card); }
+.life-garage-nav-track i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--life-accent), var(--life-gold)); }
+.life-garage-detail { overflow: hidden; border: 1px solid var(--life-border); border-radius: 11px; background: var(--life-card); box-shadow: var(--life-shadow); }
+.life-garage-detail-head { display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; align-items: center; gap: 11px; padding: 15px; }
+.life-garage-detail-head > div { display: grid; gap: 2px; min-width: 0; }
+.life-garage-detail-head small { color: var(--life-accent); font-weight: 900; }
+.life-garage-detail-head h2 { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.life-garage-detail-head p { display: flex; align-items: center; gap: 4px; margin: 2px 0 0; color: var(--life-muted); font-size: 13px; }
+.life-garage-detail-head p svg { width: 14px; height: 14px; }
+.life-parking-overview { display: grid; gap: 8px; margin: 12px; padding: 12px; border: 1px solid var(--life-border); border-radius: 9px; background: var(--life-soft-2); }
+.life-parking-overview > small { color: var(--life-muted); font-size: 13px; }
+.life-parking-bays { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.life-parking-bay { width: 32px; height: 32px; display: grid; place-items: center; border: 1px dashed var(--life-border-strong); border-radius: 6px; background: var(--life-card); color: var(--life-muted); }
+.life-parking-bay.occupied { border-style: solid; border-color: var(--life-accent); background: var(--life-accent-soft); color: var(--life-accent); }
+.life-parking-bay svg { width: 18px; height: 18px; }
+.life-parking-overflow { padding: 4px 7px; border-radius: 5px; background: var(--life-soft); color: var(--life-accent); font-size: 13px; font-weight: 900; }
+.life-garage-card, .life-garage-buy-card { border: 1px solid var(--life-border); border-radius: 11px; background: var(--life-card); box-shadow: var(--life-shadow); }
+.life-garage-card { overflow: hidden; }
+.life-garage-card > header { display: grid; grid-template-columns: 45px minmax(0, 1fr) auto; align-items: center; gap: 10px; padding: 14px; }
+.life-garage-badge { width: 45px; height: 45px; display: grid; place-items: center; border-radius: 10px; background: var(--life-accent-soft); color: var(--life-accent); }
+.life-garage-badge svg { width: 22px; height: 22px; }
+.life-garage-card header small { color: var(--life-muted); }
+.life-garage-capacity { display: grid; justify-items: end; gap: 2px; }
+.life-garage-capacity strong { color: var(--life-ink); font-size: 17px; }
+.life-garage-capacity span { color: var(--life-muted); font-size: 13px; }
+.life-capacity-track { height: 5px; background: var(--life-soft); }
+.life-capacity-track span { display: block; height: 100%; background: linear-gradient(90deg, var(--life-accent), #75b59b); }
+.life-vehicle-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 8px; padding: 11px; }
+.life-garage-empty { padding: 8px; }
+.life-garage-empty .life-empty-state { min-height: 90px; }
+.life-vehicle-row { display: grid; grid-template-columns: minmax(112px, 28%) minmax(0, 1fr); align-items: start; gap: 8px; padding: 8px; border: 1px solid var(--life-border); border-radius: 8px; background: var(--life-soft-2); }
+.life-vehicle-photo { position: relative; align-self: start; aspect-ratio: 16 / 9; overflow: hidden; border:1px solid var(--life-border); border-radius: 7px; background: linear-gradient(145deg,var(--life-soft-2),var(--life-soft)); }
+.life-vehicle-photo img { display: block; width: 100%; height: 100%; padding: 5px; box-sizing: border-box; object-fit: contain; }
+.life-class-badge, .life-rarity-badge { position: absolute; z-index: 2; color: #fff; font-weight: 900; }
+.life-rarity-badge { padding: 3px 6px; border-radius: 4px; background: #102c22c9; font-size: 13px; }
+.life-class-badge { left: 7px; top: 7px; display: inline-grid; place-items: center; min-width: 38px; min-height: 30px; padding: 5px 9px; box-sizing: border-box; overflow: hidden; border: 1px solid #ffffff70; border-radius: 7px; background: linear-gradient(135deg, #68736e, #3e4843); box-shadow: 0 5px 14px #071b1499, inset 0 1px 0 #ffffff42; font-size: 16px; font-style: italic; line-height: 1; letter-spacing: .035em; text-shadow: 0 1px 2px #000000a6; }
+.life-class-badge.is-inline { position: relative; display: inline-flex; justify-self: center; min-width: 34px; min-height: 26px; padding: 4px 7px; overflow: hidden; box-shadow: none; font-size: 15px; }
+.life-class-badge.life-class-d { background: linear-gradient(135deg, #89938e, #59635e); }
+.life-class-badge.life-class-c { border-color: #baf3d4a0; background: linear-gradient(135deg, #2e9a67, #176746); box-shadow: 0 5px 14px #0d553199, inset 0 1px 0 #d9ffee52; }
+.life-class-badge.life-class-b { border-color: #b9e6ffa3; background: linear-gradient(135deg, #318bc2, #17547f); box-shadow: 0 5px 14px #0b3b5d99, inset 0 1px 0 #d9f4ff52; }
+.life-class-badge.life-class-a { border-color: #ffe0a0b8; background: linear-gradient(135deg, #d89524, #9a5c0b); box-shadow: 0 5px 14px #633b0799, inset 0 1px 0 #fff4ca66; }
+.life-class-badge.life-class-s1 { border-color: #ffbbb0b8; background: linear-gradient(135deg, #bf443b, #7d1e25); box-shadow: 0 5px 16px #601317b8, inset 0 1px 0 #ffe0da52; }
+.life-class-badge.life-class-s2 { border-color: #f4d57ff0; background: linear-gradient(135deg, #8c40a9, #47206c 54%, #b8812d); box-shadow: 0 0 0 1px #fff3bd66, 0 6px 20px #42145f9e, inset 0 1px 0 #fff6ce73; }
+.life-class-badge.life-class-s2::after { content: ""; position: absolute; inset: -55% -90%; background: linear-gradient(105deg, transparent 40%, #fff3c99e 49%, transparent 58%); transform: translateX(-62%) rotate(8deg); animation: life-class-s2-sheen 3.6s ease-in-out infinite; }
+@keyframes life-class-s2-sheen { 0%, 58% { transform: translateX(-70%) rotate(8deg); } 78%, 100% { transform: translateX(70%) rotate(8deg); } }
+.life-rarity-badge { right: 6px; top: 6px; background: #725016d9; }
+.life-vehicle-main { display: grid; align-content: start; gap: 6px; min-width: 0; }
+.life-vehicle-main > div { min-width: 0; }
+.life-vehicle-main small { color: var(--life-muted); }
+.life-vehicle-main h3 { margin-top: 2px; overflow: hidden; font-size: 14px; line-height: 1.3; text-overflow: ellipsis; white-space: nowrap; }
+.life-vehicle-main dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 8px; margin: 0; }
+.life-vehicle-main dl > div { min-width: 0; }
+.life-vehicle-main dt { color: var(--life-muted); font-size: 13px; }
+.life-vehicle-main dd { margin: 0; color: var(--life-ink); font-size: 13px; font-weight: 800; }
+.life-vehicle-actions { grid-column: 1 / -1; display: flex; align-items: end; flex-wrap: wrap; gap: 6px; padding-top: 7px; border-top: 1px solid var(--life-border); }
+.life-vehicle-actions .life-field { flex: 1 1 100%; }
+.life-garage-buy-card { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 17px; border-style: dashed; }
+.life-garage-buy-card > div { display: grid; gap: 4px; }
+.life-garage-buy-card svg { width: 22px; height: 22px; color: var(--life-accent); }
+.life-garage-buy-card small { color: var(--life-muted); }
+.life-garage-buy-card strong { color: var(--life-accent); font-size: 15px; }
+.life-dealer-toolbar { align-items: end; }
+.life-dealer-toolbar .life-search-field { flex: 1 1 210px; }
+.life-dealer-toolbar .life-field { min-width: 120px; }
+.life-dealer-garage { margin-left: auto; min-width: 180px !important; }
+.life-dealer-note { display: flex; align-items: center; gap: 7px; padding: 9px 12px; border-radius: 7px; background: var(--life-soft); color: var(--life-muted); font-size: 13px; }
+.life-dealer-note svg { width: 16px; height: 16px; flex: 0 0 auto; color: var(--life-accent); }
+.life-dealer-results { display: grid; gap: 11px; }
+.life-results-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 2px 3px; }
+.life-results-head strong { color: var(--life-ink); font-size: 15px; }
+.life-results-head span { color: var(--life-muted); font-size: 13px; }
+.life-dealer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 11px; }
+.life-dealer-card { display: grid; overflow: hidden; border: 1px solid var(--life-border); border-radius: 10px; background: var(--life-card); box-shadow: var(--life-shadow); }
+.life-dealer-photo { position: relative; aspect-ratio: 16 / 10; background: linear-gradient(145deg,var(--life-soft-2),var(--life-soft)); }
+.life-dealer-photo img { display: block; width: 100%; height: 100%; padding: 12px; box-sizing: border-box; object-fit: contain; }
+.life-dealer-copy { display: grid; gap: 3px; padding: 10px 11px 7px; }
+.life-dealer-copy small { color: var(--life-muted); }
+.life-dealer-copy h3 { font-size: 15px; }
+.life-dealer-copy > div { display: flex; gap: 8px; color: var(--life-muted); font-size: 13px; }
+.life-dealer-card footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 11px 11px; }
+.life-dealer-card footer strong { color: var(--life-accent); font-size: 15px; }
+.life-pagination { display: flex; align-items: center; justify-content: center; gap: 12px; padding-top: 4px; }
+.life-pagination span { color: var(--life-muted); font-size: 13px; font-weight: 800; }
+.life-gacha-toolbar { display: grid; grid-template-columns: minmax(180px, 240px) auto minmax(230px, 1fr); align-items: center; }
+.life-gacha-toolbar > div:first-child { display: grid; gap: 6px; }
+.life-gacha-toolbar small { color: var(--life-muted); font-weight: 800; }
+.life-gacha-space { display: grid; grid-template-columns: auto auto; align-items: center; gap: 2px 7px; padding: 9px 12px; border-radius: 7px; background: var(--life-soft); color: var(--life-muted); font-size: 13px; }
+.life-gacha-space svg { grid-row: 1 / 3; width: 22px; height: 22px; color: var(--life-accent); }
+.life-gacha-space span { font-weight: 700; }
+.life-gacha-space strong { color: var(--life-accent); font-size: 15px; }
+.life-gacha-toolbar > p { display: flex; align-items: center; gap: 6px; justify-self: end; margin: 0; color: var(--life-muted); font-size: 13px; }
+.life-gacha-toolbar > p svg { width: 16px; height: 16px; color: var(--life-accent); }
+.life-gacha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+.life-gacha-tier { display: grid; gap: 11px; padding: 16px; border: 1px solid var(--life-border); border-radius: 11px; background: var(--life-card); box-shadow: var(--life-shadow); }
+.life-gacha-tier.tier-street { border-top: 3px solid #568aa5; }
+.life-gacha-tier.tier-performance { border-top: 3px solid #c98328; }
+.life-gacha-tier.tier-collector { border-top: 3px solid #8f63c5; }
+.life-gacha-tier-head { display: flex; align-items: start; gap: 10px; }
+.life-gacha-tier-head > span { width: 42px; height: 42px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 10px; background: var(--life-soft); color: var(--life-accent); }
+.life-gacha-tier-head svg { width: 22px; height: 22px; }
+.life-gacha-tier-head > div { display: grid; gap: 3px; }
+.life-gacha-tier-head small { color: var(--life-muted); }
+.life-gacha-tier-head p { margin: 0; color: var(--life-muted); font-size: 13px; line-height: 1.5; }
+.life-pity-track { height: 7px; overflow: hidden; border-radius: 99px; background: var(--life-soft); }
+.life-pity-track span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--life-accent), var(--life-gold)); }
+.life-pity-copy { display: flex; justify-content: space-between; gap: 8px; color: var(--life-muted); font-size: 13px; }
+.life-pity-hint { margin: -5px 0 0; color: var(--life-muted); font-size: 13px; }
+.life-gacha-prices { display: flex; gap: 7px; margin: 0; }
+.life-gacha-prices div { flex: 1; padding: 7px 8px; border-radius: 5px; background: var(--life-soft-2); }
+.life-gacha-prices dt { color: var(--life-ink); font-size: 13px; font-weight: 800; }
+.life-gacha-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.life-gacha-results { display: grid; gap: 11px; padding: 16px; border: 1px solid var(--life-border); border-radius: 11px; background: var(--life-card); box-shadow: var(--life-shadow); }
+.life-gacha-results > .life-gacha-delivery-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(390px, auto); align-items: stretch; gap: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--life-border); }
+.life-gacha-results header small { color: var(--life-accent); font-weight: 800; }
+.life-gacha-results header span { color: var(--life-muted); font-size: 13px; }
+.life-gacha-delivery-title { display: grid; align-content: space-between; gap: 8px; min-width: 0; }
+.life-gacha-delivery-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.life-gacha-delivery-heading > div { display: grid; gap: 2px; min-width: 0; }
+.life-gacha-delivery-heading h2 { margin: 0; }
+.life-gacha-delivery-metrics { display: grid; grid-template-columns: repeat(3, minmax(112px, 1fr)); gap: 8px; }
+.life-gacha-total-value { display: grid; align-content: center; gap: 2px; min-width: 0; padding: 10px 12px; border: 1px solid var(--life-border); border-radius: 8px; background: linear-gradient(145deg, var(--life-soft), var(--life-card)); }
+.life-gacha-total-value small { color: var(--life-muted); font-size: 13px; font-weight: 700; }
+.life-gacha-total-value strong { overflow: hidden; color: var(--life-accent); font-size: 17px; font-variant-numeric: tabular-nums; text-overflow: ellipsis; white-space: nowrap; }
+.life-gacha-total-value em { color: var(--life-muted); font-size: 13px; font-style: normal; font-weight: 800; }
+.life-gacha-total-value.is-positive strong, .life-gacha-total-value.is-positive em { color: #b8463f; }
+.life-gacha-total-value.is-negative strong, .life-gacha-total-value.is-negative em { color: #26744d; }
+.life-gacha-result-hint { margin: 0; max-width: 620px; text-align: left; line-height: 1.45; }
+.life-gacha-result-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 9px; }
+.life-gacha-result { display: grid; gap: 4px; min-width: 0; overflow: hidden; border: 1px solid var(--life-border); border-radius: 8px; background: var(--life-soft-2); }
+.life-gacha-result > div { position: relative; aspect-ratio: 16 / 9; background: linear-gradient(145deg,var(--life-soft-2),var(--life-soft)); }
+.life-gacha-result img { display: block; width: 100%; height: 100%; padding: 10px; box-sizing: border-box; object-fit: contain; }
+.life-gacha-result small, .life-gacha-result h3, .life-gacha-result p, .life-gacha-result em { margin-left: 8px; margin-right: 8px; }
+.life-gacha-result small { color: var(--life-muted); }
+.life-gacha-result h3 { overflow: hidden; font-size: 14px; text-overflow: ellipsis; white-space: nowrap; }
+.life-gacha-result p { margin-top: 0; color: var(--life-muted); font-size: 13px; }
+.life-gacha-result em { margin-bottom: 8px; color: #9a6d12; font-size: 13px; font-style: normal; font-weight: 800; }
+.life-page-title-row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.life-page-title-row h1 { margin: 0; }
+.life-collection-open-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 0 10px;
+  border: 1px solid var(--life-border-strong);
+  border-radius: 999px;
+  background: var(--life-card);
+  color: var(--life-accent);
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow: 0 4px 14px #173b2c10;
+  transition: border-color .16s ease, background .16s ease, transform .16s ease;
+}
+.life-collection-open-button:hover:not(:disabled) { border-color: var(--life-accent); background: var(--life-accent-soft); transform: translateY(-1px); }
+.life-collection-open-button svg { width: 16px; height: 16px; }
+.life-collection-open-button b { min-width: 54px; padding: 3px 7px; border-radius: 999px; background: var(--life-accent-soft); color: var(--life-accent); font-size: 13px; text-align: center; font-variant-numeric: tabular-nums; }
+.life-collection-dialog {
+  width: min(1180px, calc(100vw - 32px));
+  max-width: none;
+  height: min(880px, calc(100vh - 32px));
+  max-height: none;
+  padding: 0;
+  border: 1px solid var(--life-border-strong);
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--life-soft-2);
+  color: var(--life-ink);
+  box-shadow: 0 32px 100px #071b145c;
+}
+.life-collection-dialog::backdrop { background: #071b14a8; backdrop-filter: blur(5px); }
+.life-collection-dialog-shell { display: grid; grid-template-rows: auto minmax(0, 1fr); height: 100%; min-height: 0; }
+.life-collection-dialog-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 22px; border-bottom: 1px solid var(--life-border); background: linear-gradient(120deg, var(--life-card), var(--life-accent-soft)); }
+.life-collection-dialog-head > div { display: grid; gap: 4px; }
+.life-collection-dialog-head small { color: var(--life-accent); font-size: 13px; font-weight: 900; letter-spacing: .12em; }
+.life-collection-dialog-head h2 { margin: 0; font-size: 26px; letter-spacing: -.02em; }
+.life-collection-dialog-content { min-height: 0; overflow: auto; padding: 18px 22px 26px; overscroll-behavior: contain; }
+.life-collection-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; margin-bottom: 12px; }
+.life-collection-stats > span { display: grid; gap: 3px; padding: 11px 13px; border: 1px solid var(--life-border); border-radius: 10px; background: var(--life-card); }
+.life-collection-stats small { color: var(--life-muted); font-size: 13px; font-weight: 800; }
+.life-collection-stats strong { color: var(--life-ink); font-size: 21px; font-variant-numeric: tabular-nums; }
+.life-collection-tabs { position: sticky; z-index: 4; top: -18px; display: flex; gap: 5px; margin: 0 -4px 16px; padding: 9px 4px; overflow-x: auto; background: color-mix(in srgb, var(--life-soft-2) 92%, transparent); backdrop-filter: blur(8px); }
+.life-collection-tabs button { display: inline-flex; align-items: center; flex: 0 0 auto; gap: 7px; min-height: 36px; padding: 0 12px; border: 1px solid transparent; border-radius: 999px; background: transparent; color: var(--life-muted); font-size: 13px; font-weight: 900; }
+.life-collection-tabs button:hover { background: var(--life-card); color: var(--life-ink); }
+.life-collection-tabs button.active { border-color: var(--life-accent); background: var(--life-card); color: var(--life-accent); box-shadow: 0 4px 14px #173b2c12; }
+.life-collection-tabs button b { min-width: 22px; padding: 2px 6px; border-radius: 999px; background: var(--life-accent-soft); color: var(--life-accent); font-size: 13px; text-align: center; }
+.life-collection-hero { display: grid; grid-template-columns: 116px minmax(0, 1fr) minmax(280px, .9fr); align-items: center; gap: 18px; padding: 18px; border: 1px solid var(--life-border); border-radius: 14px; background: radial-gradient(circle at 0 0, var(--life-accent-soft), transparent 42%), linear-gradient(120deg, var(--life-card), var(--life-soft)); box-shadow: var(--life-shadow); }
+.life-collection-ring { width: 108px; height: 108px; display: grid; place-content: center; justify-items: center; gap: 1px; border-radius: 50%; background: conic-gradient(var(--life-accent) var(--collection-progress), var(--life-border) 0); box-shadow: inset 0 0 0 10px var(--life-card); }
+.life-collection-ring strong { color: var(--life-ink); font-size: 22px; line-height: 1; }
+.life-collection-ring span { max-width: 68px; color: var(--life-muted); font-size: 13px; text-align: center; }
+.life-collection-hero-copy { display: grid; gap: 6px; min-width: 0; }
+.life-collection-hero-copy > small { color: var(--life-accent); font-size: 13px; font-weight: 900; letter-spacing: .06em; }
+.life-collection-hero-copy h3 { margin: 0; color: var(--life-ink); font-size: 19px; line-height: 1.3; }
+.life-collection-hero-copy p { margin: 0; color: var(--life-muted); font-size: 13px; line-height: 1.45; }
+.life-collection-kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 0; }
+.life-collection-kpis div { display: grid; gap: 3px; min-width: 0; padding: 10px; border: 1px solid var(--life-border); border-radius: 9px; background: var(--life-card); }
+.life-collection-kpis dt { color: var(--life-muted); font-size: 13px; font-weight: 700; }
+.life-collection-kpis dd { margin: 0; color: var(--life-ink); font-size: 17px; font-weight: 900; font-variant-numeric: tabular-nums; }
+.life-collection-section { display: grid; gap: 10px; margin-top: 12px; padding: 15px; border: 1px solid var(--life-border); border-radius: 12px; background: var(--life-card); }
+.life-collection-section > header { display: flex; align-items: end; justify-content: space-between; gap: 12px; }
+.life-collection-section > header > div { display: grid; gap: 2px; }
+.life-collection-section > header small { color: var(--life-accent); font-size: 13px; font-weight: 900; letter-spacing: .06em; }
+.life-collection-section > header h3 { margin: 0; color: var(--life-ink); font-size: 17px; }
+.life-collection-overview-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.life-collection-manufacturer-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.life-collection-manufacturer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 9px; }
+.life-collection-manufacturer { display: grid; grid-template-columns: minmax(0, 1fr) 128px; gap: 7px 12px; align-items: center; min-width: 0; padding: 11px 12px; border: 1px solid var(--life-border); border-radius: 9px; background: var(--life-soft-2); color: var(--life-ink); text-align: left; }
+.life-collection-manufacturer:hover { border-color: var(--life-accent); background: var(--life-accent-soft); }
+.life-collection-manufacturer > span { display: grid; gap: 2px; min-width: 0; }
+.life-collection-manufacturer > span strong { overflow: hidden; font-size: 14px; text-overflow: ellipsis; white-space: nowrap; }
+.life-collection-manufacturer small, .life-collection-manufacturer em { color: var(--life-muted); font-size: 13px; font-style: normal; }
+.life-collection-manufacturer > em { grid-column: 2; text-align: right; }
+.life-collection-progress-row { display: grid; grid-template-columns: minmax(72px, auto) minmax(0, 1fr) auto; align-items: center; gap: 8px; color: var(--life-muted); font-size: 13px; }
+.life-collection-progress-row > span { color: var(--life-ink); font-weight: 800; }
+.life-collection-progress-row > div { height: 7px; overflow: hidden; border-radius: 999px; background: var(--life-soft); }
+.life-collection-progress-row > div > i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--life-accent), var(--life-gold)); transition: width .3s ease; }
+.life-collection-progress-row > b { min-width: 52px; color: var(--life-ink); font-size: 13px; text-align: right; font-variant-numeric: tabular-nums; }
+.life-collection-progress-row.rarity-legendary > div > i, .life-collection-progress-row.rarity-forza-edition > div > i, .life-collection-progress-row.rarity-donut-edition > div > i { background: linear-gradient(90deg, #9b7019, #f1c85a); }
+.life-collection-toolbar { display: grid; grid-template-columns: minmax(220px, 1.5fr) repeat(4, minmax(120px, .7fr)); align-items: end; gap: 8px; margin-bottom: 12px; padding: 11px; border: 1px solid var(--life-border); border-radius: 10px; background: var(--life-soft-2); }
+.life-catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; }
+.life-catalog-card { --rarity: #78978a; position: relative; display: grid; grid-template-rows: auto 1fr auto; overflow: hidden; min-width: 0; border: 1px solid var(--life-border); border-top: 3px solid var(--rarity); border-radius: 11px; background: var(--life-card); box-shadow: 0 7px 18px #173b2c0d; transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease; }
+.life-catalog-card:hover { transform: translateY(-2px); box-shadow: 0 12px 26px #173b2c18; }
+.life-catalog-card.rarity-common { --rarity: #78978a; }
+.life-catalog-card.rarity-rare { --rarity: #4f8fbf; }
+.life-catalog-card.rarity-epic { --rarity: #9a65c5; }
+.life-catalog-card.rarity-legendary { --rarity: #d49b25; }
+.life-catalog-card.rarity-forza-edition { --rarity: #d46025; }
+.life-catalog-card.rarity-donut-edition { --rarity: #cf3d75; }
+.life-catalog-card.is-locked .life-catalog-photo img { filter: grayscale(.74) saturate(.45); opacity: .57; }
+.life-catalog-card.is-locked:hover .life-catalog-photo img { filter: grayscale(.45) saturate(.65); opacity: .72; }
+.life-catalog-card.is-display-only { box-shadow: inset 0 0 0 1px #d6a33a45, 0 7px 18px #173b2c0d; }
+.life-catalog-photo { position: relative; aspect-ratio: 16 / 9; background: linear-gradient(145deg, var(--life-soft-2), var(--life-soft)); }
+.life-catalog-photo img { display: block; width: 100%; height: 100%; padding: 12px; box-sizing: border-box; object-fit: contain; }
+.life-catalog-card .life-rarity-badge { background: color-mix(in srgb, var(--rarity) 88%, #111 12%); }
+.life-catalog-lock { position: absolute; right: 7px; bottom: 7px; width: 27px; height: 27px; display: grid; place-items: center; border-radius: 999px; background: #14281fe0; color: #fff; }
+.life-catalog-lock.is-collected { background: #176b4de8; }
+.life-catalog-lock svg { width: 15px; height: 15px; }
+.life-catalog-copy { display: grid; gap: 3px; min-width: 0; padding: 9px 10px 7px; }
+.life-catalog-copy small { overflow: hidden; color: var(--life-muted); font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+.life-catalog-copy h3 { margin: 0; overflow: hidden; font-size: 14px; line-height: 1.3; text-overflow: ellipsis; white-space: nowrap; }
+.life-catalog-copy p { display: flex; gap: 8px; margin: 1px 0 0; color: var(--life-muted); font-size: 13px; }
+.life-catalog-card footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px 10px; border-top: 1px solid var(--life-border); }
+.life-catalog-card footer strong { color: var(--life-accent); font-size: 14px; white-space: nowrap; }
+.life-catalog-owned { overflow: hidden; color: var(--life-muted); font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+.life-catalog-owned.is-owned { color: var(--life-accent); font-weight: 900; }
+.life-catalog-exclusive { position: absolute; left: 7px; bottom: 8px; display: inline-flex; align-items: center; gap: 4px; padding: 3px 6px; border-radius: 999px; background: #f0c95ce6; color: #392804; font-size: 13px; font-weight: 900; }
+.life-catalog-exclusive svg { width: 13px; height: 13px; }
+.life-dealer-card.is-display-only { border-color: #d6b15c; background: linear-gradient(180deg, #fff9e8, var(--life-card) 38%); }
+.life-dealer-exclusive { position: absolute; left: 7px; bottom: 7px; display: inline-flex; align-items: center; gap: 4px; padding: 3px 7px; border-radius: 999px; background: #e6bd4bed; color: #382604; font-size: 13px; font-weight: 900; }
+.life-dealer-exclusive svg { width: 13px; height: 13px; }
+.life-gacha-odds { display: grid; gap: 8px; padding: 10px; border: 1px solid var(--life-border); border-radius: 8px; background: var(--life-soft-2); }
+.life-gacha-odds > header { display: flex; align-items: center; justify-content: space-between; gap: 9px; }
+.life-gacha-odds > header > span { display: inline-flex; align-items: center; gap: 5px; color: var(--life-ink); font-size: 13px; font-weight: 900; }
+.life-gacha-odds > header svg { width: 15px; height: 15px; color: var(--life-accent); }
+.life-gacha-odds > header small { max-width: 55%; color: var(--life-muted); font-size: 13px; text-align: right; }
+.life-gacha-odds-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.life-gacha-odds-groups > div { display: grid; gap: 5px; }
+.life-gacha-odds-groups > div > small { color: var(--life-muted); font-size: 13px; font-weight: 800; }
+.life-gacha-odds-groups > div > div { display: grid; gap: 4px; }
+.life-gacha-odds-groups span { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 7px; border-radius: 5px; background: var(--life-card); font-size: 13px; }
+.life-gacha-odds-groups b { color: var(--life-muted); font-size: 13px; }
+.life-gacha-odds-groups em { color: var(--life-ink); font-size: 13px; font-style: normal; font-weight: 900; font-variant-numeric: tabular-nums; }
+.life-gacha-odds > p { margin: 0; color: var(--life-muted); font-size: 13px; line-height: 1.45; }
+.life-page .spinner { width: 24px; height: 24px; }
+@media (max-width: 1180px) {
+  .life-map-grid { grid-template-columns: minmax(0, 1fr) 320px; }
+  .life-garage-grid { grid-template-columns: 1fr; }
+  .life-garage-workspace { grid-template-columns: 1fr; }
+  .life-garage-directory { position: static; max-height: none; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+  .life-garage-directory-head { grid-column: 1 / -1; }
+  .life-collection-hero { grid-template-columns: 104px minmax(0, 1fr); }
+  .life-collection-kpis { grid-column: 1 / -1; }
+  .life-collection-toolbar { grid-template-columns: repeat(3, minmax(150px, 1fr)); }
+  .life-collection-toolbar .life-search-field { grid-column: 1 / -1; }
+}
+@media (max-width: 900px) {
+  .life-map-grid { grid-template-columns: 1fr; }
+  .life-map-panel { max-height: none; }
+  .life-map-viewport { height: 480px; }
+  .life-property-metrics, .life-metric-grid { grid-template-columns: 1fr 1fr; }
+  .life-metric-action { grid-column: 1 / -1; }
+  .life-gacha-toolbar { grid-template-columns: 1fr 1fr; }
+  .life-gacha-toolbar > p { grid-column: 1 / -1; justify-self: start; }
+  .life-vehicle-list { grid-template-columns: 1fr; }
+  .life-collection-dialog-content { padding: 14px; }
+  .life-collection-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .life-collection-overview-grid, .life-collection-manufacturer-list { grid-template-columns: 1fr; }
+  .life-collection-toolbar { grid-template-columns: repeat(2, minmax(130px, 1fr)); }
+}
+@media (max-width: 620px) {
+  .life-page { padding: 14px !important; }
+  .life-page-header { align-items: flex-start !important; flex-direction: column; }
+  .life-page-actions { width: 100%; justify-content: flex-start; }
+  .life-page-title-row { align-items: flex-start; flex-direction: column; }
+  .life-collection-open-button { width: 100%; justify-content: space-between; }
+  .life-collection-dialog { width: calc(100vw - 12px); height: calc(100vh - 12px); border-radius: 12px; }
+  .life-collection-dialog-head { padding: 13px 14px; }
+  .life-collection-dialog-head h2 { font-size: 21px; }
+  .life-collection-dialog-content { padding: 11px 10px 18px; }
+  .life-collection-stats { gap: 6px; }
+  .life-collection-stats > span { padding: 8px 9px; }
+  .life-collection-stats strong { font-size: 18px; }
+  .life-collection-tabs { top: -11px; }
+  .life-collection-hero { grid-template-columns: 1fr; justify-items: start; padding: 13px; }
+  .life-collection-ring { width: 92px; height: 92px; }
+  .life-collection-kpis { grid-template-columns: 1fr; width: 100%; }
+  .life-collection-section { padding: 11px; }
+  .life-collection-section > header { align-items: flex-start; }
+  .life-collection-manufacturer, .life-collection-manufacturer-grid { grid-template-columns: 1fr; }
+  .life-collection-manufacturer > em { grid-column: auto; text-align: left; }
+  .life-collection-toolbar { grid-template-columns: 1fr; }
+  .life-collection-toolbar .life-search-field { grid-column: auto; }
+  .life-catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+  .life-catalog-photo img { padding: 7px; }
+  .life-catalog-copy { padding: 7px 8px 5px; }
+  .life-catalog-card footer { align-items: flex-start; flex-direction: column; padding: 7px 8px 8px; }
+  .life-catalog-exclusive { position: static; margin: 0 8px 8px; justify-self: start; }
+  .life-gacha-odds > header { align-items: flex-start; flex-direction: column; }
+  .life-gacha-odds > header small { max-width: none; text-align: left; }
+  .life-gacha-odds-groups { grid-template-columns: 1fr; }
+  .life-map-viewport { height: 390px; }
+  .life-map-toolbar { align-items: stretch; }
+  .life-map-country-field, .life-map-city-field { width: 100%; }
+  .life-map-toolbar > .life-primary, .life-map-toolbar > .life-icon-button { width: 100%; margin-left: 0; }
+  .life-property-metrics, .life-metric-grid { grid-template-columns: 1fr; }
+  .life-metric-action { grid-column: auto; }
+  .life-property-grid, .life-garage-grid { grid-template-columns: 1fr; }
+  .life-garage-summary { padding: 13px; }
+  .life-collection-heading { grid-template-columns: 42px minmax(0, 1fr); }
+  .life-collection-heading > b { grid-column: 2; }
+  .life-property-card > header { grid-template-columns: 38px minmax(0, 1fr); }
+  .life-property-card > header > .life-kind-pill { grid-column: 2; justify-self: start; }
+  .life-property-config, .life-income-breakdown { grid-template-columns: 1fr; }
+  .life-property-config > header { flex-direction: column; }
+  .life-property-config > header small { max-width: none; text-align: left; }
+  .life-property-config > .life-business-quote, .life-property-config > .life-primary { grid-column: 1 / -1; }
+  .life-property-config > .life-secondary { width: 100%; justify-self: stretch; }
+  .life-vehicle-row { grid-template-columns: 1fr; }
+  .life-vehicle-photo { width:100%; }
+  .life-vehicle-main dl { grid-template-columns: 1fr; }
+  .life-vehicle-actions { align-items: stretch; flex-direction: column; }
+  .life-garage-detail-head { grid-template-columns: 42px minmax(0, 1fr); }
+  .life-garage-detail-head .life-garage-capacity { grid-column: 2; justify-items: start; }
+  .life-garage-directory { grid-template-columns: 1fr; }
+  .life-dealer-toolbar { align-items: stretch; }
+  .life-dealer-toolbar .life-field, .life-dealer-garage { width: 100%; margin-left: 0; }
+  .life-dealer-grid { grid-template-columns: 1fr 1fr; }
+  .life-gacha-toolbar { grid-template-columns: 1fr; }
+  .life-gacha-toolbar > p { grid-column: auto; }
+  .life-gacha-grid { grid-template-columns: 1fr; }
+  .life-gacha-results > header { align-items: flex-start; flex-direction: column; }
+  .life-gacha-result-meta { justify-items: start; }
+  .life-pagination { flex-wrap: wrap; }
+}
+@media (max-width: 440px) {
+  .life-dealer-grid, .life-property-stats { grid-template-columns: 1fr; }
+  .life-gacha-actions { grid-template-columns: 1fr; }
+}
+
+/* Round 46: persistent vehicle media, storage garage and compact draw history. */
+.life-storage-open-button { background: linear-gradient(120deg, var(--life-card), var(--life-soft)); color: var(--life-ink); }
+.life-storage-open-button b { background: var(--life-soft-2); color: var(--life-ink); }
+.life-storage-dialog { width: min(1040px, calc(100vw - 32px)); height: min(780px, calc(100vh - 32px)); }
+.life-storage-overview { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: 13px; }
+.life-storage-overview > div { display: grid; gap: 3px; min-width: 0; padding: 12px 14px; border: 1px solid var(--life-border); border-radius: 10px; background: linear-gradient(135deg, var(--life-card), var(--life-soft)); }
+.life-storage-overview small { color: var(--life-muted); font-size: 13px; font-weight: 800; }
+.life-storage-overview strong { color: var(--life-ink); font-size: 21px; font-variant-numeric: tabular-nums; }
+.life-storage-overview span { overflow: hidden; color: var(--life-muted); font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+.life-storage-filterbar { display: grid; grid-template-columns: minmax(220px, 1.45fr) repeat(3, minmax(128px, .62fr)) auto; align-items: end; gap: 9px; margin-bottom: 12px; padding: 12px; border: 1px solid var(--life-border); border-radius: 10px; background: linear-gradient(135deg, var(--life-card), var(--life-soft)); }
+.life-storage-filterbar .life-field, .life-storage-filterbar .life-search-field { min-width: 0; }
+.life-storage-filter-count { align-self: center; justify-self: end; color: var(--life-muted); font-size: 13px; font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.life-storage-toolbar { display: grid; grid-template-columns: auto minmax(230px, 1fr) auto auto; align-items: end; gap: 9px; margin-bottom: 12px; padding: 12px; border: 1px solid var(--life-border); border-radius: 10px; background: var(--life-card); }
+.life-storage-toolbar .life-field { min-width: 0; }
+.life-storage-toolbar button { min-height: 36px; }
+.life-storage-warning { display: flex; align-items: center; gap: 7px; margin: 0 0 11px; padding: 9px 11px; border-radius: 7px; background: #fff7e2; color: #795811; font-size: 13px; }
+.life-storage-warning svg { width: 17px; height: 17px; }
+.life-storage-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.life-storage-row { display: grid; grid-template-columns: 22px 104px minmax(0, 1fr) auto; align-items: center; gap: 10px; min-width: 0; padding: 9px; border: 1px solid var(--life-border); border-radius: 9px; background: var(--life-soft-2); cursor: pointer; transition: border-color .16s ease, background .16s ease; }
+.life-storage-row:hover { border-color: var(--life-border-strong); background: var(--life-card); }
+.life-storage-row:has(input:checked) { border-color: var(--life-accent); background: var(--life-accent-soft); box-shadow: inset 3px 0 0 var(--life-accent); }
+.life-storage-row input { width: 18px; height: 18px; accent-color: var(--life-accent); }
+.life-storage-photo { position: relative; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 7px; background: linear-gradient(145deg, var(--life-soft-2), var(--life-soft)); }
+.life-storage-photo img { display: block; width: 100%; height: 100%; padding: 6px; box-sizing: border-box; object-fit: contain; }
+.life-storage-photo b { position: absolute; left: 5px; top: 5px; padding: 2px 5px; border-radius: 4px; background: #102c22c9; color: #fff; font-size: 13px; }
+.life-storage-photo .life-class-badge { left: 4px; top: 4px; min-width: 27px; min-height: 20px; padding: 2px 5px; border-radius: 5px; box-shadow: 0 2px 7px #071b1480; font-size: 13px; }
+.life-storage-copy { display: grid; gap: 2px; min-width: 0; }
+.life-storage-copy small, .life-storage-copy em { overflow: hidden; color: var(--life-muted); font-size: 13px; font-style: normal; text-overflow: ellipsis; white-space: nowrap; }
+.life-storage-copy strong { overflow: hidden; color: var(--life-ink); font-size: 14px; text-overflow: ellipsis; white-space: nowrap; }
+.life-storage-value { color: var(--life-accent); font-size: 14px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.life-gacha-tier { display: flex; flex-direction: column; height: 100%; gap: 11px; }
+.life-gacha-toolbar { grid-template-columns: minmax(230px, 1.35fr) repeat(3, minmax(176px, .8fr)); align-items: stretch; gap: 10px; }
+.life-gacha-tool { display: grid; grid-template-columns: 38px minmax(0, 1fr); align-items: center; gap: 9px; width: 100%; min-height: 74px; height: 100%; padding: 10px 12px; box-sizing: border-box; border: 1px solid var(--life-border); border-radius: 10px; background: var(--life-soft-2); color: var(--life-ink); text-align: left; }
+.life-gacha-tool > svg { grid-row: auto; width: 23px; height: 23px; color: var(--life-accent); }
+.life-gacha-tool > span { display: grid; align-content: center; gap: 2px; min-width: 0; }
+.life-gacha-tool small { overflow: hidden; color: var(--life-muted); font-size: 13px; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; }
+.life-gacha-tool b { overflow: hidden; color: var(--life-ink); font-size: 16px; font-variant-numeric: tabular-nums; text-overflow: ellipsis; white-space: nowrap; }
+.life-gacha-tool em { overflow: hidden; color: var(--life-gold); font-size: 13px; font-style: normal; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; }
+.life-gacha-delivery { cursor: pointer; }
+.life-gacha-delivery select { width: 100%; min-height: 31px; margin-top: 1px; }
+.life-gacha-storage-entry:hover, .life-gacha-collection-entry:hover { border-color: var(--life-accent); background: var(--life-accent-soft); }
+.life-gacha-toolbar > p { grid-column: 1 / -1; justify-self: stretch; min-height: 19px; }
+.life-gacha-tier-head { display: grid; grid-template-columns: 42px minmax(0, 1fr) auto; align-items: start; gap: 10px; }
+.life-gacha-tier-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
+.life-gacha-catalog-button, .life-gacha-history-button { display: inline-flex; align-items: center; gap: 5px; min-height: 32px; padding: 0 10px; border: 1px solid var(--life-border); border-radius: 999px; background: var(--life-soft-2); color: var(--life-muted); font-size: 13px; font-weight: 800; white-space: nowrap; }
+.life-gacha-catalog-button:hover, .life-gacha-history-button:hover { border-color: var(--life-accent); background: var(--life-accent-soft); color: var(--life-accent); }
+.life-gacha-catalog-button svg, .life-gacha-history-button svg { width: 15px; height: 15px; }
+.life-gacha-actions { margin-top: auto; }
+.life-gacha-pool-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; padding: 8px; border: 1px solid var(--life-border); border-radius: 8px; background: var(--life-soft-2); }
+.life-gacha-pool-stats > span { display: grid; gap: 2px; min-width: 0; }
+.life-gacha-pool-stats small { color: var(--life-muted); font-size: 13px; font-weight: 800; }
+.life-gacha-pool-stats strong { overflow: hidden; color: var(--life-ink); font-size: 14px; font-variant-numeric: tabular-nums; text-overflow: ellipsis; white-space: nowrap; }
+.life-gacha-gold-rule { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid #d8a62f88; border-radius: 9px; background: linear-gradient(120deg, color-mix(in srgb, var(--life-card) 82%, #d8a62f 18%), color-mix(in srgb, var(--life-soft) 88%, #d8a62f 12%)); color: var(--life-ink); }
+.life-gacha-gold-rule > svg { flex: 0 0 auto; width: 22px; height: 22px; color: var(--life-gold); }
+.life-gacha-gold-rule > div { display: grid; gap: 2px; min-width: 0; }
+.life-gacha-gold-rule small { font-size: 13px; font-weight: 800; }
+.life-gacha-gold-rule strong { overflow: hidden; font-size: 15px; text-overflow: ellipsis; white-space: nowrap; }
+.life-gacha-gold-rule em { color: var(--life-muted); font-size: 13px; font-style: normal; line-height: 1.45; }
+.life-gacha-history-dialog { width: min(1040px, calc(100vw - 32px)); height: min(780px, calc(100vh - 32px)); }
+.life-gacha-history-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; margin-bottom: 12px; }
+.life-gacha-history-summary > span { display: grid; gap: 3px; padding: 11px 13px; border: 1px solid var(--life-border); border-radius: 9px; background: var(--life-card); }
+.life-gacha-history-summary small { color: var(--life-muted); font-size: 13px; font-weight: 800; }
+.life-gacha-history-summary strong { overflow: hidden; color: var(--life-ink); font-size: 17px; text-overflow: ellipsis; white-space: nowrap; }
+.life-gacha-luck { display: grid; gap: 9px; margin-bottom: 10px; padding: 12px 13px; border: 1px solid var(--life-border); border-radius: 10px; background: linear-gradient(135deg, var(--life-card), var(--life-accent-soft)); }
+.life-gacha-luck > header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.life-gacha-luck > header span { display: inline-flex; align-items: center; gap: 6px; color: var(--life-ink); font-size: 14px; font-weight: 900; }
+.life-gacha-luck > header svg { width: 17px; height: 17px; color: var(--life-gold); }
+.life-gacha-luck > header strong { color: var(--life-accent); font-size: 15px; }
+.life-gacha-luck-scale { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+.life-gacha-luck-scale > span { display: grid; place-items: center; min-height: 31px; padding: 5px 4px; border: 1px solid var(--life-border); border-radius: 6px; background: var(--life-soft-2); color: var(--life-muted); text-align: center; }
+.life-gacha-luck-scale b { font-size: 13px; line-height: 1.2; }
+.life-gacha-luck-scale > span:nth-child(-n+3) { border-color: #7f8da866; }
+.life-gacha-luck-scale > span:nth-child(n+5) { border-color: #d8a62f66; }
+.life-gacha-luck-scale > span.active { border-color: var(--life-accent); background: var(--life-accent); color: #fff; box-shadow: 0 5px 14px #102d2230; }
+.life-gacha-luck p, .life-gacha-tracking-note { margin: 0; color: var(--life-muted); font-size: 13px; line-height: 1.5; }
+.life-gacha-tracking-note { margin-bottom: 12px; padding: 8px 10px; border-left: 3px solid var(--life-border-strong); border-radius: 0 6px 6px 0; background: var(--life-soft-2); }
+.life-gacha-history-list { display: grid; gap: 7px; }
+.life-gacha-history-row { display: grid; grid-template-columns: 78px minmax(0, 1fr) minmax(155px, auto) auto auto; align-items: center; gap: 10px; padding: 9px; border: 1px solid var(--life-border); border-left: 3px solid var(--life-border-strong); border-radius: 9px; background: var(--life-card); }
+.life-gacha-history-row.rarity-legendary, .life-gacha-history-row.rarity-forza-edition, .life-gacha-history-row.rarity-donut-edition { border-left-color: #c28b26; }
+.life-gacha-history-photo { aspect-ratio: 16 / 10; overflow: hidden; border-radius: 6px; background: linear-gradient(145deg, var(--life-soft-2), var(--life-soft)); }
+.life-gacha-history-photo img { display: block; width: 100%; height: 100%; padding: 5px; box-sizing: border-box; object-fit: contain; }
+.life-gacha-history-copy { display: grid; gap: 2px; min-width: 0; }
+.life-gacha-history-copy small, .life-gacha-history-copy em { overflow: hidden; color: var(--life-muted); font-size: 13px; font-style: normal; text-overflow: ellipsis; white-space: nowrap; }
+.life-gacha-history-copy strong { overflow: hidden; color: var(--life-ink); font-size: 14px; text-overflow: ellipsis; white-space: nowrap; }
+.life-gacha-history-economics { color: var(--life-muted); font-size: 13px; font-variant-numeric: tabular-nums; line-height: 1.45; text-align: right; }
+.life-gacha-history-row > b { min-width: 31px; color: var(--life-accent); font-size: 15px; text-align: center; }
+.life-gacha-history-row > .life-class-badge.is-inline { align-self: center; }
+.life-gacha-history-row > small { color: var(--life-muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.life-gacha-top-mark { display: inline-flex; align-items: center; gap: 4px; width: fit-content; padding: 3px 7px; border: 1px solid #d8a62f88; border-radius: 999px; background: #fff7dc; color: #815b08; font-size: 13px; font-weight: 900; line-height: 1.2; white-space: nowrap; }
+.life-gacha-top-mark svg { width: 13px; height: 13px; }
+.life-gacha-top-mark.is-guaranteed { border-color: var(--life-accent); background: var(--life-accent-soft); color: var(--life-accent); }
+.life-gacha-result > div > .life-gacha-top-mark { position: absolute; right: 6px; top: 6px; max-width: calc(100% - 12px); }
+.life-gacha-history-copy > .life-gacha-top-mark { margin-top: 3px; }
+.life-gacha-top-summary { display: inline-flex !important; align-items: center; gap: 5px; width: fit-content; margin-top: 3px; padding: 4px 8px; border: 1px solid #d8a62f88; border-radius: 999px; background: #fff7dc; color: #815b08 !important; font-size: 13px !important; font-weight: 900; }
+.life-gacha-top-summary svg { width: 14px; height: 14px; }
+.life-gacha-catalog-dialog { width: min(1240px, calc(100vw - 32px)); height: min(840px, calc(100vh - 32px)); }
+.life-gacha-catalog-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; margin-bottom: 12px; }
+.life-gacha-catalog-summary > div { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 2px 10px; padding: 12px 14px; border: 1px solid var(--life-border); border-radius: 10px; background: linear-gradient(135deg, var(--life-card), var(--life-soft)); }
+.life-gacha-catalog-summary small { grid-column: 1; color: var(--life-muted); font-size: 13px; font-weight: 800; }
+.life-gacha-catalog-summary strong { grid-column: 2; grid-row: 1 / span 2; color: var(--life-accent); font-size: 29px; font-variant-numeric: tabular-nums; line-height: 1; }
+.life-gacha-catalog-summary span { grid-column: 1; overflow: hidden; color: var(--life-muted); font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+.life-gacha-catalog-toolbar { display: grid; grid-template-columns: minmax(260px, 1.5fr) repeat(2, minmax(150px, .55fr)); align-items: end; gap: 8px; margin-bottom: 10px; padding: 11px; border: 1px solid var(--life-border); border-radius: 10px; background: var(--life-soft-2); }
+.life-gacha-catalog-count { margin: 0 0 9px; color: var(--life-muted); font-size: 13px; font-weight: 800; }
+.life-gacha-pool-card.is-locked .life-catalog-photo img { filter: none; opacity: 1; }
+.life-gacha-pool-card.is-gold-eligible { border-color: #c7942d99; box-shadow: inset 0 0 0 1px #e4bd5d3d, 0 8px 22px #5e420d24; }
+.life-gacha-pool-gold { position: absolute; left: 7px; bottom: 7px; display: inline-flex; align-items: center; gap: 4px; padding: 4px 7px; border: 1px solid #f1d480cc; border-radius: 999px; background: linear-gradient(120deg, #f8e6a8, #e6bf5d); color: #4a3105; font-size: 13px; font-weight: 900; box-shadow: 0 4px 12px #5c3d0766; }
+.life-gacha-pool-gold svg { width: 13px; height: 13px; }
+@media (prefers-reduced-motion: reduce) { .life-class-badge.life-class-s2::after { animation: none; } }
+@media (max-width: 1100px) {
+  .life-gacha-toolbar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .life-gacha-results > .life-gacha-delivery-head { grid-template-columns: 1fr; }
+  .life-storage-filterbar { grid-template-columns: minmax(220px, 1fr) repeat(3, minmax(120px, .6fr)); }
+  .life-storage-filter-count { grid-column: 1 / -1; justify-self: start; }
+}
+@media (max-width: 760px) {
+  .life-storage-overview, .life-gacha-history-summary { grid-template-columns: 1fr; }
+  .life-gacha-luck-scale { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .life-gacha-toolbar { grid-template-columns: 1fr; }
+  .life-gacha-result-meta { justify-items: stretch; width: 100%; }
+  .life-gacha-delivery-metrics { justify-content: flex-start; }
+  .life-gacha-result-hint { text-align: left; }
+  .life-storage-toolbar { grid-template-columns: 1fr 1fr; }
+  .life-storage-toolbar .life-field { grid-column: 1 / -1; }
+  .life-storage-filterbar { grid-template-columns: 1fr 1fr; }
+  .life-storage-filterbar .life-search-field { grid-column: 1 / -1; }
+  .life-storage-list { grid-template-columns: 1fr; }
+  .life-gacha-tier-head { grid-template-columns: 42px minmax(0, 1fr); }
+  .life-gacha-tier-actions { grid-column: 2; justify-self: start; justify-content: flex-start; }
+  .life-gacha-catalog-summary { grid-template-columns: 1fr; }
+  .life-gacha-catalog-toolbar { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .life-storage-toolbar { grid-template-columns: 1fr; }
+  .life-storage-toolbar .life-field { grid-column: auto; }
+  .life-storage-filterbar, .life-gacha-delivery-metrics { grid-template-columns: 1fr; }
+  .life-storage-row { grid-template-columns: 22px 82px minmax(0, 1fr); }
+  .life-storage-value { grid-column: 3; }
+  .life-gacha-history-row { grid-template-columns: 68px minmax(0, 1fr) auto; }
+  .life-gacha-history-economics { grid-column: 2 / -1; text-align: left; }
+  .life-gacha-luck { padding: 10px; }
+  .life-gacha-luck-scale { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .life-gacha-pool-stats { grid-template-columns: 1fr; }
+  .life-gacha-history-row > small { display: none; }
+  .life-class-badge { min-width: 34px; min-height: 28px; padding: 4px 7px; font-size: 15px; }
+}
+
+/* Asset lifecycle: tenure, construction and strict business configuration. */
+.life-asset-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 8px;
+  border: 1px solid var(--life-border);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--life-card) 86%, var(--life-soft));
+}
+.life-asset-filter button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 0 11px;
+  border: 1px solid var(--life-border);
+  border-radius: 7px;
+  background: var(--life-card);
+  color: var(--life-muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+.life-asset-filter button:hover { border-color: var(--life-border-strong); color: var(--life-ink); }
+.life-asset-filter button.active { border-color: var(--life-accent); background: var(--life-accent); color: #fff; }
+.life-asset-filter button em {
+  min-width: 22px;
+  padding: 2px 5px;
+  border-radius: 999px;
+  background: var(--life-soft);
+  color: var(--life-muted);
+  font-size: 13px;
+  font-style: normal;
+  text-align: center;
+}
+.life-asset-filter button.active em { background: #ffffff2b; color: #fff; }
+.life-property-badges { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 5px; }
+.life-status-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 25px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: var(--life-soft);
+  color: var(--life-muted);
+  font-size: 13px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.life-status-pill.construction { background: #fff1cf; color: #80580c; }
+.life-status-pill.expired { background: #ffe5df; color: #9a3827; }
+.life-property-card.under-construction { border-color: #d4a846; box-shadow: 0 0 0 1px #d4a84626, var(--life-shadow); }
+.life-property-card.leased-asset { border-left: 4px solid #4f78ad; }
+.life-construction-panel,
+.life-lease-panel {
+  display: grid;
+  gap: 8px;
+  padding: 10px 11px;
+  border: 1px solid var(--life-border);
+  border-radius: 8px;
+  background: var(--life-soft-2);
+}
+.life-construction-panel > header,
+.life-lease-panel > header { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: var(--life-ink); font-size: 13px; }
+.life-construction-panel > header span,
+.life-lease-panel > header span { display: flex; align-items: center; gap: 6px; font-weight: 900; }
+.life-construction-panel > header svg,
+.life-lease-panel > header svg { width: 17px; height: 17px; color: var(--life-accent); }
+.life-construction-panel > header b,
+.life-lease-panel > header b { color: var(--life-accent); font-size: 13px; white-space: nowrap; }
+.life-construction-panel > small { color: var(--life-muted); font-size: 13px; }
+.life-construction-track { height: 8px; overflow: hidden; border-radius: 999px; background: #d8c59a; }
+.life-construction-track span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #b8821f, #e8b949); transition: width .35s ease; }
+.life-lease-panel.expired { border-color: #d88875; background: #fff4f0; }
+.life-lease-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+.life-lease-facts > span { display: grid; gap: 2px; min-width: 0; padding: 7px 8px; border-radius: 6px; background: var(--life-card); }
+.life-lease-facts small { color: var(--life-muted); font-size: 13px; }
+.life-lease-facts b { overflow-wrap: anywhere; color: var(--life-ink); font-size: 13px; }
+.life-lease-facts.compact { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.life-lease-actions { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: end; gap: 7px; }
+.life-lease-actions .life-field { margin: 0; }
+.life-business-quote { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+.life-business-quote > span { display: grid; gap: 2px; padding: 7px 8px; border-radius: 6px; background: var(--life-card); }
+.life-business-quote small { color: var(--life-muted); font-size: 13px; }
+.life-business-quote b { color: var(--life-accent); font-size: 14px; }
+.life-config-submit > .life-primary { min-height: 100%; }
+.life-map-occupancy { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 4px 8px; padding: 9px 10px; border-radius: 7px; background: var(--life-accent-soft); }
+.life-map-occupancy strong { color: var(--life-ink); font-size: 13px; }
+.life-map-occupancy small { grid-column: 1 / -1; color: var(--life-muted); font-size: 13px; line-height: 1.45; }
+.life-map-purchase-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.life-map-purchase-option { display: grid; align-content: start; gap: 9px; padding: 10px; border: 1px solid var(--life-border); border-radius: 8px; background: var(--life-card); }
+.life-map-purchase-option.lease { border-color: #7291bb; background: color-mix(in srgb, var(--life-card) 84%, #dce8f7); }
+.life-map-purchase-option > header { display: flex; align-items: center; gap: 6px; color: var(--life-ink); font-size: 13px; font-weight: 900; }
+.life-map-purchase-option > header svg { width: 17px; height: 17px; color: var(--life-accent); }
+.life-map-purchase-option.lease > header svg { color: #416c9e; }
+.life-map-purchase-option .life-map-total { margin-top: auto; }
+.life-map-plot-row em.lease { color: #416c9e; }
+.life-map-plot-row em.construction { color: #94661b; }
+@media (max-width: 720px) {
+  .life-lease-actions,
+  .life-map-purchase-grid { grid-template-columns: 1fr; }
+  .life-lease-actions .life-secondary,
+  .life-lease-actions .life-danger-button { width: 100%; }
+}
+@media (max-width: 620px) {
+  .life-asset-filter { gap: 5px; }
+  .life-asset-filter button { flex: 1 1 calc(50% - 5px); justify-content: space-between; }
+  .life-property-badges { grid-column: 2; justify-content: flex-start; }
+  .life-config-fields,
+  .life-config-submit { grid-template-columns: 1fr; }
+  .life-lease-facts,
+  .life-business-quote { grid-template-columns: 1fr; }
+  .life-property-actions .life-secondary { flex-basis: 100%; }
+}
+
+/* V2.9.1 batch acquisition and garage operations. */
+.life-bulk-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.life-bulk-summary > span,
+.life-bulk-metrics > span { display: grid; gap: 2px; padding: 9px 10px; border: 1px solid var(--life-border); border-radius: 8px; background: var(--life-card); }
+.life-bulk-summary small,
+.life-bulk-metrics small { color: var(--life-muted); font-size: 13px; }
+.life-bulk-summary strong,
+.life-bulk-metrics strong { color: var(--life-ink); font-size: 16px; font-variant-numeric: tabular-nums; }
+.life-bulk-metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 8px; }
+.life-bulk-list { display: grid; gap: 2px; max-height: 280px; overflow: auto; margin-top: 10px; padding: 2px; }
+.life-bulk-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 10px; border-bottom: 1px solid var(--life-border); }
+.life-bulk-row > span { display: grid; gap: 2px; min-width: 0; }
+.life-bulk-row strong { color: var(--life-ink); font-size: 13px; }
+.life-bulk-row small { color: var(--life-muted); font-size: 13px; }
+.life-bulk-row b { flex: none; color: var(--life-ink); font-size: 13px; font-variant-numeric: tabular-nums; }
+.life-bulk-more { padding: 6px 10px; color: var(--life-muted); font-size: 13px; }
+.life-bulk-note { display: flex; align-items: flex-start; gap: 6px; margin: 10px 0 0; color: var(--life-muted); font-size: 13px; line-height: 1.5; }
+.life-bulk-note svg { flex: none; width: 16px; height: 16px; margin-top: 1px; }
+.life-bulk-footer { display: flex; justify-content: flex-end; margin-top: 12px; }
+.life-map-bulk-dialog,
+.life-garage-bulk-dialog { width: min(760px, calc(100vw - 24px)); }
+.life-garage-bulk-filters { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; margin-top: 10px; }
+.life-garage-bulk-toolbar { display: flex; align-items: end; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.life-garage-bulk-toolbar .life-field { margin: 0; }
+.life-garage-bulk-toolbar .life-storage-filter-count { margin-left: auto; }
+@media (max-width: 720px) {
+  .life-bulk-summary,
+  .life-garage-bulk-filters { grid-template-columns: 1fr 1fr; }
+  .life-bulk-footer .life-primary { width: 100%; }
+}
+.life-results-head { align-items: center; gap: 10px; }
+.life-results-head > div:first-child { display: grid; gap: 2px; min-width: 0; }
+.life-dealer-batch { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.life-dealer-batch > span { color: var(--life-muted); font-size: 13px; }
+.life-dealer-batch .life-primary { min-height: 34px; }
+@media (max-width: 720px) {
+  .life-results-head { align-items: flex-start; flex-direction: column; }
+  .life-dealer-batch { width: 100%; margin-left: 0; justify-content: space-between; }
+}
+.life-gacha-multiplier { display: inline-flex; align-items: center; gap: 4px; min-height: 32px; padding: 5px 9px; border: 1px solid color-mix(in srgb, var(--life-gold) 55%, var(--life-border)); border-radius: 8px; background: color-mix(in srgb, var(--life-gold) 12%, var(--life-card)); color: color-mix(in srgb, var(--life-gold) 78%, var(--life-ink)); font: inherit; font-size: 13px; font-weight: 900; cursor: pointer; }
+.life-gacha-multiplier:hover { border-color: var(--life-gold); }
+.life-gacha-multiplier svg { width: 15px; height: 15px; }
+.life-gacha-actions .life-primary { display: inline-flex; align-items: center; justify-content: center; gap: 7px; }
+.life-gacha-actions .life-primary small { font-size: 13px; opacity: .9; }
+.life-garage-detail-head { grid-template-columns: 48px minmax(0, 1fr) auto auto; }
+.life-garage-detail-head .life-garage-bulk-open { align-self: center; justify-self: end; white-space: nowrap; }
+@media (max-width: 720px) {
+  .life-garage-detail-head { grid-template-columns: 42px minmax(0, 1fr); }
+  .life-garage-detail-head .life-garage-capacity { grid-column: 2; justify-items: start; }
+  .life-garage-detail-head .life-garage-bulk-open { grid-column: 2; justify-self: start; }
+}
+.life-map-bulk-dialog .life-collection-dialog-shell,
+.life-garage-bulk-dialog .life-collection-dialog-shell { height: auto; max-height: calc(100vh - 32px); }
+.life-map-bulk-dialog .life-collection-dialog-content,
+.life-garage-bulk-dialog .life-collection-dialog-content { overflow-y: auto; max-height: calc(100vh - 170px); }
+/* V2.9.2 gacha, garage batch and duplicate controls. */
+.life-gacha-tier-title { display: grid; gap: 4px; min-width: 0; }
+.life-gacha-tier-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; min-width: 0; }
+.life-gacha-tier-title-row > div { display: grid; gap: 2px; min-width: 0; }
+.life-gacha-tier-title-row h2 { margin: 0; }
+.life-gacha-tier-title-row .life-gacha-multiplier { flex: 0 0 auto; margin-top: 1px; }
+.life-gacha-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.life-gacha-draw { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 5px; min-height: 50px; padding: 8px 9px; }
+.life-gacha-draw span { font-size: 13px; font-weight: 800; }
+.life-gacha-draw b { padding: 1px 6px; border-radius: 999px; background: #ffffff2e; font-size: 13px; font-variant-numeric: tabular-nums; }
+.life-gacha-draw small { flex-basis: 100%; opacity: .92; text-align: center; font-size: 13px; }
+.life-garage-detail-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 6px; }
+.life-garage-detail-actions button { white-space: nowrap; }
+.life-garage-duplicate-open:disabled { opacity: .48; }
+.life-storage-toolbar { grid-template-columns: auto auto minmax(210px, 1fr) auto auto; }
+.life-garage-bulk-dialog .life-collection-dialog-shell { display: flex; flex-direction: column; height: min(900px, calc(100vh - 24px)); max-height: calc(100vh - 24px); }
+.life-garage-bulk-dialog .life-collection-dialog-content { display: flex; min-height: 0; overflow: hidden; padding-bottom: 12px; }
+#life-garage-bulk-content { display: flex; flex-direction: column; gap: 9px; width: 100%; min-height: 0; height: 100%; }
+.life-garage-bulk-list-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding-right: 3px; }
+.life-garage-bulk-list-scroll .life-storage-results { max-height: none; overflow: visible; }
+.life-garage-bulk-footer { flex: 0 0 auto; display: grid; gap: 8px; padding-top: 9px; border-top: 1px solid var(--life-border); background: var(--life-card); }
+.life-garage-bulk-footer .life-garage-bulk-toolbar { margin-top: 0; }
+.life-garage-bulk-footer .life-storage-warning { margin: 0; }
+@media (max-width: 900px) {
+  .life-storage-toolbar { grid-template-columns: 1fr 1fr; }
+  .life-storage-toolbar .life-field { grid-column: 1 / -1; }
+  .life-garage-detail-head { grid-template-columns: 42px minmax(0, 1fr); }
+  .life-garage-detail-head .life-garage-capacity,
+  .life-garage-detail-head .life-garage-detail-actions { grid-column: 2; justify-self: start; justify-content: flex-start; }
+  .life-gacha-tier-actions { grid-column: 2 / -1; justify-content: flex-start; }
+}
+@media (max-width: 560px) {
+  .life-gacha-actions { grid-template-columns: 1fr; }
+}
+.life-garage-bulk-dialog .life-collection-dialog-content { flex: 1 1 auto; }
+.life-garage-bulk-dialog .life-garage-bulk-list-scroll { border-top: 1px solid var(--life-border); border-bottom: 1px solid var(--life-border); padding-top: 6px; }
+
+#life-garage-bulk-content { height: auto; flex: 1 1 auto; min-height: 0; overflow: hidden; }
+.life-garage-bulk-footer { position: sticky; bottom: 0; z-index: 3; }
+
+.life-gacha-tier-title-row { justify-content: flex-start; flex-wrap: wrap; gap: 8px; }
+.life-gacha-tier-title-row .life-gacha-multiplier { margin-left: 0; }
+
+#life-garage-bulk-content { height: 0; flex: 1 1 0; min-height: 0; overflow: hidden; }
+.life-garage-bulk-dialog .life-collection-dialog-shell { overflow: hidden; }
+.life-garage-bulk-footer { flex: 0 0 auto; max-height: 46%; overflow-y: auto; }
+.life-bulk-metrics strong.is-short { color: #b8463f; }
+.life-garage-bulk-dialog .life-collection-dialog-shell { position: relative; }
+.life-garage-bulk-dialog .life-garage-bulk-footer { position: absolute; left: 0; right: 0; bottom: 0; z-index: 6; max-height: none; overflow: visible; padding: 10px 20px 12px; border-top: 1px solid var(--life-border); background: color-mix(in srgb, var(--life-card) 97%, transparent); box-shadow: 0 -10px 22px #0b1f1814; }
+.life-garage-bulk-dialog #life-garage-bulk-content { padding-bottom: 130px; }#life-garage-bulk-content { overflow: visible !important; }.life-garage-bulk-dialog .life-garage-bulk-footer { bottom: 12px; border-radius: 0 0 10px 10px; }
+/* V2.9.3 asset portfolio city/district grouping. */
+.life-asset-group-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 14px 0 10px; color: var(--life-muted); font-size: 13px; font-weight: 700; }
+.life-asset-group-toolbar > span { display: inline-flex; align-items: center; gap: 6px; }
+.life-asset-group-toolbar .life-secondary { flex: 0 0 auto; }
+.life-asset-city-list { display: grid; gap: 12px; }
+.life-asset-city { border: 1px solid var(--life-border); border-radius: 12px; background: var(--life-card); overflow: hidden; }
+.life-asset-city-head { width: 100%; display: grid; grid-template-columns: 18px minmax(0, 1fr) auto auto; align-items: center; gap: 10px; padding: 12px 14px; border: 0; background: color-mix(in srgb, var(--life-green-soft) 44%, var(--life-card)); color: var(--life-ink); text-align: left; cursor: pointer; }
+.life-asset-city-head:hover { background: color-mix(in srgb, var(--life-green-soft) 62%, var(--life-card)); }
+.life-asset-city-head > span { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+.life-asset-city-head small { color: var(--life-muted); font-size: 12px; font-weight: 700; }
+.life-asset-city-head strong { font-size: 16px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.life-asset-city-head > b { padding: 2px 7px; border-radius: 999px; background: var(--life-card); color: var(--life-green); font-size: 13px; }
+.life-asset-city-head > small:last-child { color: var(--life-muted); font-size: 13px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.life-asset-districts { display: grid; gap: 10px; padding: 10px 12px 12px; }
+.life-asset-district { border: 1px solid color-mix(in srgb, var(--life-border) 78%, transparent); border-radius: 10px; overflow: hidden; }
+.life-asset-district-head { width: 100%; display: grid; grid-template-columns: 16px minmax(0, 1fr) auto auto; align-items: center; gap: 8px; padding: 8px 10px; border: 0; background: color-mix(in srgb, var(--life-card) 84%, var(--life-green-soft)); color: var(--life-ink); text-align: left; cursor: pointer; }
+.life-asset-district-head:hover { background: var(--life-green-soft); }
+.life-asset-district-head span { font-size: 13px; font-weight: 800; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.life-asset-district-head b { color: var(--life-green); font-size: 12px; }
+.life-asset-district-head small { color: var(--life-muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.life-asset-district-grid { padding: 10px; }
+@media (max-width: 760px) {
+  .life-asset-group-toolbar { align-items: flex-start; flex-direction: column; }
+  .life-asset-city-head { grid-template-columns: 16px minmax(0, 1fr) auto; }
+  .life-asset-city-head > small:last-child { grid-column: 2; }
+}

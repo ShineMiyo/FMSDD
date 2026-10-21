@@ -1,0 +1,382 @@
+/* FMSDD gift boutique and shared gift artwork. */
+.gift-shop-page {
+  min-width: 0;
+}
+
+.gift-shop-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.gift-shop-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  min-width: 0;
+}
+
+.gift-shop-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid #cfddd5;
+  border-radius: 999px;
+  background: #fff;
+  color: #426456;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.gift-shop-category svg {
+  width: 15px;
+  height: 15px;
+}
+
+.gift-shop-category:hover,
+.gift-shop-category.active {
+  border-color: #176b4d;
+  background: #176b4d;
+  color: #fff;
+}
+
+.gift-shop-tip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex: 0 1 auto;
+  color: #72827a;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.gift-shop-tip svg {
+  width: 16px;
+  height: 16px;
+  color: #b45b45;
+}
+
+.gift-shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.gift-shop-card {
+  display: flex;
+  min-width: 0;
+  min-height: 342px;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #d6e1da;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 24px #17382a0c;
+  transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+}
+
+.gift-shop-card:hover {
+  border-color: #b9d3c5;
+  box-shadow: 0 12px 30px #17382a16;
+  transform: translateY(-2px);
+}
+
+.gift-shop-card.is-busy {
+  opacity: .72;
+}
+
+.gift-shop-art {
+  position: relative;
+  display: flex;
+  min-height: 112px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #334155, #172033);
+  color: #fff;
+}
+
+.gift-shop-art::after {
+  position: absolute;
+  right: -28px;
+  bottom: -52px;
+  width: 154px;
+  height: 154px;
+  border: 1px solid #ffffff2e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 20px #ffffff12, 0 0 0 44px #ffffff0a;
+  content: "";
+}
+
+.gift-shop-art > svg {
+  position: relative;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 5px 10px #0003);
+}
+
+.gift-shop-art > span {
+  position: relative;
+  z-index: 1;
+  align-self: flex-start;
+  padding: 5px 9px;
+  border: 1px solid #ffffff3d;
+  border-radius: 999px;
+  background: #ffffff1f;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .04em;
+}
+
+.gift-art-book { background: linear-gradient(135deg, #8c5d43, #3b281f); }
+.gift-art-fashion { background: linear-gradient(135deg, #bc6d7a, #5c2d45); }
+.gift-art-technology { background: linear-gradient(135deg, #547bc6, #1c315f); }
+.gift-art-food { background: linear-gradient(135deg, #c98a45, #6a3e1f); }
+.gift-art-sport { background: linear-gradient(135deg, #398a6e, #153e34); }
+.gift-art-music { background: linear-gradient(135deg, #7565b8, #332a63); }
+.gift-art-art { background: linear-gradient(135deg, #b4673e, #632e3b); }
+.gift-art-luxury { background: linear-gradient(135deg, #9b7a35, #493616); }
+
+.gift-shop-copy {
+  display: grid;
+  gap: 6px;
+  padding: 17px 18px 8px;
+}
+
+.gift-shop-kicker {
+  color: #8b6b30;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.gift-shop-copy h2 {
+  margin: 0;
+  color: #20382e;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.gift-shop-copy p {
+  min-height: 58px;
+  margin: 0;
+  color: #6f7f77;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.gift-shop-card-foot {
+  display: grid;
+  grid-template-columns: minmax(84px, 1fr) auto;
+  gap: 9px;
+  align-items: end;
+  margin-top: auto;
+  padding: 12px 18px 10px;
+}
+
+.gift-shop-price {
+  display: grid;
+  gap: 1px;
+}
+
+.gift-shop-price small {
+  color: #88968f;
+  font-size: 13px;
+}
+
+.gift-shop-price strong {
+  color: #176b4d;
+  font-size: 19px;
+  font-variant-numeric: tabular-nums;
+}
+
+.gift-shop-quantity {
+  display: inline-grid;
+  grid-template-columns: 30px 42px 30px;
+  min-height: 34px;
+  overflow: hidden;
+  border: 1px solid #cddbd4;
+  border-radius: 8px;
+  background: #f4f8f6;
+}
+
+.gift-shop-quantity button,
+.gift-shop-quantity input {
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: #27483b;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.gift-shop-quantity button:hover:not(:disabled) {
+  background: #e3efe9;
+}
+
+.gift-shop-quantity input {
+  width: 100%;
+  border-right: 1px solid #dce6e0;
+  border-left: 1px solid #dce6e0;
+  outline: none;
+}
+
+.gift-shop-buy {
+  grid-column: 1 / -1;
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 0;
+  border-radius: 8px;
+  background: #176b4d;
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.gift-shop-buy:hover:not(:disabled) {
+  background: #105a40;
+}
+
+.gift-shop-buy:disabled,
+.gift-shop-quantity button:disabled {
+  cursor: not-allowed;
+  opacity: .48;
+}
+
+.gift-shop-buy svg {
+  width: 15px;
+  height: 15px;
+}
+
+.gift-shop-storage {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 18px 17px;
+  color: #7e8c85;
+  font-size: 13px;
+}
+
+.gift-shop-storage svg {
+  width: 14px;
+  height: 14px;
+}
+
+.gift-shop-empty {
+  grid-column: 1 / -1;
+  display: grid;
+  min-height: 240px;
+  place-items: center;
+  align-content: center;
+  gap: 8px;
+  border: 1px dashed #c9d8d1;
+  border-radius: 14px;
+  color: #788820;
+  text-align: center;
+}
+
+.gift-shop-empty svg {
+  width: 34px;
+  height: 34px;
+}
+
+.gift-shop-empty span {
+  color: #7c8b84;
+  font-size: 13px;
+}
+
+.gift-item-art {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  color: #fff;
+}
+
+.gift-item-art svg {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 1180px) {
+  .gift-shop-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .gift-shop-toolbar { align-items: stretch; flex-direction: column; }
+  .gift-shop-grid { grid-template-columns: 1fr; }
+}
+
+html[data-theme="dark"] .gift-shop-category,
+html[data-theme="dark"] .gift-shop-card {
+  border-color: #33473f;
+  background: #1c2a25;
+}
+
+html[data-theme="dark"] .gift-shop-category {
+  color: #c6d6cf;
+}
+
+html[data-theme="dark"] .gift-shop-category:hover,
+html[data-theme="dark"] .gift-shop-category.active {
+  background: #2a7e5e;
+  color: #fff;
+}
+
+html[data-theme="dark"] .gift-shop-copy h2,
+html[data-theme="dark"] .gift-shop-price strong {
+  color: #eef6f2;
+}
+
+html[data-theme="dark"] .gift-shop-copy p,
+html[data-theme="dark"] .gift-shop-tip,
+html[data-theme="dark"] .gift-shop-storage,
+html[data-theme="dark"] .gift-shop-price small,
+html[data-theme="dark"] .gift-shop-empty span {
+  color: #a5b8af;
+}
+
+html[data-theme="dark"] .gift-shop-quantity {
+  border-color: #3a5047;
+  background: #24362f;
+}
+
+html[data-theme="dark"] .gift-shop-quantity button,
+html[data-theme="dark"] .gift-shop-quantity input {
+  color: #e4efe9;
+}
+
+/* V2.9.4 romance and intimate gift artwork */
+.gift-art-romance { background: linear-gradient(135deg, #7f2f45, #d77a8f) !important; }
+.gift-art-intimate { background: linear-gradient(135deg, #5a2b55, #b35d8b) !important; }
+
+/* V2.9.4 gift cart */
+.gift-shop-cart { position: sticky; bottom: 10px; z-index: 5; margin: 18px 0 0; border: 1px solid var(--gift-line, #dfe5df); border-radius: 16px; background: var(--gift-card, #fff); overflow: hidden; box-shadow: 0 12px 30px rgba(21, 48, 38, .07); }
+.gift-shop-cart[hidden] { display: none; }
+.gift-shop-cart-head { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-bottom: 1px solid var(--gift-line, #e3e8e2); flex-wrap: wrap; }
+.gift-shop-cart-head > div { display: grid; gap: 2px; flex: 1; }
+.gift-shop-cart-head small { color: var(--gift-muted, #6d7d73); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+.gift-shop-cart-head strong { font-size: 15px; }
+.gift-shop-cart-head > b { font-size: 20px; color: var(--gift-ink, #153d32); }
+.gift-shop-cart-checkout { display: inline-flex; align-items: center; gap: 7px; min-height: 38px; padding: 0 16px; border: 0; border-radius: 9px; background: #1f6b4f; color: #fff; font-weight: 800; cursor: pointer; }
+.gift-shop-cart-checkout:disabled { opacity: .55; cursor: progress; }
+.gift-shop-cart-lines { display: grid; }
+.gift-shop-cart-line { display: grid; grid-template-columns: minmax(0, 1fr) auto auto auto; align-items: center; gap: 10px; padding: 9px 16px; border-top: 1px solid var(--gift-line, #edf1eb); font-size: 14px; }
+.gift-shop-cart-line > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gift-shop-cart-quantity { display: inline-flex; align-items: center; gap: 6px; }
+.gift-shop-cart-quantity button { width: 26px; height: 26px; border: 1px solid var(--gift-line, #d9e0d8); border-radius: 7px; background: #fff; color: inherit; cursor: pointer; }
+.gift-shop-cart-quantity b { min-width: 18px; text-align: center; }
+.gift-shop-cart-remove { width: 28px; height: 28px; border: 0; border-radius: 7px; background: transparent; color: #a35454; cursor: pointer; }
