@@ -406,7 +406,7 @@ def test_round50_save_collection_and_gacha_delivery_contract():
     source = (ROOT / "src" / "tools" / "life_system.py").read_text(encoding="utf-8")
 
     assert index.count('id="life-collection-dialog"') == 1
-    assert index.index('<dialog id="life-collection-dialog"') > index.index('id="support-author-dialog"')
+    assert '<dialog id="life-collection-dialog"' in index
     assert 'id="life-gacha-collection-open"' in script
     assert 'data-life-action="open-collection"' in script
     assert "state.lastGacha?.draw?.cost" in script

@@ -1,4 +1,4 @@
-# FMODD documentation
+# FMSDD documentation
 
 Start here to find the right guide. Product homepages are available in [English](../README.md), [简体中文](../README.zh-CN.md) and [한국어](../README.ko-KR.md). Detailed technical documents are mainly in Chinese.
 
@@ -10,7 +10,6 @@ Start here to find the right guide. Product homepages are available in [English]
 | [Product guide](guides/PRODUCT_GUIDE.md) | Detailed features and game compatibility |
 | [Development manual](development/DEVELOPMENT.md) | Windows environment, source runtime and focused verification |
 | [Contributing](../CONTRIBUTING.md) | Issues and pull requests |
-| Support FMODD | [English](support/SUPPORT.md) · [简体中文](support/SUPPORT.zh-CN.md) · [한국어](support/SUPPORT.ko-KR.md) |
 
 ## Code and architecture · 代码与架构 · 코드 및 아키텍처
 
@@ -44,7 +43,7 @@ Start here to find the right guide. Product homepages are available in [English]
 | [src/](../src/) | Application entrypoints, Python modules, web interface, desktop host, native code and runtime assets |
 | [tests/](../tests/) | Isolated regression tests, separate from application code |
 | [scripts/](../scripts/) | Native core build helpers, WebView2 SDK restoration, the source-runtime package builder and the single-file EXE builder |
-| [docs/](README.md) | Guides, architecture, support and project notices |
+| [docs/](README.md) | Guides, architecture and project notices |
 | [.github/](../.github/) | GitHub funding configuration |
 
 Within `src/`, the [feature index](FEATURE_INDEX.md) and [architecture](ARCHITECTURE.md) locate the relevant module. Run development commands from the repository root; see the [quick start](guides/GETTING_STARTED.md).

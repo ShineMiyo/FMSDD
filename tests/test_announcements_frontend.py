@@ -486,34 +486,32 @@ def test_markdown_renders_packaged_images_and_rejects_unsafe_sources() -> None:
 def test_markdown_renders_two_images_in_one_row() -> None:
     html = _node_module(
         "return board.renderMarkdown(input).html",
-        "![Group](/assets/community/qq-group.png) ![Support](/assets/author-support.png)",
+        "![Group](/assets/community/qq-group.png) ![App icon](/assets/app-icon.png)",
     )
     assert '<div class="announcement-media-row">' in html
     assert html.count("<figure") == 2
     assert 'src="/assets/community/qq-group.png"' in html
-    assert 'src="/assets/author-support.png"' in html
+    assert 'src="/assets/app-icon.png"' in html
     assert "<figcaption>Group</figcaption>" in html
-    assert "<figcaption>Support</figcaption>" in html
+    assert "<figcaption>App icon</figcaption>" in html
 
     unsafe_pair = _node_module(
         "return board.renderMarkdown(input).html",
-        "![a](javascript:alert(1)) ![b](/assets/author-support.png)",
+        "![a](javascript:alert(1)) ![b](/assets/app-icon.png)",
     )
     assert "announcement-media-row" not in unsafe_pair
 
 
 def test_community_qr_asset_and_group_number_ship_with_the_board() -> None:
     community_qr = ROOT / "web" / "assets" / "community" / "qq-group.png"
-    support_qr = ROOT / "web" / "assets" / "author-support.png"
     assert community_qr.is_file()
     assert community_qr.stat().st_size > 10_000
-    assert support_qr.is_file()
-    assert support_qr.stat().st_size > 10_000
     catalog = _catalog(["announce.entry.community.body"])
     for locale in LOCALES:
         body = catalog[locale]["announce.entry.community.body"]
         assert "/assets/community/qq-group.png" in body, locale
-        assert "/assets/author-support.png" in body, locale
+        assert "/assets/author-support.png" not in body, locale
+        assert "fmodd.com/donate" not in body, locale
         assert "1131124119" in body, locale
 
 

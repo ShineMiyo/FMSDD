@@ -21,7 +21,7 @@ VOID_ELEMENTS = {
 }
 SECTION_CLASSES = (
     "font-settings", "font-user-folders", "cheat-setting", "storage-setting",
-    "support-setting", "operation-log-setting",
+    "operation-log-setting",
 )
 
 
@@ -68,7 +68,7 @@ def test_settings_sections_are_direct_children_of_settings_content() -> None:
     layout.feed(_read("web/index.html"))
     for marker in (
         "font-settings", "cheat-setting", "storage-setting",
-        "support-setting", "author-update-note", "operation-log-setting",
+        "author-update-note", "operation-log-setting",
     ):
         assert layout.parent_of.get(marker) == "settings-content", (
             f"{marker} must be a direct child of .settings-content; "
@@ -79,5 +79,5 @@ def test_settings_sections_are_direct_children_of_settings_content() -> None:
 
 def test_settings_rows_never_insert_before_unguarded_anchors() -> None:
     app = _read("web/app.js")
-    for anchor in ("fontSettings", "storage", "support"):
+    for anchor in ("fontSettings", "storage"):
         assert f"settings.insertBefore(row, {anchor} || null)" not in app

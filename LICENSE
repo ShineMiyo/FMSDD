@@ -1,6 +1,6 @@
-FMODD Source-Available License 1.0
+FMSDD Source-Available License 1.0
 
-Copyright (c) 2026 FMODD contributors. All rights reserved except as expressly
+Copyright (c) 2026 FMSDD contributors. All rights reserved except as expressly
 granted below.
 
 1. Grant. Permission is granted to view, copy, fork, modify and redistribute
@@ -9,7 +9,7 @@ granted below.
    are retained in all copies or substantial portions, and that modified
    versions are clearly identified as modified.
 
-2. Commercial use. Commercial use of FMODD original code and other material
+2. Commercial use. Commercial use of FMSDD original code and other material
    over which the maintainer holds rights is prohibited without prior written
    authorisation. This includes selling, paid distribution, paid hosting, or
    incorporation into a paid product or service.
@@ -20,7 +20,7 @@ granted below.
    docs/notices/SOURCE_NOTICE.md.
 
 4. No trademark or endorsement. This licence does not grant permission to use
-   the FMODD/FMSDD names, logos or branding in a way that suggests endorsement
+   the FMSDD/FMSDD names, logos or branding in a way that suggests endorsement
    of a fork or derivative.
 
 5. No warranty. The software is provided "as is", without warranty of any kind,

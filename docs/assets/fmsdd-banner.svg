@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
-<title id="title">Football Manager ODD — FMODD</title>
+<title id="title">Football Manager ODD — FMSDD</title>
 <desc id="desc">Forest green and gold project banner with a stylised football pitch. Club management, player development and match play.</desc>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b241e"/><stop offset="1" stop-color="#176b4d"/></linearGradient>
@@ -13,7 +13,7 @@
   <path d="M758 0 598 400M838 0 678 400M918 0 758 400" stroke="#d5eade" stroke-opacity=".045" stroke-width="1"/>
   <rect x="54" y="44" width="6" height="22" rx="3" fill="#e6b74b"/>
   <text x="74" y="62" fill="#d0e2d7" font-family="Arial,sans-serif" font-size="18" letter-spacing="2.8">FOOTBALL MANAGER ODD</text>
-  <text x="47" y="203" fill="#f7f8f3" font-family="Arial,sans-serif" font-size="132" font-weight="800" letter-spacing="-7">FM<tspan fill="#e6b74b">ODD</tspan></text>
+  <text x="47" y="203" fill="#f7f8f3" font-family="Arial,sans-serif" font-size="132" font-weight="800" letter-spacing="-7">FM<tspan fill="#e6b74b">S</tspan>DD</text>
   <text x="56" y="261" fill="#e8f4ee" font-family="Arial,sans-serif" font-size="29" font-weight="600">Your club. Your players. Your story.</text>
   <text x="57" y="309" fill="#b8d3c5" font-family="Arial,sans-serif" font-size="18">CLUB MANAGEMENT</text>
   <circle cx="267" cy="303" r="2.5" fill="#e6b74b"/>

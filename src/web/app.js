@@ -28350,7 +28350,6 @@ function renderHistory() {
   $("#history-dialog-title").textContent = analysisMode ? uiText("history.analysis") : uiText("history.title");
   $(".history-tabs").style.display = analysisMode ? "none" : "";
   $("#clear-settled-history").style.display = !analysisMode && app.historyTab === "settled" ? "" : "none";
-  $("#history-support-author").hidden = !(analysisMode && Number(app.betAnalysis?.net_profit || 0) > 0);
   const viewToggle = $("#history-view-toggle");
   viewToggle.style.display = analysisMode ? "none" : "";
   const analysisToggle = $("#history-analysis-toggle");
@@ -29444,9 +29443,7 @@ function ensureUpdateCheckControl() {
   const row = document.createElement("section");
   row.className = "update-setting";
   row.innerHTML = `<div><strong data-i18n="settings.update.title">${uiText("settings.update.title")}</strong><span id="update-check-status" role="status" aria-live="polite" hidden></span></div><div class="update-actions"><button type="button" id="check-for-updates" data-i18n="settings.update.check">${uiText("settings.update.check")}</button><a id="update-download-link" href="https://fmodd.com/download" target="_blank" rel="noopener noreferrer" data-i18n="settings.update.download" hidden>${uiText("settings.update.download")}</a><button type="button" id="ignore-update" data-i18n="settings.update.ignore" hidden>${uiText("settings.update.ignore")}</button></div>`;
-  const support = settings.querySelector(".support-setting");
-  if (support?.parentElement === settings) settings.insertBefore(row, support);
-  else settings.append(row);
+  settings.append(row);
 }
 
 function renderUpdateCheckResult() {
@@ -29582,7 +29579,7 @@ const SETTINGS_TAB_GROUPS = [
     key:"general", labelKey:"settings.tabs.general",
     selectors:[
       ".money-currency-setting", ".save-account-setting", ".cdk-setting", ".full-refresh-setting",
-      ".storage-setting", ".update-setting", ".support-setting", ".author-update-note",
+      ".storage-setting", ".update-setting", ".author-update-note",
     ],
   },
   {
@@ -30884,7 +30881,6 @@ function bindEvents() {
     } catch (error) { toast(error.message || uiText("settings.storage.delete_failed")); }
     finally { button.disabled = false; }
   });
-  $("#support-author-button").addEventListener("click", () => { $("#settings-dialog").close(); $("#support-author-dialog").showModal(); });
   $("#wallet-button").addEventListener("click", () => {
     const balance = availableWalletBalance();
     $("#wallet-dialog-balance").textContent = formatFullMoney(balance);

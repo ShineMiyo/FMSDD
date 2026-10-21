@@ -81,32 +81,16 @@ def test_english_shell_has_long_label_layout_guardrails() -> None:
     assert '.ui-locale-setting' in css
 
 
-def test_support_author_uses_qr_for_simplified_chinese_and_external_links_elsewhere() -> None:
+def test_donation_entry_points_are_removed() -> None:
     _i18n, _korean, script, html, css = sources()
-    locale_sources = "\n".join(
-        (ROOT / "web" / filename).read_text(encoding="utf-8")
-        for filename in (
-            "i18n.static.js", "i18n.tw.js", "i18n.de.js", "i18n.es.js",
-            "i18n.fr.js", "i18n.ru.js", "i18n.ja.js", "i18n.pt-BR.js", "i18n.pt-PT.js",
-        )
-    )
-    assert 'id="support-author-button" class="support-zh-cn-control"' in html
-    assert 'id="support-kofi-link" class="support-kofi-control"' in html
-    assert 'href="https://ko-fi.com/fmodd"' in html
-    assert 'target="_blank" rel="noopener noreferrer" aria-label="Ko-fi"' in html
-    assert 'class="kofi-mark"' in html
-    assert '<span>Ko-fi</span>' in html
-    assert 'id="support-other-link" class="support-other-control"' in html
-    assert html.count('href="https://fmodd.com/donate"') == 3
-    assert 'data-i18n="settings.other_ways">Other ways</span>' in html
-    for translation in (
-        '"Other ways"', '"其他方式"', '"다른 방법"', '"Weitere Möglichkeiten"',
-        '"Otras formas"', '"Autres moyens"', '"Другие способы"', '"その他の方法"', '"Outras formas"',
-    ):
-        assert translation in locale_sources
-    assert '[data-locale]:not([data-locale="zh-CN"]) .support-setting .support-zh-cn-control { display:none; }' in css
-    assert '[data-locale]:not([data-locale="zh-CN"]) .support-setting :is(.support-kofi-control,.support-other-control) { display:inline-flex; }' in css
-    assert '$("#support-author-button").addEventListener("click"' in script
+    assert "fmodd.com/donate" not in html
+    assert "support-author-button" not in html
+    assert "support-kofi-link" not in html
+    assert "support-other-link" not in html
+    assert "history-support-author" not in html
+    assert "support-author-dialog" not in html
+    assert "usage-notice-support-link" not in html
+    assert '$("#support-author-button").addEventListener' not in script
 
 
 def test_usage_notice_can_be_suppressed_for_seven_days_without_explaining_the_period() -> None:
@@ -120,9 +104,6 @@ def test_usage_notice_can_be_suppressed_for_seven_days_without_explaining_the_pe
     assert 'id="usage-notice-dismiss" type="checkbox"' in notice_html
     assert 'data-i18n="notice.dismiss">Don\'t show again</span>' in notice_html
     assert 'href="https://fmodd.com/" target="_blank" rel="noopener noreferrer"' in notice_html
-    assert 'class="usage-notice-support-link" href="https://fmodd.com/donate" target="_blank" rel="noopener noreferrer" data-i18n="notice.support_link"' in notice_html
-    assert 'data-i18n="notice.support_before"' in notice_html
-    assert 'data-i18n="notice.support_after"' in notice_html
     assert "7 days" not in notice_html
     assert "7 天" not in notice_html
     assert "USAGE_NOTICE_DISMISS_DURATION_MS = 7 * 24 * 60 * 60 * 1000" in script

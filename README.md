@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="docs/assets/fmodd-banner.svg" alt="FMODD · Football Manager ODD · Club management, player development and match play" width="100%" />
+<img src="docs/assets/fmsdd-banner.svg" alt="FMSDD · Football Manager ODD · Club management, player development and match play" width="100%" />
 
 [English](README.md) &nbsp; · &nbsp; [简体中文](README.zh-CN.md) &nbsp; · &nbsp; [한국어](README.ko-KR.md)
 
 # Football Manager ODD
 
-> **Current release name: FMSDD** (renamed from FMODD; **S = Stock**). Program folders, saves, fonts and compatibility identifiers keep their original `FMODD` names.
+> **Current name: FMSDD** (**S = Stock**). Existing program folders, saves, fonts, compatibility identifiers and the `fmodd.com` domain keep their legacy names for compatibility; **FMSDD is the product name**.
 
 **Bring club management, player development and match play into your FM career.**
 
@@ -17,29 +17,15 @@ A Windows companion for Football Manager, built around clubs, players and the st
 <img alt="FM24 and FM26" src="https://img.shields.io/badge/Football_Manager-24_%2F_26-176b4d?style=flat-square&amp;labelColor=123d32" />
 <img alt="Source available" src="https://img.shields.io/badge/Source-Available-697586?style=flat-square&amp;labelColor=123d32" />
 
-**[Download for Windows](https://fmodd.com/download)** &nbsp; · &nbsp; **[Releases](https://github.com/ShineMiyo/FMSDD/releases)** &nbsp; · &nbsp; **[Report an issue](https://github.com/ShineMiyo/FMSDD/issues)** &nbsp; · &nbsp; **[Support the author](https://fmodd.com/donate)**
+**[Download for Windows](https://fmodd.com/download)** &nbsp; · &nbsp; **[Releases](https://github.com/ShineMiyo/FMSDD/releases)** &nbsp; · &nbsp; **[Report an issue](https://github.com/ShineMiyo/FMSDD/issues)**
 
 </div>
 
 ---
 
-## 💛 Support the author and help FMODD grow
-
-If FMODD adds a little more joy to your save, consider buying the author a coffee. Every contribution is motivation to keep maintaining the project, adding improvements and exploring new ways to play.
-
-<a href="https://fmodd.com/donate"><img src="docs/assets/support-fmodd.svg" alt="Support FMODD · Open the official donation page" width="100%" /></a>
-
-<p align="center">
-<a href="https://ko-fi.com/fmodd"><img src="https://img.shields.io/badge/Ko--fi-Buy_me_a_coffee-e6b74b?style=for-the-badge&amp;logo=kofi&amp;logoColor=123d32" alt="Ko-fi · Buy the author a coffee" /></a>
-</p>
-
-<p align="center"><strong><a href="https://fmodd.com/donate">💛 Visit the donation page</a> &nbsp; · &nbsp; <a href="docs/support/SUPPORT.md">All support options and QR codes</a></strong></p>
-
----
-
 ## More to build, more to remember
 
-FMODD is a local Windows companion built around your Football Manager career. Manage clubs you own, arrange player training and team activities, handle funds and personnel between matches, and keep a record of player development, memorable matches and relationships.
+FMSDD is a local Windows companion built around your Football Manager career. Manage clubs you own, arrange player training and team activities, handle funds and personnel between matches, and keep a record of player development, memorable matches and relationships.
 
 Features follow your current save and game date. Match play uses an ODD virtual wallet. Some club, personnel and training operations modify native FM data after version checks pass. Availability depends on the exact game build and distribution platform.
 
@@ -78,11 +64,11 @@ Features follow your current save and game date. Match play uses an ODD virtual 
 </tr>
 </table>
 
-## A look inside FMODD
+## A look inside FMSDD
 
 ### Fixtures and odds
 
-<img src="docs/assets/odds-interface-v264.png" alt="FMODD V2.6.4 example: fixtures, live odds and a bet slip" width="100%" />
+<img src="docs/assets/odds-interface-v264.png" alt="FMSDD V2.6.4 example: fixtures, live odds and a bet slip" width="100%" />
 
 <sub>This screenshot is from V2.6.4 and illustrates the interface style. The current application determines the available layout and features.</sub>
 
@@ -231,7 +217,7 @@ Features follow your current save and game date. Match play uses an ODD virtual 
 
 - The home screen now exposes **Life** directly and no longer carries a separate Inventory shortcut. The existing Items-style shortcut continues to open Shop and is labelled **Items**.
 - The sidebar groups **Shop** and **Backpack** under a new first-level **Items** menu. Selecting Items expands the group and opens Shop; entering either child page keeps the group highlighted.
-- Page keys, APIs, local storage and save compatibility are unchanged. Font folders and the original `FMODD` compatibility identifiers continue to work as before.
+- Page keys, APIs, local storage and save compatibility are unchanged. Font folders and the original `FMSDD` compatibility identifiers continue to work as before.
 - All eleven interface locales use the updated Items and Backpack wording.
 - Version metadata, the window title and the desktop host are now **V2.8.5Beta** / `2.8.5.0`.
 
@@ -360,13 +346,13 @@ The club exchange prices every result on the day it is played, and one result no
 - **ODD valuation** uses available player samples from the current save. Cards show the club, competition and offered amount.
 - Confirm the transfer before accepting. Proceeds are credited to the **selling club’s transfer budget**.
 
-Offers are generated by FMODD as a simulated gameplay feature, rather than incoming transfer offers from native FM clubs.
+Offers are generated by FMSDD as a simulated gameplay feature, rather than incoming transfer offers from native FM clubs.
 
 ## Get started
 
 1. Get the Windows application from the **[official download page](https://fmodd.com/download)**.
 2. Start Football Manager and load the save you want to use.
-3. Start FMODD, select the matching game version and connect to your save.
+3. Start FMSDD, select the matching game version and connect to your save.
 4. Explore clubs, training, activities and match play.
 
 ### Run from source
@@ -403,23 +389,22 @@ Contribute an idea, a reproducible bug report, a translation improvement, a focu
 | Improve the code | Fork → make a focused change → open a pull request; see [Contributing](CONTRIBUTING.md) |
 | Explore the structure | [Documentation map](docs/README.md), [architecture](docs/ARCHITECTURE.md) and [feature index](docs/FEATURE_INDEX.md) |
 | Run the source | [Development quick start](docs/guides/GETTING_STARTED.md) |
-| Support ongoing work | [Support the author](https://fmodd.com/donate), at your own discretion |
 
-The maintainer reviews feedback and pull requests as time and energy allow. Thank you to everyone who tests, contributes, shares and supports FMODD.
+The maintainer reviews feedback and pull requests as time and energy allow. Thank you to everyone who tests, contributes, shares and supports FMSDD.
 
 ## Contact
 
-For feedback or collaboration, email **[FMODD@foxmail.com](mailto:FMODD@foxmail.com)**.
+For feedback or collaboration, email **[FMSDD@foxmail.com](mailto:FMSDD@foxmail.com)**.
 
 ---
 
 ### Commercial use and project identity
 
-**Commercial use of FMODD’s original code and other material over which the maintainer holds rights is prohibited without prior written authorisation. This includes selling, paid distribution, or incorporation into paid products or services. The maintainer will preserve evidence and pursue legal action against unauthorised commercial exploitation or other infringement.**
+**Commercial use of FMSDD’s original code and other material over which the maintainer holds rights is prohibited without prior written authorisation. This includes selling, paid distribution, or incorporation into paid products or services. The maintainer will preserve evidence and pursue legal action against unauthorised commercial exploitation or other infringement.**
 
-Project source is available under the [FMODD Source-Available License](LICENSE) for personal, non-commercial use. Third-party components and materials remain governed by their respective licences; see [Third-party notices](THIRD_PARTY_NOTICES.md).
+Project source is available under the [FMSDD Source-Available License](LICENSE) for personal, non-commercial use. Third-party components and materials remain governed by their respective licences; see [Third-party notices](THIRD_PARTY_NOTICES.md).
 
-FMODD is an unofficial community project, independent of Sports Interactive, SEGA and FMRTE.
+FMSDD is an unofficial community project, independent of Sports Interactive, SEGA and FMRTE.
 
 <div align="center">
 

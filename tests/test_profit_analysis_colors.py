@@ -128,6 +128,7 @@ class ProfitAnalysisColorTests(unittest.TestCase):
         probe = r'''
 const vm = require("vm");
 const context = {
+  app: { chineseMoneyUnits: false },
   toDisplayMoney: value => value,
   activeUiLocale: () => "en-GB",
   moneySymbol: () => "£",
@@ -162,19 +163,12 @@ process.stdout.write(JSON.stringify(context.results));
             css,
         )
 
-    def test_profitable_analysis_links_to_the_donation_page(self):
+    def test_profit_analysis_has_no_donation_entry(self):
         html = (ROOT / "web" / "index.html").read_text(encoding="utf-8")
         script = (ROOT / "web" / "app.js").read_text(encoding="utf-8")
-        css = (ROOT / "web" / "app.css").read_text(encoding="utf-8")
-
-        self.assertIn('id="history-support-author" href="https://fmodd.com/donate"', html)
-        self.assertIn('target="_blank" rel="noopener noreferrer" hidden', html)
-        self.assertIn("玩的开心？赞助作者", html)
-        self.assertIn('analysisMode && Number(app.betAnalysis?.net_profit || 0) > 0', script)
-        self.assertNotIn('$("#history-support-author").addEventListener', script)
-        self.assertIn(".history-support-author {", css)
-        self.assertIn(".history-support-author[hidden] { display:none; }", css)
-        self.assertIn("font-size:13px", css.split(".history-support-author {", 1)[1].split("}", 1)[0])
+        self.assertNotIn("history-support-author", html)
+        self.assertNotIn("fmodd.com/donate", html)
+        self.assertNotIn("history-support-author", script)
 
     def test_shareholder_report_uses_profit_red_and_loss_green(self):
         css = (ROOT / "web" / "app.css").read_text(encoding="utf-8")

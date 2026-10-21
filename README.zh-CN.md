@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="docs/assets/fmodd-banner.svg" alt="FMODD · Football Manager ODD · Club management, player development and match play" width="100%" />
+<img src="docs/assets/fmsdd-banner.svg" alt="FMSDD · Football Manager ODD · Club management, player development and match play" width="100%" />
 
 [English](README.md) &nbsp; · &nbsp; [简体中文](README.zh-CN.md) &nbsp; · &nbsp; [한국어](README.ko-KR.md)
 
 # Football Manager ODD
 
-> **当前发行名称：FMSDD**（由 FMODD 更名，**S = Stock，股票**）。程序文件夹、存档、字体与兼容标识继续沿用原来的 `FMODD` 名称。
+> **当前名称：FMSDD**（**S = Stock，股票**）。为保证兼容，已有程序文件夹、存档、字体、兼容标识与 `fmodd.com` 域名继续沿用旧名称；**产品名称统一为 FMSDD**。
 
 **把俱乐部经营、球员成长与比赛玩法，带进你的 FM 生涯。**
 
@@ -17,29 +17,15 @@ A Windows companion for Football Manager, built around clubs, players and the st
 <img alt="FM24 and FM26" src="https://img.shields.io/badge/Football_Manager-24_%2F_26-176b4d?style=flat-square&amp;labelColor=123d32" />
 <img alt="Source available" src="https://img.shields.io/badge/Source-Available-697586?style=flat-square&amp;labelColor=123d32" />
 
-**[下载 Windows 版本](https://fmodd.com/download)** &nbsp; · &nbsp; **[查看发布版本](https://github.com/ShineMiyo/FMSDD/releases)** &nbsp; · &nbsp; **[反馈问题](https://github.com/ShineMiyo/FMSDD/issues)** &nbsp; · &nbsp; **[支持作者](https://fmodd.com/donate)**
+**[下载 Windows 版本](https://fmodd.com/download)** &nbsp; · &nbsp; **[查看发布版本](https://github.com/ShineMiyo/FMSDD/releases)** &nbsp; · &nbsp; **[反馈问题](https://github.com/ShineMiyo/FMSDD/issues)**
 
 </div>
 
 ---
 
-## 💛 支持作者，让 FMODD 继续成长
-
-如果 FMODD 让你的生涯多了一些乐趣，欢迎请作者喝杯咖啡。每一份支持，都是继续维护、更新和尝试新玩法的动力。
-
-<a href="https://fmodd.com/donate"><img src="docs/assets/support-fmodd.svg" alt="支持 FMODD 作者 · 点击打开官网捐赠页面" width="100%" /></a>
-
-<p align="center">
-<a href="https://ko-fi.com/fmodd"><img src="https://img.shields.io/badge/Ko--fi-%E8%AF%B7%E4%BD%9C%E8%80%85%E5%96%9D%E6%9D%AF%E5%92%96%E5%95%A1-e6b74b?style=for-the-badge&amp;logo=kofi&amp;logoColor=123d32" alt="Ko-fi · 请作者喝杯咖啡" /></a>
-</p>
-
-<p align="center"><strong><a href="https://fmodd.com/donate">💛 打开官网捐赠页</a> &nbsp; · &nbsp; <a href="docs/support/SUPPORT.zh-CN.md">查看二维码与全部支持方式</a></strong></p>
-
----
-
 ## 让一段生涯，多一些值得经营的事
 
-FMODD 是一个围绕 Football Manager 生涯展开的本地桌面项目。你可以经营旗下俱乐部、安排球员训练与球队活动，在比赛之外管理资金和人员，也可以保存球员的成长轨迹、比赛时刻与人物关系。
+FMSDD 是一个围绕 Football Manager 生涯展开的本地桌面项目。你可以经营旗下俱乐部、安排球员训练与球队活动，在比赛之外管理资金和人员，也可以保存球员的成长轨迹、比赛时刻与人物关系。
 
 这些功能围绕当前存档和游戏日期运行。比赛玩法使用 ODD 虚拟资金；部分俱乐部、人员和训练操作会在版本校验通过后影响 FM 的原生数据。功能可用性以当前游戏版本与平台的实际检查为准。
 
@@ -78,11 +64,11 @@ FMODD 是一个围绕 Football Manager 生涯展开的本地桌面项目。你�
 </tr>
 </table>
 
-## 看看 FMODD 的样子
+## 看看 FMSDD 的样子
 
 ### 比赛与赔率界面
 
-<img src="docs/assets/odds-interface-v264.png" alt="FMODD V2.6.4 示例：赛事列表、实时赔率与投注单" width="100%" />
+<img src="docs/assets/odds-interface-v264.png" alt="FMSDD V2.6.4 示例：赛事列表、实时赔率与投注单" width="100%" />
 
 <sub>截图来自 V2.6.4，用于展示界面风格；当前版本的布局与功能以实际程序为准。</sub>
 
@@ -231,7 +217,7 @@ FMODD 是一个围绕 Football Manager 生涯展开的本地桌面项目。你�
 
 - 首页快捷入口新增 **生活**，点击直接进入生活地图；原来的物品栏快捷入口已移除，商店入口改名为 **物品** 并继续打开商店。
 - 侧边栏新增一级 **物品** 菜单，下含 **商店** 与 **背包** 两个二级菜单。点击一级菜单会展开分组并进入商店，进入任一子页面时一级菜单保持高亮。
-- `data-page` 页面键、API、浏览器本地设置和旧存档继续兼容，字体目录与原有 `FMODD` 兼容标识不受影响。
+- `data-page` 页面键、API、浏览器本地设置和旧存档继续兼容，字体目录与原有 `FMSDD` 兼容标识不受影响。
 - 11 种界面语言均已同步物品与背包文案。
 - 版本号迭代到 **V2.8.5Beta**，窗口标题与桌面宿主程序集同步为 `2.8.5.0`。
 
@@ -342,13 +328,13 @@ FMODD 是一个围绕 Football Manager 生涯展开的本地桌面项目。你�
 - 使用当前存档的可用球员样本进行 **ODD 估值**，报价卡片展示俱乐部、赛事和金额。
 - 接受前确认转会；成交所得计入**卖方俱乐部转会预算**。
 
-这些报价由 FMODD 随机模拟，**不是 FM 原生球队主动发来的转会报价**。
+这些报价由 FMSDD 随机模拟，**不是 FM 原生球队主动发来的转会报价**。
 
 ## 开始使用
 
 1. 前往 **[官网下载页](https://fmodd.com/download)** 获取 Windows 版本。
 2. 启动 Football Manager，进入你希望使用的存档。
-3. 启动 FMODD，选择匹配的游戏版本并连接当前存档。
+3. 启动 FMSDD，选择匹配的游戏版本并连接当前存档。
 4. 从集团、训练、活动或比赛入口开始体验。
 
 涉及原生数据修改的功能，首次使用前先备份游戏存档。Beta 版本的兼容性和功能会继续调整。
@@ -371,32 +357,31 @@ FMODD 是一个围绕 Football Manager 生涯展开的本地桌面项目。你�
 | 提交代码改进 | Fork → 修改 → Pull Request；详见 [贡献说明](CONTRIBUTING.md) |
 | 理解代码结构 | [文档导航](docs/README.md)、[架构](docs/ARCHITECTURE.md)、[功能索引](docs/FEATURE_INDEX.md) |
 | 在本机开发 | [开发手册](docs/development/DEVELOPMENT.md)，包括原生核心准备与开发版运行 |
-| 支持持续开发 | [支持作者](https://fmodd.com/donate)，按自己的意愿参与 |
 
 维护者按精力处理反馈与 PR，不承诺即时回复或固定更新频率。感谢每一位愿意测试、贡献和支持项目的人。
 
 <details>
 <summary><strong>For international contributors</strong></summary>
 
-FMODD adds club management, player development, team activities, simulated departure offers and career records to a Football Manager save. Match features use an ODD virtual wallet. Native game operations depend on the exact build and platform.
+FMSDD adds club management, player development, team activities, simulated departure offers and career records to a Football Manager save. Match features use an ODD virtual wallet. Native game operations depend on the exact build and platform.
 
-Windows is the current runtime platform. Download the application from [fmodd.com](https://fmodd.com/download), or explore the source and submit a focused pull request. Include the FMODD version, exact game build, distribution platform, reproduction steps and test results in bug reports. Never attach private saves, credentials or proprietary game/editor binaries.
+Windows is the current runtime platform. Download the application from [fmodd.com](https://fmodd.com/download), or explore the source and submit a focused pull request. Include the FMSDD version, exact game build, distribution platform, reproduction steps and test results in bug reports. Never attach private saves, credentials or proprietary game/editor binaries.
 
 </details>
 
 ## 联系作者
 
-反馈建议或合作交流，请发送邮件至 **[FMODD@foxmail.com](mailto:FMODD@foxmail.com)**。
+反馈建议或合作交流，请发送邮件至 **[FMSDD@foxmail.com](mailto:FMSDD@foxmail.com)**。
 
 ---
 
 ### 商业使用与项目身份
 
-**未经维护者事先书面授权，禁止将 FMODD 原创代码及维护者享有权利的相关内容用于商业用途，包括销售、收费分发，或将其整合进收费产品与服务。对于未经授权的商业利用及其他侵权行为，维护者将保留证据并依法追究责任。**
+**未经维护者事先书面授权，禁止将 FMSDD 原创代码及维护者享有权利的相关内容用于商业用途，包括销售、收费分发，或将其整合进收费产品与服务。对于未经授权的商业利用及其他侵权行为，维护者将保留证据并依法追究责任。**
 
 第三方组件与素材遵循各自许可条款，见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
-FMODD 是社区制作的非官方项目，与 Sports Interactive、SEGA 或 FMRTE 不存在官方隶属关系。
+FMSDD 是社区制作的非官方项目，与 Sports Interactive、SEGA 或 FMRTE 不存在官方隶属关系。
 
 <div align="center">
 

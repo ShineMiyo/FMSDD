@@ -1,14 +1,14 @@
-# FMODD source and third-party materials notice
+# FMSDD source and third-party materials notice
 
 This public source snapshot is provided by the project maintainer. Project
-source is licensed under the [FMODD Source-Available License](../../LICENSE) for
+source is licensed under the [FMSDD Source-Available License](../../LICENSE) for
 personal, non-commercial use. This notice does not grant new rights
 in third-party code, data, images, proprietary game/editor binaries, or private
 research captures. Those materials retain their own rights and license terms.
 Publication does not authorize unauthorized unpacking or redistribution of
 third-party proprietary materials.
 
-Automated analysis of public FMODD source follows the applicable source license
+Automated analysis of public FMSDD source follows the applicable source license
 and the repository contributor rules. This notice does not override applicable
 law or restrict permissions granted by a project or third-party license.
 

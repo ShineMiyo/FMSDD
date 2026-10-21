@@ -303,7 +303,7 @@ class FrontendRefreshRecoveryTests(unittest.TestCase):
             ".full-refresh-setting",
             ".odds-reading-setting", "#championship-enabled",
             ".compact-money-setting", ".profit-loss-color-setting", "#show-hidden-attributes",
-            ".cheat-setting", ".storage-setting", ".support-setting",
+            ".cheat-setting", ".storage-setting",
         ):
             self.assertIn(f'"{selector}"', tabs)
         general = tabs.split('key:"general"', 1)[1].split('key:"markets"', 1)[0]
@@ -461,13 +461,13 @@ class FrontendRefreshRecoveryTests(unittest.TestCase):
         self.assertIn("function renderIcons(root = null)", icons)
         self.assertIn("root:scope", icons)
 
-    def test_storage_and_support_belong_to_general_settings(self):
+    def test_storage_belongs_to_general_settings(self):
         tabs = self.script.split("const SETTINGS_TAB_GROUPS", 1)[1].split(
             "function activateSettingsTab", 1,
         )[0]
         general = tabs.split('key:"general"', 1)[1].split('key:"markets"', 1)[0]
 
-        for selector in (".storage-setting", ".support-setting", ".author-update-note"):
+        for selector in (".storage-setting", ".author-update-note"):
             self.assertIn(f'"{selector}"', general)
         self.assertNotIn('icon:"settings"', general)
 
@@ -720,7 +720,7 @@ class FrontendRefreshRecoveryTests(unittest.TestCase):
 
     def test_delete_current_save_requires_two_confirmations(self):
         handler = self.script.split('$("#delete-current-save-button")', 1)[1].split(
-            '$("#support-author-button")', 1,
+            '$("#wallet-button")', 1,
         )[0]
         self.assertEqual(handler.count("await fmoddConfirm("), 2)
         self.assertIn("DELETE_CURRENT_SAVE_FILE", handler)

@@ -1,4 +1,4 @@
-"""Safely provision the public FMODD Discord community structure.
+"""Safely provision the public FMSDD Discord community structure.
 
 The tool is deliberately additive: it reuses matching roles/channels and never
 deletes, renames, or moves existing Discord resources.  For seeded text
@@ -25,8 +25,8 @@ from urllib.request import Request, urlopen
 
 API_BASE = "https://discord.com/api/v10"
 DEFAULT_GUILD_ID = "1546807720953253888"
-TOKEN_ENV = "FMODD_DISCORD_BOT_TOKEN"
-AUDIT_REASON = "FMODD community bootstrap"
+TOKEN_ENV = "FMSDD_DISCORD_BOT_TOKEN"
+AUDIT_REASON = "FMSDD community bootstrap"
 
 GUILD_TEXT = 0
 GUILD_CATEGORY = 4
@@ -128,7 +128,7 @@ CHANNEL_SPECS = (
         "START HERE",
         "welcome",
         GUILD_TEXT,
-        "Start here: what FMODD is, essential safety information, and where to go next.",
+        "Start here: what FMSDD is, essential safety information, and where to go next.",
         "read_only",
         seed_key="welcome",
     ),
@@ -144,7 +144,7 @@ CHANNEL_SPECS = (
         "START HERE",
         "announcements",
         GUILD_TEXT,
-        "Official FMODD releases, compatibility changes, and maintenance notices.",
+        "Official FMSDD releases, compatibility changes, and maintenance notices.",
         "read_only",
         seed_key="announcements",
     ),
@@ -160,7 +160,7 @@ CHANNEL_SPECS = (
         "START HERE",
         "faq",
         GUILD_TEXT,
-        "Short answers to common FMODD installation, compatibility, safety, and support questions.",
+        "Short answers to common FMSDD installation, compatibility, safety, and support questions.",
         "read_only",
         seed_key="faq",
     ),
@@ -208,20 +208,19 @@ CHANNEL_SPECS = (
 )
 
 SEED_MESSAGES = {
-    "welcome": """# Welcome to FMODD
+    "welcome": """# Welcome to FMSDD
 
-FMODD's betting and odds features are intended solely to enrich the Football Manager experience. They are unrelated to real-world gambling or real-money transactions. Never use this tool for any form of real-world gambling, illegal betting or other unlawful activity.
+FMSDD's betting and odds features are intended solely to enrich the Football Manager experience. They are unrelated to real-world gambling or real-money transactions. Never use this tool for any form of real-world gambling, illegal betting or other unlawful activity.
 
 Some features modify game data and may corrupt a save or cause data loss. Back up your save before use. No person or organisation may sell this tool, offer paid licences for it or bundle it for sale.
 
-FMODD is still being updated and improved. If you encounter an error, want to report an issue, get the latest version or join the discussion, visit the [official website](https://fmodd.com/) and this community.
+FMSDD is still being updated and improved. If you encounter an error, want to report an issue, get the latest version or join the discussion, visit the [official website](https://fmodd.com/) and this community.
 
-If FMODD helps you enjoy the game more, you can [support the author](https://fmodd.com/donate) from Settings. Your support is the author's greatest motivation to keep updating FMODD.
 
-FMODD is an independent community-made project and is not affiliated with Sports Interactive or SEGA.
+FMSDD is an independent community-made project and is not affiliated with Sports Interactive or SEGA.
 
-FMODD Community Setup • welcome • v1""",
-    "rules": """# FMODD Community Rules
+FMSDD Community Setup • welcome • v1""",
+    "rules": """# FMSDD Community Rules
 
 **1. Be respectful**
 No harassment, hate speech, discrimination, threats, or personal attacks.
@@ -233,7 +232,7 @@ Keep problem reports and feature requests in their designated forums.
 Do not advertise products, servers, referral links, or services without staff approval.
 
 **4. Use official downloads only**
-Do not distribute modified FMODD builds, unofficial mirrors, cracks, or suspicious executable files.
+Do not distribute modified FMSDD builds, unofficial mirrors, cracks, or suspicious executable files.
 
 **5. Protect private information**
 Never post passwords, account tokens, licence keys, personal information, or unredacted private paths.
@@ -242,58 +241,55 @@ Never post passwords, account tokens, licence keys, personal information, or unr
 Do not upload Football Manager save files or full memory dumps. Redact personal information from logs and screenshots.
 
 **7. Provide reproducible reports**
-Include your exact FM build, platform, FMODD version, reproduction steps, original error, and whether the issue may have affected your save.
+Include your exact FM build, platform, FMSDD version, reproduction steps, original error, and whether the issue may have affected your save.
 
-**8. Use FMODD responsibly**
+**8. Use FMSDD responsibly**
 Back up your save before write operations. Compatibility is limited to builds listed on the official release page.
 
-FMODD Community Setup • rules • v1""",
-    "announcements": """# Official FMODD Updates
+FMSDD Community Setup • rules • v1""",
+    "announcements": """# Official FMSDD Updates
 
-Release announcements, compatibility changes, and maintenance notices will be posted here. Download builds only from links published through official FMODD channels.
+Release announcements, compatibility changes, and maintenance notices will be posted here. Download builds only from links published through official FMSDD channels.
 
-FMODD Community Setup • announcements • v1""",
+FMSDD Community Setup • announcements • v1""",
     "getting-started": """# Getting Started
 
 **Before you start**
-• FMODD currently supports FM26 and FM24 on Steam and Epic Games.
+• FMSDD currently supports FM26 and FM24 on Steam and Epic Games.
 • The available download is for Windows; macOS is not yet available.
 • Back up your save before modifying game data.
 
 1. Download the Windows build from the [official Download page](https://fmodd.com/download) and extract it to a folder you can read and write normally.
 2. Start Football Manager, open the career save you want to use, and wait for the main save screen to finish loading.
-3. Start FMODD and check the top-left corner for the detected game version and connection status.
-4. If the game is not detected, close FMODD while keeping Football Manager and the save open, then run FMODD as administrator. Both programs must use the same permission level.
-5. After loading another save, use **Change save and refresh** in FMODD and verify the save and manager information again.
-6. If something fails, create one post in **Bug Reports** with the original error, FM platform, FMODD version, and reproduction steps.
+3. Start FMSDD and check the top-left corner for the detected game version and connection status.
+4. If the game is not detected, close FMSDD while keeping Football Manager and the save open, then run FMSDD as administrator. Both programs must use the same permission level.
+5. After loading another save, use **Change save and refresh** in FMSDD and verify the save and manager information again.
+6. If something fails, create one post in **Bug Reports** with the original error, FM platform, FMSDD version, and reproduction steps.
 
-FMODD Community Setup • getting-started • v1""",
+FMSDD Community Setup • getting-started • v1""",
     "faq": """# Frequently Asked Questions
 
 **Which Football Manager versions and platforms are supported?**
-FMODD currently supports FM26 and FM24 on Steam and Epic Games. Check the [Download page](https://fmodd.com/download) for the latest build details.
+FMSDD currently supports FM26 and FM24 on Steam and Epic Games. Check the [Download page](https://fmodd.com/download) for the latest build details.
 
 **Is there a macOS version?**
 Not yet. The current download is for Windows.
 
-**How do I connect FMODD?**
-Open a career save in Football Manager, wait for the main save screen, then start FMODD. If detection fails, keep the game open and run FMODD as administrator at the same permission level as Football Manager.
+**How do I connect FMSDD?**
+Open a career save in Football Manager, wait for the main save screen, then start FMSDD. If detection fails, keep the game open and run FMSDD as administrator at the same permission level as Football Manager.
 
 **How do I switch saves?**
-Load the other save in Football Manager, wait for it to finish displaying, then use **Change save and refresh** in FMODD.
+Load the other save in Football Manager, wait for it to finish displaying, then use **Change save and refresh** in FMSDD.
 
 **Where should I ask for help or suggest a feature?**
 Use **Bug Reports** for problems and **Feature Requests** for ideas. Include the original error and enough version and reproduction information to investigate safely.
 
-**How can I support the project?**
-Use Ko-fi or the crypto donation option on the [Donate page](https://fmodd.com/donate).
-
 **Why might some translations sound unnatural?**
-FMODD was originally developed in Chinese. Please report awkward wording through feedback so it can be improved.
+FMSDD was originally developed in Chinese. Please report awkward wording through feedback so it can be improved.
 
 Never upload passwords, tokens, licence keys, full memory dumps, personal information, or Football Manager save files. See the maintained [official FAQ](https://fmodd.com/faq).
 
-FMODD Community Setup • faq • v1""",
+FMSDD Community Setup • faq • v1""",
     "general": "Please keep conversations friendly.",
 }
 
@@ -421,7 +417,7 @@ class DiscordClient:
         data = None if payload is None else json.dumps(payload).encode("utf-8")
         headers = {
             "Authorization": f"Bot {self._token}",
-            "User-Agent": "FMODD-Community-Setup/1.0",
+            "User-Agent": "FMSDD-Community-Setup/1.0",
         }
         if data is not None:
             headers["Content-Type"] = "application/json"
@@ -463,7 +459,7 @@ def get_token() -> str:
         raise RuntimeError(
             f"No interactive terminal. Set {TOKEN_ENV} locally without printing or committing it."
         )
-    return getpass.getpass("Paste the FMODD Assistant bot token (hidden): ").strip()
+    return getpass.getpass("Paste the FMSDD Assistant bot token (hidden): ").strip()
 
 
 def bot_permissions(
@@ -759,7 +755,7 @@ def ensure_seed_channel_permissions(
 def find_seed_message(
     messages: Iterable[dict[str, Any]], seed_key: str, bot_id: str | None = None
 ) -> dict[str, Any] | None:
-    marker = f"FMODD Community Setup • {seed_key} • v1"
+    marker = f"FMSDD Community Setup • {seed_key} • v1"
     for message in messages:
         if int(message.get("type") or 0) != 0:
             continue
@@ -870,7 +866,7 @@ def apply_plan(
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Audit or additively provision the FMODD Discord community."
+        description="Audit or additively provision the FMSDD Discord community."
     )
     parser.add_argument("--guild-id", default=DEFAULT_GUILD_ID)
     mode = parser.add_mutually_exclusive_group()
@@ -912,7 +908,7 @@ def main(argv: list[str] | None = None) -> int:
             migrate_simplified_layout(client, channels)
             prune_simplified_layout(client, str(args.guild_id), channels, bot_id)
             apply_plan(client, guild, channels, roles, current_member)
-            print("\nFMODD Discord community simplification completed.")
+            print("\nFMSDD Discord community simplification completed.")
             return 0
 
         plan = build_plan(guild, channels, roles)
@@ -929,7 +925,7 @@ def main(argv: list[str] | None = None) -> int:
             print("Apply cancelled; no changes were made.")
             return 1
         apply_plan(client, guild, channels, roles, current_member)
-        print("\nFMODD Discord community bootstrap completed.")
+        print("\nFMSDD Discord community bootstrap completed.")
         print("Finish the native Discord-only steps listed in the plan above.")
         return 0
     except (DiscordApiError, RuntimeError, ValueError, KeyError) as exc:
